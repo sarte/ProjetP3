@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.8)  22 SEP 2014 15:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.8)  22 SEP 2014 18:13
 entering extended mode
 **Tache1.tex
-(C:\Users\charles\Documents\GitHub\ProjetP3\Tache1.tex
+(C:\Users\charles\Documents\GitHub\ProjetP3\tache1\Tache1.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -386,86 +386,201 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen115
 \Gin@req@width=\dimen116
 )
-(C:\Users\charles\Documents\GitHub\ProjetP3\Tache1.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Info: Redefining \degres on input line 11.
-LaTeX Info: Redefining \dots on input line 11.
-LaTeX Info: Redefining \up on input line 11.
+(C:\Users\charles\Documents\Latex\tex\latex\siunits\SIunits.sty
+Package: SIunits 2007/12/02 v1.36 Support for the International System of units
+ (MH)
+
+
+\@qskwidth=\skip46
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+(C:\Users\charles\Documents\Latex\tex\latex\base\ts1enc.dfu
+File: ts1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+)
+\symgreek=\mathgroup6
+
+(C:\Users\charles\Documents\Latex\tex\latex\siunits\SIunits.cfg)
+Option `squaren' provided!
+Option `Gray' provided!
+) (C:\Users\charles\Documents\Latex\tex\latex\numprint\numprint.sty
+Package: numprint 2012/08/20 v1.39 Print numbers (HH)
+
+(C:\Users\charles\Documents\Latex\tex\latex\tools\array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen117
+\extrarowheight=\dimen118
+\NC@list=\toks22
+\extratabsurround=\skip47
+\backup@length=\skip48
+)
+\c@nprt@mantissa@digitsbefore=\count104
+\c@nprt@mantissa@digitsafter=\count105
+\c@nprt@exponent@digitsbefore=\count106
+\c@nprt@exponent@digitsafter=\count107
+\nprt@digitwidth=\skip49
+\nprt@sepwidth=\skip50
+\nprt@decimalwidth=\skip51
+\nprt@blockwidth=\skip52
+\nprt@digittoks=\toks23
+\nprt@pretoks=\toks24
+\nprt@posttoks=\toks25
+\nprt@thisdigit=\count108
+\nprt@curpos=\count109
+\nprt@rndpos=\count110
+\c@nprt@digitsfirstblock=\count111
+\c@nprt@blockcnt=\count112
+\c@nprt@cntprint=\count113
+
+No configuration file `numprint.cfg' found.)
+(C:\Users\charles\Documents\GitHub\ProjetP3\tache1\Tache1.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 15.
+
+(C:\Users\charles\Documents\Latex\tex\latex\base\ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Info: Redefining \degres on input line 15.
+LaTeX Info: Redefining \dots on input line 15.
+LaTeX Info: Redefining \up on input line 15.
 
 (C:\Users\charles\Documents\Latex\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count104
-\scratchdimen=\dimen117
+\scratchcounter=\count114
+\scratchdimen=\dimen119
 \scratchbox=\box28
-\nofMPsegments=\count105
-\nofMParguments=\count106
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count107
-\MPscratchDim=\dimen118
-\MPnumerator=\count108
-\makeMPintoPDFobject=\count109
-\everyMPtoPDFconversion=\toks23
+\nofMPsegments=\count115
+\nofMParguments=\count116
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count117
+\MPscratchDim=\dimen120
+\MPnumerator=\count118
+\makeMPintoPDFobject=\count119
+\everyMPtoPDFconversion=\toks27
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 12.
- (C:\Users\charles\Documents\Latex\tex\latex\amsfonts\umsa.fd
+Option `squaren' provided! 
+ Command \squaren defined by SIunits package!
+
+Option `Gray' provided! 
+ Command \Gray defined by SIunits package!
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 16.
+(C:\Users\charles\Documents\Latex\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 12.
+LaTeX Font Info:    Try loading font information for U+msb on input line 16.
 
 (C:\Users\charles\Documents\Latex\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/charles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 14--38
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--52
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--52
-
- []
-
-[1] [2] (C:\Users\charles\Documents\GitHub\ProjetP3\Tache1.aux) ) 
+{C:/Users/charles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [1] [2]
+(C:\Users\charles\Documents\GitHub\ProjetP3\tache1\Tache1.aux) ) 
 Here is how much of TeX's memory you used:
- 3129 strings out of 493921
- 38139 string characters out of 3145272
- 99869 words of memory out of 3000000
- 6386 multiletter control sequences out of 15000+200000
- 14453 words of font info for 44 fonts, out of 3000000 for 9000
+ 4039 strings out of 493921
+ 50798 string characters out of 3145272
+ 116926 words of memory out of 3000000
+ 7275 multiletter control sequences out of 15000+200000
+ 15585 words of font info for 48 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,10n,24p,414b,191s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\cha
-rles\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <
-C:\Users\charles\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ec
-rm1095.pk> <C:\Users\charles\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
-ec\dpi600\ecbx1440.pk> <C:\Users\charles\AppData\Local\MiKTeX\2.9\fonts\pk\ljfo
-ur\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\charles\AppData\Local\MiKTeX\2.9\f
-onts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk><C:/Users/charles/Documents/Latex
-/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/charles/Documents/Latex/fo
-nts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/charles/Documents/Latex/fonts/
-type1/public/amsfonts/cm/cmr10.pfb><C:/Users/charles/Documents/Latex/fonts/type
-1/public/amsfonts/cm/cmr8.pfb><C:/Users/charles/Documents/Latex/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb>
-Output written on Tache1.pdf (3 pages, 107540 bytes).
+ 27i,11n,24p,252b,190s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\char
+les\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C
+:\Users\charles\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecr
+m1095.pk> <C:\Users\charles\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
+c\dpi600\ecbx1440.pk> <C:\Users\charles\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\charles\AppData\Local\MiKTeX\2.9\fo
+nts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk><C:/Users/charles/Documents/Latex/
+fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/charles/Documents/Latex/fon
+ts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/charles/Documents/Latex/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/charles/Documents/Latex/fonts/type1
+/public/amsfonts/cm/cmr8.pfb><C:/Users/charles/Documents/Latex/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb><C:/Users/charles/Documents/Latex/fonts/type1/public/
+amsfonts/cm/cmsy8.pfb>
+Output written on Tache1.pdf (3 pages, 117752 bytes).
 PDF statistics:
- 204 PDF objects out of 1000 (max. 8388607)
+ 209 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
