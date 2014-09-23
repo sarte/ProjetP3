@@ -27,8 +27,8 @@ Nous sommes donc arrivés à l'équation de synthèse de l'ammoniac suivante:
  $$\ce{N_{2(g)} + 3H_{2(g)} -> 2NH_{3(g)}}$$
 
 La masse molaire de l'ammoniac étant de \unit{17}{\gram\per\mole}, nous en avons déduit que une masse de \unit{1000}{\ton}
-correspondait à \unit{\dfrac{10^{9}}{17}}{\mole}. Nous avons ensuite fait un tableau d'avancement de la réaction,
-où les données sont exprimées en moles: 
+correspondait à \unit{\dfrac{10^{9}}{17}}{\mole}. Nous avons ensuite fait un tableau d'avancement (Figure \ref{tableau}) de la réaction,
+où les données sont exprimées en moles.
 
 \begin{figure}[h]
 \centering
@@ -43,15 +43,17 @@ Réaction & -$\dfrac{10^{9}}{17} \cdot \dfrac{1}{2}$ & -$\dfrac{10^{9}}{17} \cdo
 Final & 0 & 0 & $\dfrac{10^{9}}{17}$ \\ 
 \hline 
 \end{tabular} 
+\caption{Tableau d'avancement de la réaction}
+\label{tableau}
 \end{figure}
 
 La réaction se produisant en continu, on peut calculer des flux de quantité pour une période de 24 heures.
 On obtient selon nos calculs:
 
 \begin{itemize}
-  \item{une consommation de $N_2$ égale à: $\dfrac{\dfrac{10^{9}}{17} \cdot \dfrac{1}{2}}{3600 \cdot 24} \cong 340.41 $ \unit{}{\mole\per\second}.}
-  \item{une consommation de $H_2$ égale à: $\dfrac{\dfrac{10^{9}}{17} \cdot \dfrac{3}{2}}{3600 \cdot 24} \cong 1021.241 $\unit{}{\mole\per\second}
-  \item{une production de $NH_3$ égale à: $\dfrac{\dfrac{10^{9}}{17}}{3600 \cdot 24} \cong 680.827$ \unit{}{\mole\per\second}
+  \item{une consommation de $N_2$ égale à: $\dfrac{10^{9}}{17} \cdot \dfrac{1}{2} \cdot \dfrac{1}{3600 \cdot 24} \cong 340.41 $ \unit{}{\mole\per\second}.}
+  \item{une consommation de $H_2$ égale à: $\dfrac{10^{9}}{17} \cdot \dfrac{3}{2} \cdot \dfrac{1}{3600 \cdot 24} \cong 1021.241 $\unit{}{\mole\per\second}
+  \item{une production de $NH_3$ égale à: $\dfrac{10^{9}}{17}} \cdot \dfrac{1}{3600 \cdot 24} \cong 680.827$ \unit{}{\mole\per\second}
 }}\end{itemize}
 
 \section*{Aspect thermique}
@@ -77,10 +79,10 @@ Nous avions calculé plus haut que le rythme de production de $NH_3$ était de e
 il vient donc:  $680.827 \cdot 0.339344 = 231.03$. 
 le débit d'eau nécessaire serait donc de \unit{231.03}{\liter\per\second}.
 
-\subsection*{Bilan de matière}}
+\subsection*{Bilan de matière}
 \begin{figure}[ht!]
  \centering
- \includegraphics[scale=0.6]{flowsheet.jpg}
+ \includegraphics[scale=0.4]{flowsheet.jpg}
  \caption{Flowsheet production ammoniac}
  \label{scheme}
  
