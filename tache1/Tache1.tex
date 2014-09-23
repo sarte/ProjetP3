@@ -50,7 +50,7 @@ Final & 0 & 0 & $\dfrac{10^{9}}{17}$ \\
 \label{tableau}
 \end{figure}
 
-La réaction se produisant en continu, on peut calculer des flux de quantité pour une période de 24 heures.
+La réaction se produisant en continu, on peut calculer des flux de quantité par seconde.
 On obtient selon nos calculs:
 
 \begin{itemize}
@@ -60,27 +60,31 @@ On obtient selon nos calculs:
 }}\end{itemize}
 
 \section*{Aspect thermique}
-Selon nos recherches, nous avons trouvé que la réaction était exothermique ($\Delta H_{react} = -92.2kJ$).
+Selon nos recherches, nous avons trouvé que la réaction était exothermique ($\Delta H_{react}(\unit{25}{\celsius}) = -92.2kJ$).
 Il nous était indiqué que la température du réacteur devait être maintenue à \unit{500}{\celsius} et que celui-ci, 
 vu le caractère exothermique de la réaction, pouvait être refroidi par un débit continu d'eau, dont la température 
 variait entre \unit{25}{\celsius} et \unit{90}{\celsius}.
 
 \subsection*{Calcul de volume d'eau nécessaire (pour une mole produite)}
-Nous savons donc que: $$\Delta H_{react} = \unit{-92.2}{kJ}$$
-Nous savons aussi que:
- $$q = m \cdot C \cdot dT$$
-où $C$ est la constante calorifique massique de l'eau valant \unit{4.18}{\joule \cdot \celsius^{-1} \cdot \gram^{-1}} et m est 
- la masse totale du volume d'eau.
 
- Vu les indications données, on peut facilement trouver que $dT=\unit{65}{\kelvin}$. En supposant que la température initiale de 
- réacteur est de \unit{500}{\celsius}, il vient: 
-$92200 = 4.18 \cdot 65 \cdot m \Rightarrow \dfrac{92200}{4.18 \cdot 65} = m =$ \unit{339.344}{\gram}, qui correspond à \unit{0.339344}{\liter} d'eau.
+Il nous faut déterminer l'enthalpie de la réaction à \unit{500}{\celsius}, c'est-à-dire \unit{773.15}{\kelvin}.
+Nous l'obtenons comme suit:
 
-\subsection*{Calcul du débit d'eau nécessaire}
+$$\Delta H(\unit{773.15}{\kelvin}) = \Delta H_{NH_2}(\unit{298.15}{\kelvin}) + \int_{298.15}^{773.15} C_{p, NH_2} dT 
+ - \frac{1}{2} \lbrack \Delta H_{N_2}(\unit{298.15}{\kelvin}) $$ 
+$$+ \int_{298.15}^{773.15} C_{p, N_2} dT \rbrack - \frac{3}{2}  \lbrack \Delta H_{H_2}(\unit{298.15}{\kelvin}) + \int_{298.15}^{773.15} C_{p, H_2} dT  \rbrack $$
 
-Nous avions calculé plus haut que le rythme de production de $NH_3$ était de environ \unit{680.827}{\mole\per\second},
-il vient donc:  $680.827 \cdot 0.339344 = 231.03$. 
-le débit d'eau nécessaire serait donc de \unit{231.03}{\liter\per\second}.
+Il est important de préciser que les $C_{p}$ sont les constantes calorifiques massiques des différents composants. 
+Nous trouvons leur valeur ainsi que celles des enthalpies dans le livre de référence\footnote{Principes de chimie - P. ATKINS et L.JONES, 2e édition, 2013}.
+Nous obtenons finalement une différence d'enthalpie d'approximativement \unit{-57}{\kilo\joule}.
+
+Nous savons que:
+$$q =  C_p \cdot dT$$
+
+Au vu des indications données, en supposant que nous travaillons à pression constante, en supposant que la température initiale de
+réacteur est de \unit{500}{\celsius}, il vient:
+$-57000 \cdot 680.827 = 4180 \cdot 65 \cdot d_{H_{2}O} \Rightarrow  d_{H_{2}O} = \unit{142.83}{\mole\per\second}.$
+Etant donné qu'une mole d'eau représente \unit{18}{\gram}, cela équivaut à  \unit{2.57}{\kilogram\per\second}.
 
 \section*{Source des réactifs}
 \subsection*{Le diazote}
@@ -98,9 +102,9 @@ qui rejette une quantité de $CO_2$ non-négligeable.
 L'électrolyse de l'eau est également une alternative pour la production de dihydrogène. \footnote{« Hydrogène > Air Liquide in BELGIUM and LUXEMBOURG ». Consulté le 23 septembre 2014. http://www.airliquide.be/fr/applications-des-gaz/hydrogene-1.html.}
 C'est un moyen respectueux de l'environnement utilisant de l'eau déminéralisée qui sera dissociée au moyen 
 d'un courant électrique. Les bulles de gaz formées seront séparées et filtrées, pour arriver à un gaz de bonne qualité.
-Mais cette technique ne premet qu'une production en petites quantités, et n'est donc pas tellement utilisée.
+Mais cette technique ne permet qu'une production en petites quantités, et n'est donc pas tellement utilisée.
 
-\subsection*{Bilan de matière}
+\section*{Bilan de matière}
 \begin{figure}[ht!]
  \centering
  \includegraphics[scale=0.35]{flowsheet.jpg}
