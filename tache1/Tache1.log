@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.8)  23 SEP 2014 15:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.8)  23 SEP 2014 15:52
 entering extended mode
 **Tache1.tex
 (C:\Users\charles\Documents\GitHub\ProjetP3\tache1\Tache1.tex
@@ -766,8 +766,12 @@ Such booboos are generally harmless, so keep going.
 File: flowsheet.jpg Graphic file (type jpg)
  <use flowsheet.jpg>
 Package pdftex.def Info: flowsheet.jpg used on input line 82.
-(pdftex.def)             Requested size: 172.24483pt x 289.08223pt.
- [2 <C:/Users/charles/Documents/GitHub/ProjetP3/tache1/flowsheet.jpg>]
+(pdftex.def)             Requested size: 344.48965pt x 578.16447pt.
+
+
+LaTeX Warning: Float too large for page by 8.09285pt on input line 86.
+
+[2] [3 <C:/Users/charles/Documents/GitHub/ProjetP3/tache1/flowsheet.jpg>]
 (C:\Users\charles\Documents\GitHub\ProjetP3\tache1\Tache1.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -794,9 +798,9 @@ arles/Documents/Latex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/charle
 s/Documents/Latex/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/charles/Doc
 uments/Latex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/charles/Docume
 nts/Latex/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Tache1.pdf (3 pages, 156776 bytes).
+Output written on Tache1.pdf (4 pages, 157544 bytes).
 PDF statistics:
- 208 PDF objects out of 1000 (max. 8388607)
+ 212 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
