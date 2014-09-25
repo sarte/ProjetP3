@@ -1,0 +1,102 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usetheme{default}
+
+\title{APP1 Physique}
+\author{Groupe 1246}
+\institute{École Polytechnique de Louvain}
+\date{Vendedi 26 septembre 2014}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Démontrer que $\vec{B}$ et $\vec{H}$ se propagent sans support}
+$$f(x,t)=f(x,-vt)$$
+Il suffit de transformer les équations de Maxwell dans le vide jusqu'à l'obtention d'une telle forme (valable $\forall$ fonction se propageant)
+\end{frame}
+
+\begin{frame}
+\frametitle{Solution mathématique}
+
+\begin{columns}[T] % contents are top vertically aligned
+     \begin{column}[T]{5cm} % each column can also be its own environment
+$\nabla \times \vec{E} = - \mu_{0} \frac{\partial{\vec{H}}} {\partial{t}}$
+\\ 
+$\nabla \times \vec{H} = \varepsilon_{0} \frac{\partial{\vec{E}}} {\partial{t}}$
+     \end{column}
+     \begin{column}[T]{5cm} % alternative top-align that's better for graphics
+\Rightarrow $\nabla(\nabla \times \vec{H}) =  - \varepsilon_{0} \mu_{0} \frac{\partial^2{\vec{H}}} {\partial{t^2}}$
+     \end{column}
+     \end{columns}
+
+\bigbreak
+\bigbreak
+\begin{columns}[T] % contents are top vertically aligned
+     \begin{column}[T]{5cm}
+$\nabla \times \vec{H} = u_{y} \frac{\partial{\vec{H_z}}} {\partial{t}}$
+     \end{column}
+     \begin{column}[T]{5cm}
+\Rightarrow $\nabla(\nabla \times \vec{H}) = \frac{\partial^2{\vec{H}}} {\partial{x^2}}$
+     \end{column}
+     \end{columns}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Influence des champs}
+
+$\vec{E}$ et $\vec{B}$ s'influencent mutuellement.
+
+\bigbreak
+Preuve: les équations de \textsc{Maxwell}!
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Forme générale d'une fonction qui se propage à une vitesse v dans une direction x}
+
+\begin{center}
+$f(x,t)=f(x-vt)$
+$\forall$ fonction se propageant
+
+\bigbreak
+
+Exemple: $sin(kx \pm $\omega$t)$
+\end{center}
+\end{frame}
+
+\begin{frame}
+\begin{figure}[ht!]
+\frametitle{Illustration de la propagation}
+ \centering
+ \includegraphics[scale=0.6]{APP1.png}
+ \caption{Directions et propagation des champs \\ Source: University Physics Young Freedman 13th Edition}
+ \label{champs}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{figure}[ht!]
+ \centering
+ \includegraphics[scale=0.5]{image.PNG}
+ \caption{Le spectre électromagnétique. \\ Source: University Physics Young Freedman 13th Edition}
+ \label{spectre}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Que deviendrait le temps de propagation de la lumière entre le Soleil et la Terre si le milieu traversé était différent du vide?}
+
+Le temps de propagation de la lumière entre la Terre et le Soleil augmente si la lumière doit se propoger autre part que dans le vide.
+
+Dans le vide, aucune particule ne l'entrave
+\Rightarrow
+c = vitesse maximale
+\end{frame}
+
+\end{document}
