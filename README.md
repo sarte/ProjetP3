@@ -47,6 +47,10 @@ En bloc (saut à la ligne automatique et centré) :
 ```
 $$x=42$$
 ```
+Pour faire des parenthèses, crochets ou accolades dans des formules:
+```
+\left( \right) \left[ \right] \left{ \right}
+```
 
 **Pour faire un grapgique**
 PGFPlots : http://pgfplots.sourceforge.net/pgfplots.pdf
