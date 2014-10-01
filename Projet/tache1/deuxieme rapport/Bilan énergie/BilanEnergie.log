@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.8)  1 OCT 2014 22:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.8)  2 OCT 2014 00:02
 entering extended mode
 **BilanEnergie.tex
 
@@ -742,33 +742,60 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 17.
 
 (C:\Users\charles\Documents\Latex\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+Overfull \hbox (10.03883pt too wide) in paragraph at lines 47--48
+[]$\OML/cmm/m/it/10.95 H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 T[]\OT1/cmr/m
+/n/10.95 ) = \OML/cmm/m/it/10.95 H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 T[
+]\OT1/cmr/m/n/10.95 ) + [][][\OML/cmm/m/it/10.95 A \OT1/cmr/m/n/10.95 + [] + \O
+ML/cmm/m/it/10.95 C\OT1/cmr/m/n/10.95 ([])[] + \OML/cmm/m/it/10.95 D\OT1/cmr/m/
+n/10.95 ([])[] + []]$\T1/cmr/m/n/10.95 dT 
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 51.
+(C:\Users\charles\Documents\Latex\tex\latex\base\omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 51.
+
+Overfull \hbox (9.9402pt too wide) in paragraph at lines 51--52
+[]$\OML/cmm/m/it/10.95 H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 T[]\OT1/cmr/m
+/n/10.95 ) = \OML/cmm/m/it/10.95 H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 T[
+]\OT1/cmr/m/n/10.95 ) + [\OML/cmm/m/it/10.95 AT \OT1/cmr/m/n/10.95 + [] + \OML/
+cmm/m/it/10.95 C\OT1/cmr/m/n/10.95 ([]) + \OML/cmm/m/it/10.95 D\OT1/cmr/m/n/10.
+95 ([]) + []][]$\T1/cmr/m/n/10.95 (3) 
+ []
+
+[1
 
 {C:/Users/charles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+[2]
 ("C:\Users\charles\Documents\GitHub\ProjetP3\Projet\tache1\deuxieme rapport\Bil
 an énergie\BilanEnergie.aux") ) 
 Here is how much of TeX's memory you used:
- 9861 strings out of 493921
- 170255 string characters out of 3145272
- 213094 words of memory out of 3000000
- 13060 multiletter control sequences out of 15000+200000
+ 9878 strings out of 493921
+ 170563 string characters out of 3145272
+ 216094 words of memory out of 3000000
+ 13074 multiletter control sequences out of 15000+200000
  12989 words of font info for 40 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 34i,4n,37p,10345b,154s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,8n,37p,10345b,199s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\charles\AppData\Local\MiKTeX\2.9\fon
 ts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\charles\AppData\Local\Mi
 KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\charles\AppD
 ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk><C:/Users/c
 harles/Documents/Latex/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/char
 les/Documents/Latex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/charles
-/Documents/Latex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/charles/Doc
-uments/Latex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/charles/Documen
-ts/Latex/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/charles/Documents/La
-tex/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/charles/Documents/Latex/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on BilanEnergie.pdf (1 page, 90803 bytes).
+/Documents/Latex/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/charles/Doc
+uments/Latex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/charles/Documen
+ts/Latex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/charles/Documents/L
+atex/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/charles/Documents/Latex/
+fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/charles/Documents/Latex/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/charles/Documents/Latex/fonts/ty
+pe1/public/amsfonts/cm/cmsy8.pfb>
+Output written on BilanEnergie.pdf (2 pages, 118838 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
+ 145 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

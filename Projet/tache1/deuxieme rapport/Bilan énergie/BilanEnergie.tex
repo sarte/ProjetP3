@@ -21,13 +21,16 @@ Il nous a été demandé de calculer de faire le bilan énergétique. Sur base d
 
 Nous avons commencé par calculer le $\Delta H$ de chaque équation.
 \subsection*{Le bloc 'Four'}
-Dans ce bloc, nous avons donc traiter la réaction suivante:
+Dans ce bloc, nous avons traité les réactions suivantes:
 \begin{itemize}
-\item{$CH_{4(g)} + 2O_{2(g)} \Rightarrow 2H_{2}O + CO_{2(g)}$}
+\item{$CH_{4(g)} + H_{2}O_{(g)} \Rightarrow 3H_{2(g)} + CO_{(g)}$}
+\item{$CO_{(g)} + H_{2}O_{(g)} \Rightarrow H_{2(g)} + CO_{2(g)}$}
 \end{itemize}
+
+Nous allons d'abord nous interreser à la première des deux.
 Nous savons que:
 
-$\Delta H^o_{react}=2\Delta H^o_{H_2O} + \Delta H^o_{CO_2} - (2\Delta H^o_{O_2} + \Delta H^o_{CH_4})$
+$\Delta H^o_{react}=3\Delta H^o_{H_2} + \Delta H^o_{CO} - (\Delta H^o_{CH_{4(g)}} + \Delta H^o_{H_{2}O_{(g)}})$
 
 La réaction se passant dans un mileu à une température 'T' donnée, nous devons calculer les différences d'entalpie molaire de formation des composés à cette température, sur base des données expérimentale. Pour cela, nous avons utilisé la relation suivante:
 
@@ -40,7 +43,38 @@ $\Delta C_p=A+\dfrac{BT}{1000}+C(\dfrac{T}{1000})^2+D(\dfrac{T}{1000})^3+\frac{E
 où T est la température du mileu et A,B,C,D,E sont des constantes propres à chaques composants (cfr Annexe).
 
 De (1) et (2), on trouve facilement:
+
+$H^o_m(T_2)=\Delta H^o_{form}(T_1)+\int_{T_1}^{T_2} [A+\dfrac{BT}{1000}+C(\dfrac{T}{1000})^2+D(\dfrac{T}{1000})^3+\frac{E}{(\dfrac{T}{1000})^2}]$dT
+
+ou encore
+
+$H^o_m(T_2)=\Delta H^o_{form}(T_1) + [AT+\dfrac{BT^2}{2\cdot10^3}+C(\dfrac{T^3}{3\cdot10^6})+D(\dfrac{T^4}{4\cdot10^9})+\frac{-10^6E}{T}]^{T_2}_{T_1}$(3) 
+
+En remplaçant la valeur des $\Delta H^o$ dans (1) de chaque élément par leur valeur à la température 'T' obtenue avec (3), on peut facilement obtenir une expression pour $\Delta H^o_{react}$.
+
+
+\subsection*{Annexe}
+On connait les valeurs de $\Delta H^o$ pour les éléments suivants:
 \begin{itemize}
-\item{}
+\item{$CH_{4(g)} \Rightarrow \unit{-74.6}{\kilo\joule\per\mole}$}
+\item{$H_2O_{(g)} \Rightarrow \unit{-241.83}{\kilo\joule\per\mole}$}
+\item{$CO_{(g)} \Rightarrow \unit{-110.53}{\kilo\joule\per\mole}$}
+\item{$CO_{2(g)} \Rightarrow \unit{-393.51}{\kilo\joule\per\mole}$}
 \end{itemize}
+
+On connaît les constantes permettant d'utiliser la formule (2) suivantes:
+
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+\rule[-1ex]{0pt}{2.5ex}  & A & B & C & D & E \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} $CH_{4(g)}$ & -0.703 & 108.471 & -42.521 & 5.862 & 0.678 \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} $H_2O_{(g)}$ & 30.092 & 6.832 & 6.793 & -2.534 & 0.082 \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} $CO_{(g)}$ & 25.5675 & 6.0961 & 4.0546 & -2.6713 & 0.131 \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} $CO_{2(g)}$ & 34.2244 & 41.044 & -23.5297 & 5.5352 & -0.129 \\ 
+\hline 
+\end{tabular} 
 \end{document}
