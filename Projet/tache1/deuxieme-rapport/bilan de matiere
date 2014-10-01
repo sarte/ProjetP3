@@ -1,0 +1,135 @@
+\documentclass{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{chemist}
+\usepackage{array}
+\usepackage[version=3]{mhchem}
+\usepackage{amsmath}
+
+
+\begin{document}
+
+\section*{Bilan de matière}
+
+Cette section met en avant l'évolution des réactifs et produits en terme de moles. Les différents tableaux sont explicités plus bas.
+\begin{figure}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+&
+\multicolumn{1}{c!{\makebox[0pt]{+}}}{
+\ce{CH4}}
+&
+\multicolumn{1}{c!{\makebox[0pt]{$\rightleftharpoons$}}}{\ce{H2O}}
+&
+\multicolumn{1}{c!{\makebox[0pt]{+}}}{\ce{3H2}}
+& \ce{CO}
+\\
+\hline
+$n_i$ & x & y & 0 & 0\\
+\hline
+$n_f$ & x-m & y-m & 3m & m \\\hline
+\end{tabular}
+\end{center}
+\end{figure}
+
+
+
+
+
+\begin{figure}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+&
+\multicolumn{1}{c!{\makebox[0pt]{+}}}{
+\ce{CO}}
+&
+\multicolumn{1}{c!{\makebox[0pt]{$\rightleftharpoons$}}}{\ce{H2O}}
+&
+\multicolumn{1}{c!{\makebox[0pt]{+}}}{\ce{H2}}
+& \ce{CO2}
+\\
+\hline
+$n_i$ & m & y-m & 3m & 0\\
+\hline
+$n_f$ & m-n & y-m-n & 3m+n & n \\\hline
+\end{tabular}
+\end{center}
+\end{figure}
+
+
+
+
+
+\begin{figure}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+&
+\multicolumn{1}{c!{\makebox[0pt]{+}}}{
+\ce{2CH4}}
+&
+\multicolumn{1}{c!{\makebox[0pt]{$\rightarrow$}}}{\ce{O2}}
+&
+\multicolumn{1}{c!{\makebox[0pt]{+}}}{\ce{2CO}}
+& \ce{4H2}
+\\
+\hline
+$n_i$ & x-m & 0.21a & m-n & 3m+n\\
+\hline
+$n_f$ & 0 & 0 &  x-n & m+n+2x \\\hline
+\end{tabular}
+\end{center}
+\end{figure}
+
+
+
+\begin{figure}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+&
+\multicolumn{1}{c!{\makebox[0pt]{+}}}{
+\ce{CO}}
+&
+\multicolumn{1}{c!{\makebox[0pt]{$\rightarrow$}}}{\ce{H2O}}
+&
+\multicolumn{1}{c!{\makebox[0pt]{+}}}{\ce{H2}}
+& \ce{CO2}
+\\
+\hline
+$n_i$ & x-n & y-m-n & m+n+2x & n\\
+\hline
+$n_f$ & 0 & y-m-x & m+3x & x \\\hline
+\end{tabular}
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+&
+\multicolumn{1}{c!{\makebox[0pt]{+}}}{
+\ce{N2}}
+&
+\multicolumn{1}{c!{\makebox[0pt]{$\rightarrow$}}}{\ce{3H2}}
+&
+\ce{2NH3}
+\\
+\hline
+$n_i$ & 0.78a & m+3x & 0 \\
+\hline
+$n_f$ & 0 & 0 & 2*0.78 a \\\hline
+\end{tabular}
+\end{center}
+\end{figure}
+
+\end{document}
