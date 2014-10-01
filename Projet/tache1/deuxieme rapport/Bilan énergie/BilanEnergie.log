@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.8)  1 OCT 2014 19:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.8)  1 OCT 2014 22:03
 entering extended mode
 **BilanEnergie.tex
 
@@ -750,7 +750,7 @@ an énergie\BilanEnergie.aux") )
 Here is how much of TeX's memory you used:
  9861 strings out of 493921
  170255 string characters out of 3145272
- 212094 words of memory out of 3000000
+ 213094 words of memory out of 3000000
  13060 multiletter control sequences out of 15000+200000
  12989 words of font info for 40 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -759,15 +759,16 @@ Here is how much of TeX's memory you used:
 ts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\charles\AppData\Local\Mi
 KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\charles\AppD
 ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk><C:/Users/c
-harles/Documents/Latex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/char
-les/Documents/Latex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/charles/
-Documents/Latex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/charles/Docu
-ments/Latex/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/charles/Documents
-/Latex/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/charles/Documents/Late
-x/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on BilanEnergie.pdf (1 page, 80493 bytes).
+harles/Documents/Latex/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/char
+les/Documents/Latex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/charles
+/Documents/Latex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/charles/Doc
+uments/Latex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/charles/Documen
+ts/Latex/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/charles/Documents/La
+tex/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/charles/Documents/Latex/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on BilanEnergie.pdf (1 page, 90803 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
+ 120 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

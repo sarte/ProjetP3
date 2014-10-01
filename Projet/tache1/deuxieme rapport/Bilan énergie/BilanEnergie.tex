@@ -14,7 +14,7 @@
 \section*{Bilan d'énergie}
 Il nous a été demandé de calculer de faire le bilan énergétique. Sur base du flowsheet simplifié que nous avons complété en S2, nous avons déterminé que seulement trois réactions devait être analyser, celles se produisant dans le bloc du four et dans le réacteur du reformage primaire, afin de réalisé le bilan:
 \begin{itemize}
-\item{$CH_{4(g)} + 2O_{2(g)} \Rightarrow 2H_{2}O + CO_{2(g)}$ (Combustion de $CH_{4(g)}$, réaction complète)}
+\item{$CH_{4(g)} + 2O_{2(g)} \Rightarrow 2H_{2}O_{(g)} + CO_{2(g)}$ (Combustion de $CH_{4(g)}$, réaction complète)}
 \item{$CH_{4(g)} + H_{2}O_{(g)} \Rightarrow 3H_{2(g)} + CO_{(g)}$ (Reformage à vapeur de $CH_{4(g)}$, réaction à l'équilibre)}
 \item{$CO_{(g)} + H_{2}O_{(g)} \Rightarrow H_{2(g)} + CO_{2(g)}$ (Reformage à vapeur de $CH_{4}$, réaction à l'équilibre)}
 \end{itemize}
@@ -29,11 +29,18 @@ Nous savons que:
 
 $\Delta H^o_{react}=2\Delta H^o_{H_2O} + \Delta H^o_{CO_2} - (2\Delta H^o_{O_2} + \Delta H^o_{CH_4})$
 
-ou encore
+La réaction se passant dans un mileu à une température 'T' donnée, nous devons calculer les différences d'entalpie molaire de formation des composés à cette température, sur base des données expérimentale. Pour cela, nous avons utilisé la relation suivante:
 
-$\Delta H^o_{react}=$ \unit{206}{\kilo\joule\per\mole}
+$H^o_m(T_2)=\Delta H^o_{form}(T_1)+\int_{T_1}^{T_2} \Delta C_pdT$   (1)
 
+En faisant des recherches, nous avons trouvé l'expression pour $\Delta C_p$ en fonction de 'T' suivante:
 
-La réaction est utilisée pour ses propriétés exothermiques: en effet, on cherche à produire de l'énergie qui sera consommée par les réactions endothermiques se produisant dans le réacteur de reformage primaire. 
+$\Delta C_p=A+\dfrac{BT}{1000}+C(\dfrac{T}{1000})^2+D(\dfrac{T}{1000})^3+\frac{E}{(\dfrac{T}{1000})^2}$        (2)
 
+où T est la température du mileu et A,B,C,D,E sont des constantes propres à chaques composants (cfr Annexe).
+
+De (1) et (2), on trouve facilement:
+\begin{itemize}
+\item{}
+\end{itemize}
 \end{document}
