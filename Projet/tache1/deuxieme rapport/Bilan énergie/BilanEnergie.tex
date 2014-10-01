@@ -7,8 +7,33 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \author{Groupe 1246}
+\usepackage[squaren,Gray]{SIunits}
+\usepackage{numprint}
+\usepackage{mhchem}
 \begin{document}
-\section{Bilan d'énergie}
-Il nous a été demandé de calculer de faire le bilan énergétique. Sur base du flowsheet simplifié que nous avons complété en S2, nous avons déterminé que seulement trois réactions devait être analyser afin de réalisé le bilan:
+\section*{Bilan d'énergie}
+Il nous a été demandé de calculer de faire le bilan énergétique. Sur base du flowsheet simplifié que nous avons complété en S2, nous avons déterminé que seulement trois réactions devait être analyser, celles se produisant dans le bloc du four et dans le réacteur du reformage primaire, afin de réalisé le bilan:
+\begin{itemize}
+\item{$CH_{4(g)} + 2O_{2(g)} \Rightarrow 2H_{2}O + CO_{2(g)}$ (Combustion de $CH_{4(g)}$, réaction complète)}
+\item{$CH_{4(g)} + H_{2}O_{(g)} \Rightarrow 3H_{2(g)} + CO_{(g)}$ (Reformage à vapeur de $CH_{4(g)}$, réaction à l'équilibre)}
+\item{$CO_{(g)} + H_{2}O_{(g)} \Rightarrow H_{2(g)} + CO_{2(g)}$ (Reformage à vapeur de $CH_{4}$, réaction à l'équilibre)}
+\end{itemize}
+
+Nous avons commencé par calculer le $\Delta H$ de chaque équation.
+\subsection*{Le bloc 'Four'}
+Dans ce bloc, nous avons donc traiter la réaction suivante:
+\begin{itemize}
+\item{$CH_{4(g)} + 2O_{2(g)} \Rightarrow 2H_{2}O + CO_{2(g)}$}
+\end{itemize}
+Nous savons que:
+
+$\Delta H^o_{react}=2\Delta H^o_{H_2O} + \Delta H^o_{CO_2} - (2\Delta H^o_{O_2} + \Delta H^o_{CH_4})$
+
+ou encore
+
+$\Delta H^o_{react}=$ \unit{206}{\kilo\joule\per\mole}
+
+
+La réaction est utilisée pour ses propriétés exothermiques: en effet, on cherche à produire de l'énergie qui sera consommée par les réactions endothermiques se produisant dans le réacteur de reformage primaire. 
 
 \end{document}
