@@ -20,17 +20,17 @@ Il nous a été demandé de calculer de faire le bilan énergétique. Sur base d
 \end{itemize}
 
 Nous avons commencé par calculer le $\Delta H$ de chaque équation.
-\subsection*{Le bloc 'Four'}
+\subsection*{Le bloc 'Réacteur de reformage primaire'}
 Dans ce bloc, nous avons traité les réactions suivantes:
 \begin{itemize}
 \item{$CH_{4(g)} + H_{2}O_{(g)} \Rightarrow 3H_{2(g)} + CO_{(g)}$}
 \item{$CO_{(g)} + H_{2}O_{(g)} \Rightarrow H_{2(g)} + CO_{2(g)}$}
 \end{itemize}
 
-Nous allons d'abord nous interreser à la première des deux.
+Nous nous sommes d'abord interressé à la première des deux.
 Nous savons que:
 
-$\Delta H^o_{react}=3\Delta H^o_{H_2} + \Delta H^o_{CO} - (\Delta H^o_{CH_{4(g)}} + \Delta H^o_{H_{2}O_{(g)}})$
+$\Delta H^o_{react1}=3\Delta H^o_{H_{2(g)}} + \Delta H^o_{CO_{(g)}} - (\Delta H^o_{CH_{4(g)}} + \Delta H^o_{H_{2}O_{(g)}})$
 
 La réaction se passant dans un mileu à une température 'T' donnée, nous devons calculer les différences d'entalpie molaire de formation des composés à cette température, sur base des données expérimentale. Pour cela, nous avons utilisé la relation suivante:
 
@@ -50,10 +50,55 @@ ou encore
 
 $H^o_m(T_2)=\Delta H^o_{form}(T_1) + [AT+\dfrac{BT^2}{2\cdot10^3}+C(\dfrac{T^3}{3\cdot10^6})+D(\dfrac{T^4}{4\cdot10^9})+\frac{-10^6E}{T}]^{T_2}_{T_1}$(3) 
 
-En remplaçant la valeur des $\Delta H^o$ dans (1) de chaque élément par leur valeur à la température 'T' obtenue avec (3), on peut facilement obtenir une expression pour $\Delta H^o_{react}$.
+En remplaçant la valeur des $\Delta H^o$ de chaque élément par leur valeur à la température 'T' obtenue avec (3), on peut facilement obtenir une expression pour $\Delta H^o_{react}$. A titre d'exemple, nous avons réalisé le calcul complet pour un milieu réactionnel à une température standard de \unit{1080}{\kelvin}.
+
+Comme indiqué plus haut, nous savons que:
+
+$\Delta H^o_{react}=3\Delta H^o_{H_{2(g)}} + \Delta H^o_{CO_{(g)}} - (\Delta H^o_{CH_{4(g)}} + \Delta H^o_{H_{2}O_{(g)}})$
+
+Calculons donc les enthalpies de formation des différents composés à la température de 1080 K, sur base de la formule (3), des données précisées en annexe et des tables de données expérimentale à une température de \unit{298.5}{\kelvin}:
+
+\begin{itemize}
+\item{$\Delta H^o_{H_{2(g)}} (1080K)= \unit{23113}{\joule}$}
+\item{$\Delta H^o_{CO_{(g)}} (1080K)= \unit{-86170}{\joule}$}
+\item{$\Delta H^o_{CH_{4(g)}} (1080K)= \unit{-30556}{\joule}$}
+\item{$\Delta H^o_{H_{2}O_{(g)}} (1080K)= \unit{-212480}{\joule}$}
+\end{itemize}
+
+En utilisant ces données nous trouvons:
+
+$\Rightarrow \Delta H^o_{react1}= 3\cdot 23113 + (-86170) - (-30556 + (-212480))= \unit{226205}{\joule}$
+
+de la même façon, nous trouvons pour la seconde réaction les résultats suivants:
+
+\begin{itemize}
+\item{$\Delta H^o_{CO_{2(g)}} (1080K)= \unit{-352750}{\joule}$}
+\end{itemize}
+$\Rightarrow \Delta H^o_{react2}= \Delta H^o_{CO_{2(g)}} + \Delta H^o_{H_{2(g)}} -(\Delta H^o_{H_{2}O_{(g)}} + \Delta H^o_{CO_{(g)}})$
+
+=-352750 + 23113 - ( -212480 + (-86170)) = \unit{-30987}{\joule}7
+
+Les deux réactions se produisant en même temps dans le même réacteur, nous pouvons établir un bilan énergétique général au bloc:
 
 
-\subsection*{Annexe}
+$\Delta H^o_{general}= \Delta H^o_{react1} + \Delta H^o_{react2} = 226205 - 30987 = \unit{195218}{\joule}$
+
+\subsection*{Le bloc 'Four'}
+La réaction traitée dans cette partie est la suivante:
+
+$CH_{4(g)} + 2O_{2(g)} \Rightarrow 2H_{2}O_{(g)} + CO_{2(g)}$
+
+Nous savons que:
+
+$\Delta H^o_{react} = \Delta H^o_{CO_{2(g)}} + 2\cdot \Delta H^o_{H_{2}O_{(g)}} - (2\cdot \Delta H^o_{H_{2(g)}} + \Delta H^o_{CH_{4(g)}}) $
+
+En supposant que la réaction se déroule à température ambiante, nous pouvons utiliser les table de $\Delta H^o$ pour une température de \unit{298.5}{\kelvin}. Il vient:
+
+$\Delta H^o_{react} = -393510 + 2\cdot -241830 - (-74600) = \unit{-802570}{\joule}$
+
+La valeur trouvée nous indique que la réaction est exothermique. En effet, l'énergie dégagée par le four va être utilisée à alimenter le réacteur de reformage primaire, dont le bilan énergétique est endothermique.
+\section*{Annexe}
+\subsection*{Données et constantes}
 On connait les valeurs de $\Delta H^o$ pour les éléments suivants:
 \begin{itemize}
 \item{$CH_{4(g)} \Rightarrow \unit{-74.6}{\kilo\joule\per\mole}$}
@@ -76,5 +121,28 @@ On connaît les constantes permettant d'utiliser la formule (2) suivantes:
 \hline 
 \rule[-1ex]{0pt}{2.5ex} $CO_{2(g)}$ & 34.2244 & 41.044 & -23.5297 & 5.5352 & -0.129 \\ 
 \hline 
+\rule[-1ex]{0pt}{2.5ex} $H_{2(g)}$ & 33.066 & -11.363 & 11.432 & -2.772 & -0.158 \\ 
+\hline 
 \end{tabular} 
+\subsection*{Code matlab}
+Voici une fonction en matlab créée par nos soins, nous permettant de calculer l'enthalpie d'un élément à une certaine température, en fonction des différentes constantes utilisées dans la formule (3).
+
+function [Sol]= HmolT(Hfo,T2,A,B,C,D,E)
+
+\% Hfo est le delta H formation a 298K en kJ/mol, T2 est la temperature pour
+
+\% laquelle on desire connaitre le nouveau delta H, A,B,C,D et E sont
+
+\% des donnees qui doivent etre prises sur le site nist et qui dependent
+
+\% de la molecule pour laquelle on calcule le nouveau H.
+
+$Intcp1 = A*298 + B* (298^2)/2000 + C*(298^3)/(3*1000^2) + D*(298^4)/(4*1000^3) + (-1000^2)*E/298;$
+
+$ = A*T2 + B* (T2^2)/2000 + C*(T2^3)/(3*1000^2) + D*(T2^4)/(4*1000^3) + (-1000^2)*E/T2;$
+
+$Sol = Hfo*1000 + Intcp2 - Intcp1$
+
+end
+
 \end{document}
