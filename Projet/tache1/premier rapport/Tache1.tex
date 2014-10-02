@@ -54,14 +54,14 @@ La réaction se produisant en continu, on peut calculer des flux de quantité pa
 On obtient selon nos calculs:
 
 \begin{itemize}
-  \item{une consommation de $N_2$ égale à: $\dfrac{10^{9}}{17} \cdot \dfrac{1}{2} \cdot \dfrac{1}{3600 \cdot 24} \cong 340.41 $ \unit{}{\mole\per\second}.}
-  \item{une consommation de $H_2$ égale à: $\dfrac{10^{9}}{17} \cdot \dfrac{3}{2} \cdot \dfrac{1}{3600 \cdot 24} \cong 1021.241 $\unit{}{\mole\per\second}
-  \item{une production de $NH_3$ égale à: $\dfrac{10^{9}}{17}} \cdot \dfrac{1}{3600 \cdot 24} \cong 680.827$ \unit{}{\mole\per\second}
+  \item{une consommation de $N_2$ égale à: $\dfrac{10^{9}}{17} \cdot \dfrac{1}{2} \cdot \dfrac{1}{3600 \cdot 24} = 340.41 $ \unit{}{\mole\per\second}.}
+  \item{une consommation de $H_2$ égale à: $\dfrac{10^{9}}{17} \cdot \dfrac{3}{2} \cdot \dfrac{1}{3600 \cdot 24} = 1021.241 $\unit{}{\mole\per\second}
+  \item{une production de $NH_3$ égale à: $\dfrac{10^{9}}{17}} \cdot \dfrac{1}{3600 \cdot 24} = 680.827$ \unit{}{\mole\per\second}
 }}\end{itemize}
 
 \section*{Aspect thermique}
-Selon nos recherches, nous avons trouvé que la réaction était exothermique ($\Delta H_{react}(\unit{25}{\celsius}) = -92.2kJ$).
-Il nous était indiqué que la température du réacteur devait être maintenue à \unit{500}{\celsius} et que celui-ci, 
+Selon nos recherches, nous avons trouvé que la réaction était exothermique ($\Delta H_{react}(\unit{25}{\celsius}) = \unit{-92.2}
+{\kilo\joule \per \mole}$ pour la réaction en haut de page). Il nous était indiqué que la température du réacteur devait être maintenue à \unit{500}{\celsius} et que celui-ci, 
 vu le caractère exothermique de la réaction, pouvait être refroidi par un débit continu d'eau, dont la température 
 variait entre \unit{25}{\celsius} et \unit{90}{\celsius}.
 
@@ -70,16 +70,16 @@ variait entre \unit{25}{\celsius} et \unit{90}{\celsius}.
 Il nous faut déterminer l'enthalpie de la réaction à \unit{500}{\celsius}, c'est-à-dire \unit{773.15}{\kelvin}.
 Nous l'obtenons comme suit:
 
-$$\Delta H(\unit{773.15}{\kelvin}) = \Delta H_{NH_2}(\unit{298.15}{\kelvin}) + \int_{298.15}^{773.15} C_{p, NH_2} dT 
+$$\Delta H(\unit{773.15}{\kelvin}) = \Delta H_{NH_3}(\unit{298.15}{\kelvin}) + \int_{298.15}^{773.15} C_{p, NH_3} dT 
  - \frac{1}{2} \lbrack \Delta H_{N_2}(\unit{298.15}{\kelvin}) $$ 
 $$+ \int_{298.15}^{773.15} C_{p, N_2} dT \rbrack - \frac{3}{2}  \lbrack \Delta H_{H_2}(\unit{298.15}{\kelvin}) + \int_{298.15}^{773.15} C_{p, H_2} dT  \rbrack $$
 
 Il est important de préciser que les $C_{p}$ sont les constantes calorifiques massiques des différents composants. 
 Nous trouvons leur valeur ainsi que celles des enthalpies dans le livre de référence\footnote{Principes de chimie - P. ATKINS et L.JONES, 2e édition, 2013}.
-Nous obtenons finalement une différence d'enthalpie d'approximativement \unit{-57}{\kilo\joule}.
+Nous obtenons finalement une différence d'enthalpie d'approximativement \unit{-57}{\kilo\joule\per\mole} de NH_3.
 
 Nous savons que:
-$$q =  C_p \cdot dT$$
+$$q =  C_{p} \cdot \Delta T$$
 
 Au vu des indications données, en supposant que nous travaillons à pression constante, en supposant que la température initiale de
 réacteur est de \unit{500}{\celsius}, il vient:
