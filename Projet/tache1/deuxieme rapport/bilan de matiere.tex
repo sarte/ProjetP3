@@ -1,0 +1,155 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{chemist}
+\usepackage{array}
+\usepackage[version=3]{mhchem}
+\usepackage{amsmath}
+\begin{document}
+\section*{Bilan de matière}
+
+\subsection*{Introduction et notations}
+
+Cette section met en avant l'évolution des réactifs et produits en terme de moles. Nous pouvons ainsi gérer les quantités de matière nécessaires à la réaction, et moduler la production d'ammoniac. Nous avons procédé de manière systématique, en partant de la première équation jusqu'à la dernière, et posant quelques variables intermédiaires:
+
+\begin{itemize}
+	\item Soit $x$ le nombre de moles de \ce{CH4} introduites dans le réacteur.
+	\item Soit $y$ le nombre de moles de \ce{H2O} introduites dans le réacteur.
+	\item Soit $m(T)$ le degré d'avancement de la réaction à l'équilibre 1.
+	\item Soit $n(T)$ le degré d'avancement de la réaction à l'équilibre 2.
+	\item Soit $a$ le nombre de moles d'air introduites dans le réacteur.
+\end{itemize}
+
+\subsection*{Analyse et commentaires}
+Dans la phase de reformage primaire, les réactions sont des équilibres; ce qui signifie qu'il faudra prendre en compte un degré d'avancement lié à la température par la constante d'équilibre. Pour le moment, nous ne devons pas nous en préoccuper, et nous poserons seulement les variables $m(T)$ et $n(T)$ identifiées ci-dessus. Nous discuterons l'aspect énergétique dans la section "Bilan d'énergie", c'est là qu'interviendra la température de réaction.
+
+\begin{figure}[h]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+&
+\multicolumn{1}{c!{\makebox[0pt]{+}}}{
+\ce{CH4}}
+&
+\multicolumn{1}{c!{\makebox[0pt]{$\rightleftharpoons$}}}{\ce{H2O}}
+&
+\multicolumn{1}{c!{\makebox[0pt]{+}}}{\ce{3H2}}
+& \ce{CO}
+\\
+\hline
+$n_i$ & x & y & 0 & 0\\
+\hline
+$n_f$ & x-m & y-m-n & 3m+n & m-n \\\hline
+\end{tabular}
+\end{center}
+\caption{Tableau d'avancement de la réaction 1 du reformage primaire.}
+\end{figure}
+\begin{figure}[h]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+&
+\multicolumn{1}{c!{\makebox[0pt]{+}}}{
+\ce{CO}}
+&
+\multicolumn{1}{c!{\makebox[0pt]{$\rightleftharpoons$}}}{\ce{H2O}}
+&
+\multicolumn{1}{c!{\makebox[0pt]{+}}}{\ce{H2}}
+& \ce{CO2}
+\\
+\hline
+$n_i$ & m & y-m & 3m & 0\\
+\hline
+$n_f$ & m-n & y-m-n & 3m+n & n \\\hline
+\end{tabular}
+\end{center}
+\caption{Tableau d'avancement de la réaction 2  du reformage primaire.}
+\end{figure}
+
+Les réaction suivantes sont toutes considérées comme complètes. Dans le reformeur secondaire, le méthane et l'oxygène sont alimentés de façon stœchiométrique, ce qui signifie qu'il ne reste plus aucun de ces deux réactifs après réaction. Tout a été converti. Cette condition nous permet d'aboutir à une première équation :
+$$x - m - 0.21a = 0$$
+Nous reviendrons sur cette équation plus tard.
+
+\begin{figure}[h]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+&
+\multicolumn{1}{c!{\makebox[0pt]{+}}}{
+\ce{2CH4}}
+&
+\multicolumn{1}{c!{\makebox[0pt]{$\rightarrow$}}}{\ce{O2}}
+&
+\multicolumn{1}{c!{\makebox[0pt]{+}}}{\ce{2CO}}
+& \ce{4H2}
+\\
+\hline
+$n_i$ & x-m & 0.21a & m-n & 3m+n\\
+\hline
+$n_f$ & 0 & 0 & x-n & m+n+2x \\\hline
+\end{tabular}
+\end{center}
+\caption{Tableau d'avancement de la réaction du reformage secondaire}
+\end{figure}
+
+Dans le réacteur Water-Gas-Shift, tout le \ce{CO} aura réagi, mais il faudra par la suite séparer l'eau restante, et absorber le \ce{CO2}.
+
+\begin{figure}[h]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+&
+\multicolumn{1}{c!{\makebox[0pt]{+}}}{
+\ce{CO}}
+&
+\multicolumn{1}{c!{\makebox[0pt]{$\rightarrow$}}}{\ce{H2O}}
+&
+\multicolumn{1}{c!{\makebox[0pt]{+}}}{\ce{H2}}
+& \ce{CO2}
+\\
+\hline
+$n_i$ & x-n & y-m-n & m+n+2x & n\\
+\hline
+$n_f$ & 0 & y-m-x & m+3x & x \\\hline
+\end{tabular}
+\end{center}
+\caption{Tableau d'avancement de la réaction dans les réacteurs Water-Gas-Shift.}
+\end{figure}
+
+Enfin, la dernière réaction permet la synthèse de \ce{NH3}. Nous imposons qu'il ne reste ni de \ce{N2} ni de \ce{H2}, étant donné que la réaction globale peut être considérée comme complète, grâce au "recyclage". Cette étape sera expliquée plus en profondeur dans la section "??????". %tâche 2
+Nous obtenons ici une seconde équation:
+$$ 2\cdot0.78a = \frac{2}{3}\cdot (m + 3x) $$
+
+\begin{figure}[h]
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+&
+\multicolumn{1}{c!{\makebox[0pt]{+}}}{
+\ce{N2}}
+&
+\multicolumn{1}{c!{\makebox[0pt]{$\rightarrow$}}}{\ce{3H2}}
+&
+\ce{2NH3}
+\\
+\hline
+$n_i$ & 0.78a & m+3x & 0 \\
+\hline
+$n_f$ & 0 & 0 & 2\cdot0.78 a \\\hline
+\end{tabular}
+\end{center}
+\caption{Tableau d'avancement de la synthèse de l'ammoniac}
+\end{figure}
+
+Au terme de ce procédé, nous aurons donc produit $1.56a$ moles de \ce{CH4}. Cette quantité est liée aux réactifs initiaux (i.e. $x$ et $y$) par les deux équations obtenues plus haut:
+\[
+\left \{
+\begin{array}
+& x - m - 0.21a = 0
+& 2\cdot0.78a = \frac{2}{3}\cdot (m + 3x) 
+\end{array}
+\right.
+\]
+WTF pourquoi j'ai pas d'équation avec $y$ ? \#incompréhension \#abandon
+\end{document}

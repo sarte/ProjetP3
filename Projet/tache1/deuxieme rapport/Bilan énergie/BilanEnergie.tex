@@ -18,8 +18,8 @@ devaient être analysées pour réaliser le bilan: celles se produisant dans le 
 reformage primaire.
 \begin{itemize}
 \item{$CH_{4(g)} + 2O_{2(g)} \Rightarrow 2H_{2}O_{(g)} + CO_{2(g)}$ (Combustion de $CH_{4(g)}$, réaction complète)}
-\item{$CH_{4(g)} + H_{2}O_{(g)} \Rightarrow 3H_{2(g)} + CO_{(g)}$ (Reformage à vapeur de $CH_{4(g)}$, réaction à l'équilibre)}
-\item{$CO_{(g)} + H_{2}O_{(g)} \Rightarrow H_{2(g)} + CO_{2(g)}$ (Reformage à vapeur de $CH_{4}$, réaction à l'équilibre)}
+\item{$CH_{4(g)} + H_{2}O_{(g)} \Leftrightarrow 3H_{2(g)} + CO_{(g)}$ (Reformage à vapeur de $CH_{4(g)}$, réaction à l'équilibre)}
+\item{$CO_{(g)} + H_{2}O_{(g)} \Leftrightarrow H_{2(g)} + CO_{2(g)}$ (Reformage à vapeur de $CH_{4}$, réaction à l'équilibre)}
 \end{itemize}
 
 Nous avons commencé par calculer le $\Delta H$ de chaque équation.
@@ -28,8 +28,8 @@ Nous avons commencé par calculer le $\Delta H$ de chaque équation.
 
 Dans ce bloc, nous avons traité les réactions suivantes:
 \begin{itemize}
-\item{$CH_{4(g)} + H_{2}O_{(g)} \Rightarrow 3H_{2(g)} + CO_{(g)}$}
-\item{$CO_{(g)} + H_{2}O_{(g)} \Rightarrow H_{2(g)} + CO_{2(g)}$}
+\item{$CH_{4(g)} + H_{2}O_{(g)} \Leftrightarrow 3H_{2(g)} + CO_{(g)}$}
+\item{$CO_{(g)} + H_{2}O_{(g)} \Leftrightarrow H_{2(g)} + CO_{2(g)}$}
 \end{itemize}
 
 Nous nous sommes d'abord interressés à la première des deux.
@@ -43,7 +43,7 @@ avons utilisé la relation suivante:
 
 $H^o_m(T_2)=\Delta H^o_{form}(T_1)+\int_{T_1}^{T_2} \Delta C_pdT$   (1)
 
-En faisant des recherches, nous avons trouvé l'expression pour $\Delta C_p$ en fonction de $T$ suivante:
+En faisant des recherches \footnote{http://webbook.nist.gov/chemistry/form-ser.html}, nous avons trouvé l'expression pour $\Delta C_p$ en fonction de $T$ suivante:
 
 $\Delta C_p=A+\dfrac{BT}{1000}+C(\dfrac{T}{1000})^2+D(\dfrac{T}{1000})^3+\frac{E}{(\dfrac{T}{1000})^2}$        (2)
 
@@ -69,30 +69,30 @@ Calculons donc les enthalpies de formation des différents composés à la temp�
 $(3)$, des données précisées en annexe et des tables de données expérimentales à une température de \unit{298.5}{\kelvin}:
 
 \begin{itemize}
-\item{$\Delta H^o_{H_{2(g)}} (1080K)= \unit{23113}{\joule}$}
-\item{$\Delta H^o_{CO_{(g)}} (1080K)= \unit{-86170}{\joule}$}
-\item{$\Delta H^o_{CH_{4(g)}} (1080K)= \unit{-30556}{\joule}$}
-\item{$\Delta H^o_{H_{2}O_{(g)}} (1080K)= \unit{-212480}{\joule}$}
+\item{$\Delta H^o_{H_{2(g)}} (1080K)= \unit{23.113}{\kilo\joule}$}
+\item{$\Delta H^o_{CO_{(g)}} (1080K)= \unit{-86.170}{\kilo\joule}$}
+\item{$\Delta H^o_{CH_{4(g)}} (1080K)= \unit{-30.556}{\kilo\joule}$}
+\item{$\Delta H^o_{H_{2}O_{(g)}} (1080K)= \unit{-212.480}{\kilo\joule}$}
 \end{itemize}
 
 En utilisant ces données nous trouvons:
 
-$\Rightarrow \Delta H^o_{react1}= 3\cdot 23113 + (-86170) - (-30556 + (-212480))= \unit{226205}{\joule}$
+$\Rightarrow \Delta H^o_{react1}= 3\cdot 23113 + (-86170) - (-30556 + (-212480))= \unit{226.205}{\kilo\joule}$ par mole de $CH_4$.
 
 de la même façon, nous trouvons pour la seconde réaction les résultats suivants:
 
 \begin{itemize}
-\item{$\Delta H^o_{CO_{2(g)}} (1080K)= \unit{-352750}{\joule}$}
+\item{$\Delta H^o_{CO_{2(g)}} (1080K)= \unit{-352.750}{\kilo\joule}$}
 \end{itemize}
 $\Rightarrow \Delta H^o_{react2}= \Delta H^o_{CO_{2(g)}} + \Delta H^o_{H_{2(g)}} -(\Delta H^o_{H_{2}O_{(g)}} + \Delta H^o_{CO_{(g)}})$
 
-=-352750 + 23113 - ( -212480 + (-86170)) = \unit{-30987}{\joule}7
+=-352750 + 23113 - ( -212480 + (-86170)) = \unit{-30.987}{\kilo\joule} par mole de $CO$.
 
 Les deux réactions se produisant en même temps dans le même réacteur, nous pouvons établir un bilan énergétique 
 général au bloc:
 
 
-$\Delta H^o_{general}= \Delta H^o_{react1} + \Delta H^o_{react2} = 226205 - 30987 = \unit{195218}{\joule}$
+$\Delta H^o_{general}= \Delta H^o_{react1} + \Delta H^o_{react2} = 226205 - 30987 = \unit{195.218}{\kilo\joule}$ par mole de $CH_4$.
 
 \subsection*{Le bloc 'Four'}
 La réaction traitée dans cette partie est la suivante:
@@ -106,7 +106,7 @@ $\Delta H^o_{react} = \Delta H^o_{CO_{2(g)}} + 2\cdot \Delta H^o_{H_{2}O_{(g)}} 
 En supposant que la réaction se déroule à température ambiante, nous pouvons utiliser les table de $\Delta H^o$ pour une
 température de \unit{298.5}{\kelvin}. Il vient:
 
-$\Delta H^o_{react} = -393510 + 2\cdot -241830 - (-74600) = \unit{-802570}{\joule}$
+$\Delta H^o_{react} = -393510 + 2\cdot -241830 - (-74600) = \unit{-802.570}{\kilo\joule}$ par mole de $CH_4$.
 
 La valeur trouvée nous indique que la réaction est exothermique. En effet, l'énergie dégagée par le four va être 
 utilisée pour alimenter le réacteur de reformage primaire, dont le bilan énergétique est endothermique.
