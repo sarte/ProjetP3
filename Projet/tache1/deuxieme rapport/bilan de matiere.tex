@@ -6,22 +6,24 @@
 \usepackage{array}
 \usepackage[version=3]{mhchem}
 \usepackage{amsmath}
+\usepackage[squaren,Gray]{SIunits}
+\usepackage{numprint}
 \begin{document}
 \section*{Bilan de matière}
 
 \subsection*{Introduction et notations}
 
-Cette section met en avant l'évolution des réactifs et produits en terme de moles. 
-Nous pouvons ainsi gérer les quantités de matière nécessaires à la réaction, et moduler la production d'ammoniac.
+Cette section met en avant l'évolution des réactifs et produits en terme de débit. 
+Nous pouvons ainsi gérer les quantités de matière nécessaires à la réaction par unité de temps, et moduler la production d'ammoniac.
 Nous avons procédé de manière systématique, en partant de la première équation jusqu'à la dernière, et posant quelques 
 variables intermédiaires:
 
 \begin{itemize}
-	\item Soit $x$ le nombre de moles de \ce{CH4} introduites dans le réacteur.
-	\item Soit $y$ le nombre de moles d' \ce{H2O} introduites dans le réacteur.
+	\item Soit $x$ le nombre de moles de \ce{CH4} introduites dans le réacteur par jour.
+	\item Soit $y$ le nombre de moles d' \ce{H2O} introduites dans le réacteur par jour.
 	\item Soit $m$ le degré d'avancement de la réaction à l'équilibre 1.
 	\item Soit $n$ le degré d'avancement de la réaction à l'équilibre 2.
-	\item Soit $a$ le nombre de moles d'air introduites dans le réacteur.
+	\item Soit $a$ le nombre de moles d'air introduites dans le réacteur par jour.
 \end{itemize}
 
 \subsection*{Analyse et commentaires}
@@ -72,9 +74,7 @@ $n_f$ & m-n & y-m-n & 3m+n & n \\\hline
 \caption{Tableau d'avancement de la réaction 2  du reformage primaire.}
 \end{figure}
 
-Les réaction suivantes sont toutes considérées comme complètes. Dans le reformeur secondaire, le méthane et l'oxygène
-sont alimentés de façon stœchiométrique, ce qui signifie qu'il ne reste plus aucun de ces deux réactifs après réaction.
-Tout a été converti. Cette condition nous permet d'aboutir à une première équation :
+Les réaction suivantes sont toutes considérées comme complètes. Dans le reformeur secondaire, le méthane et l'oxygène sont alimentés de façon stœchiométrique, ce qui signifie qu'il ne reste plus aucun de ces deux réactifs après réaction. Tout a été converti. Cette condition nous permet d'aboutir à une première équation :
 $$x - m - 0.21a = 0$$
 Nous reviendrons sur cette équation plus tard.
 
@@ -100,8 +100,7 @@ $n_f$ & 0 & 0 & x-n & m+n+2x \\\hline
 \caption{Tableau d'avancement de la réaction du reformage secondaire}
 \end{figure}
 
-Dans le réacteur Water-Gas-Shift, tout le \ce{CO} aura réagi, mais il faudra par la suite séparer l'eau restante, et
-absorber le \ce{CO2}.
+Dans le réacteur Water-Gas-Shift, tout le \ce{CO} aura réagi, mais il faudra par la suite séparer l'eau restante, et absorber le \ce{CO2}.
 
 \begin{figure}[h]
 \begin{center}
@@ -125,9 +124,7 @@ $n_f$ & 0 & y-m-x & m+3x & x \\\hline
 \caption{Tableau d'avancement de la réaction dans les réacteurs Water-Gas-Shift.}
 \end{figure}
 
-Enfin, la dernière réaction permet la synthèse de \ce{NH3}. Nous imposons qu'il ne reste ni de \ce{N2} ni de \ce{H2},
-étant donné que la réaction globale peut être considérée comme complète, grâce au "recyclage". Cette étape sera 
-expliquée plus en profondeur dans la section "??????". %tâche 2
+Enfin, la dernière réaction permet la synthèse de \ce{NH3}. Nous imposons qu'il ne reste ni de \ce{N2} ni de \ce{H2}, étant donné que la réaction globale peut être considérée comme complète, grâce au "recyclage". Cette étape sera expliquée plus en profondeur dans la section "??????". %tâche 2
 Nous obtenons ici une seconde équation:
 $$ 2\cdot0.78a = \frac{2}{3}\cdot (m + 3x) $$
 
@@ -152,8 +149,7 @@ $n_f$ & 0 & 0 & 2\cdot0.78 a \\\hline
 \caption{Tableau d'avancement de la synthèse de l'ammoniac}
 \end{figure}
 
-Au terme de ce procédé, nous aurons donc produit $1.56a$ moles de \ce{NH3}. Cette quantité est liée au nombre de moles 
-de \ce{CH4} introduites dans le réacteur (i.e. $x$) par les deux équations obtenues plus haut:
+Au terme de ce procédé, nous aurons donc produit $1.56a$ moles de \ce{NH3}. Cette quantité est liée au nombre de moles de \ce{CH4} introduites dans le réacteur (i.e. $x$) par les deux équations obtenues plus haut:
 \[
 \left \{
 \begin{array}
@@ -163,22 +159,13 @@ de \ce{CH4} introduites dans le réacteur (i.e. $x$) par les deux équations obt
 \right.
 \]
 
-Afin d'obtenir une relation avec le nombre de moles d' \ce{H2O} introduites dans le réacteur (i.e. $y$), nous devons 
-utiliser les constantes d'équilibre des deux premières réactions. Pour une certaine température $T$ [K], nous avons 
-l'expression suivante pour $K_1 (T)$ et $K_2 (T)$ , respectivement les constantes d'équilibre de la première et de 
-la deuxième équation:
+Afin d'obtenir une relation avec le nombre de moles d' \ce{H2O} introduites dans le réacteur (i.e. $y$), nous devons utiliser les constantes d'équilibre des deux premières réactions. Pour une certaine température $T$ [\unit{}{\kelvin}], nous avons l'expression suivante pour $K_1 (T)$ et $K_2 (T)$ , respectivement les constantes d'équilibre de la première et de la deuxième équation:
 \[
 \left \{
 \begin{array}
-& K_1 (T) =
-& K_2 (T) =
+& K_1 (T) = \left( \frac{(3m+n)³ \cdot (m-n) \cdot p_{tot}²}{(x+2m+y)² \cdot (y-m-n) \cdot (x-m) \cdot p_0²}\right)
+& K_2 (T) = \left( \frac{(3m+n)\cdot n}{(m-n)\cdot(y-m-n)} \right)
 \end{array}
 \right.
 \]
-Nous pouvons calculer la valeur théorique de ces constantes d'équilibre en fonction de la température avec 
-\textsc{Matlab} (voir code en Annexe). Il nous reste donc \numprint{4} équations à \numprint{4} inconnues et deux
-paramètres: la température $T$ et $a$ le nombre de moles d'air introduites dans le réacteur. À partir de ces équations, 
-nous avons crée un outil de gestion permettant de réaliser le calcul d'approvisionnement nécessaire en matière première,
-en fonction de la température et de la capacité d'ammoniac à produire (cfr section ??????? ).
-
-\end{document}
+Nous pouvons calculer la valeur théorique de ces constantes d'équilibre en fonction de la température avec \textsc{Matlab} (voir code en Annexe), en posant la pression du reformeur primaire à \unit{30}{\bbar}. Il nous reste donc \numprint{4} équations à \numprint{4} inconnues et \numprint{2} paramètres: la température $T$ et $a$ le nombre de moles d'air introduites dans le réacteur. À partir de ces équations, nous avons crée un outil de gestion permettant de réaliser le calcul d'approvisionnement nécessaire en matière première, en fonction de la température et de la capacité d'ammoniac à produire (cfr section ??????? ).
