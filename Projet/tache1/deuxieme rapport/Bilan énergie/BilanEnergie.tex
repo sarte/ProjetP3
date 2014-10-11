@@ -53,16 +53,16 @@ Nous savons que:
 
 $\Delta H^o_{react} = \Delta H^o_{CO_{2(g)}} + 2\cdot \Delta H^o_{H_{2}O_{(g)}} - (2\cdot \Delta H^o_{H_{2(g)}} + \Delta H^o_{CH_{4(g)}}) $
 
-En supposant que la réaction se déroule à température ambiante, nous pouvons utiliser les table de $\Delta H^o$ pour une
-température de \unit{298.5}{\kelvin}. Il vient:
+Comme pour le réacteur primaire, le milieu réactionnel n'est pas à température ambiante, mais à la température T. Nous devons donc à nouveau trouver la valeur du $\Delta H^o(T)$ de chaque composé grâce aux formules utilisées plus haut, puis injecter ces valeurs dans l'équation du $\Delta H^o_{react}$ (ces calculs, vu leurs longueurs, ne sont pas repris dans ce document).
 
-$\Delta H^o_{react} = -393510 + 2\cdot -241830 - (-74600) = \unit{-802.570}{\kilo\joule}$ par mole de $CH_4$.
+Nous supposons que la réaction à la température T sera exothermique car le $\Delta H^o_{react}$ à \unit{25}{\celsius} est négatif, comme indiqué ci-dessous:
 
-La valeur trouvée nous indique que la réaction est exothermique. En effet, l'énergie dégagée par le four va être 
-utilisée pour alimenter le réacteur de reformage primaire, dont le bilan énergétique est endothermique.
+$\Delta H^o_{react, \unit{25}{\celsius}} = -393510 + 2\cdot -241830 - (-74600) = \unit{-802.570}{\kilo\joule}$ par mole de $CH_4$.
+
+Ce résultat est logique dans la mesure où le four sert à fournir de l'énergie à la réaction endothermique du réacteur primaire de reformage.
 \section*{Annexe}
 \subsection*{Données et constantes}
-On connait les valeurs de $\Delta H^o$ pour les éléments suivants:
+On connait les valeurs de $\Delta H^o (\unit{25}{\celsius})$ pour les éléments suivants:
 \begin{itemize}
 \item{$CH_{4(g)} \Rightarrow \unit{-74.6}{\kilo\joule\per\mole}$}
 \item{$H_2O_{(g)} \Rightarrow \unit{-241.83}{\kilo\joule\per\mole}$}
