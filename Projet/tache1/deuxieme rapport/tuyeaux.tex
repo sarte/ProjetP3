@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{chemist}
+\usepackage{array}
+\usepackage[version=3]{mhchem}
+\usepackage{amsmath}
+\usepackage[squaren,Gray]{SIunits}
+\usepackage{numprint}
+\begin{document}
+\subsection{Calcul du nombre de tuyaux dans le réacteur primaire de reformage}
+
+dans cette section, nous allons déterminer le nombre de tuyaux de diamètre de \unit{10}{\centi\meter}, que doit comporter le réacteur de reformage. On considère que la vitesse superficielle typique à l'entrée du réacteur est de \unit{2}{\meter\per\second}, dans le cadre d'une production journalière de \unit{1500}{t} d'ammoniac. On pose que le flux '$\dot{V}$' s'exprime de la sorte:
+
+$\dot{V} = v \cdot A$, où $A$ est l'aire de la section du tuyaux valant $\unit{\pi \cdot 0.05^2}{\meter ^2}$. On trouve encore:
+
+$\dot{V} = \pi \cdot 0.05^2 = \unit{0.015}{\meter ^3 \per\second}$
+
+Grâce à notre bilan de matière et en supposant que les gaz sont parfaits, nous pouvons trouver:
+
+$F_{CH_4}$ = le flux de $CH_4$ en \unit{}{\meter ^3 \per\second}
+
+$F_{H_2O}$ = le flux de $H_2O$ en \unit{}{\meter ^3 \per\second}
+
+Les deux composés se déplaçant simultanément dans les tuyaux, le nombre de tuyaux $n$ se trouve grâce à la relation suivante:
+
+$n = \dfrac{F_{CH_4} + F_{H_2O}}{\dot{V}}$
+\end{document}
