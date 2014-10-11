@@ -10,6 +10,7 @@
 \usepackage[squaren,Gray]{SIunits}
 \usepackage{numprint}
 \usepackage{mhchem}
+\usepackage{listings}
 
 \begin{document}
 
@@ -20,7 +21,7 @@ Sur base du flowsheet simplifié disponible ci-après, nous avons déterminé qu
 devaient être analysées pour réaliser un tel bilan: celle se produisant dans le bloc du four et celles dans 
 le réacteur du reformage primaire.
 
-\subsection*{Le bloc 'Réacteur de reformage primaire'}
+\subsection*{Le bloc "Réacteur de reformage primaire"}
 
 Dans ce bloc, nous devons traiter les réactions suivantes, prenant place simultanément, à une certaine température $T$:
 
@@ -44,7 +45,7 @@ En remplaçant, nous pouvons facilement obtenir une expression pour $\Delta H^o_
 ici, mais qui est disponible dans le code \textsc{Matlab} en Annexe. Pour une illustration avec quelques valeurs de 
 température, se référer à la section "Analyse paramétrique".
 
-\subsection*{Le bloc 'Four'}
+\subsection*{Le bloc "Four"}
 La réaction traitée dans cette partie est la suivante:
 
 $CH_{4(g)} + 2O_{2(g)} \Rightarrow 2H_{2}O_{(g)} + CO_{2(g)}$
@@ -94,26 +95,28 @@ On connaît les constantes permettant d'utiliser la formule $(2)$:
 \rule[-1ex]{0pt}{2.5ex} $H_{2(g)}$ & 33.066 & -11.363 & 11.432 & -2.772 & -0.158 \\ 
 \hline 
 \end{tabular} 
+
+
 \subsection*{Code matlab}
 Voici une fonction en matlab créée par nos soins, nous permettant de calculer l'enthalpie d'un élément à une certaine
 température, en fonction des différentes constantes utilisées dans la formule $(3)$.
 
+
+\lstset{language=Matlab,breaklines=true}
+\begin{lstlisting}[frame=single]
+
 function [Sol]= HmolT(Hfo,T2,A,B,C,D,E)
 
-\% Hfo est le delta H formation a 298K en kJ/mol, T2 est la température pour
+%% Hfo est le delta H formation a 298K en kJ/mol, T2 est la temperature pour laquelle on desire connaitre le nouveau delta H, A,B,C,D et E sont des donnees qui doivent etre prises sur le site NIST et qui dependent de la molecule pour laquelle on calcule le nouveau H.
+%%
 
-\% laquelle on desire connaitre le nouveau delta H, A,B,C,D et E sont
+Intcp1 = A*298 + B* (298^2)/2000 + C*(298^3)/(3*1000^2) + D*(298^4)/(4*1000^3) + (-1000^2)*E/298;
 
-\% des donnees qui doivent etre prises sur le site nist et qui dependent
+ = A*T2 + B* (T2^2)/2000 + C*(T2^3)/(3*1000^2) + D*(T2^4)/(4*1000^3) + (-1000^2)*E/T2;
 
-\% de la molecule pour laquelle on calcule le nouveau H.
-
-$Intcp1 = A*298 + B* (298^2)/2000 + C*(298^3)/(3*1000^2) + D*(298^4)/(4*1000^3) + (-1000^2)*E/298;$
-
-$ = A*T2 + B* (T2^2)/2000 + C*(T2^3)/(3*1000^2) + D*(T2^4)/(4*1000^3) + (-1000^2)*E/T2;$
-
-$Sol = Hfo*1000 + Intcp2 - Intcp1$
+Sol = Hfo*1000 + Intcp2 - Intcp1
 
 end
+\end{lstlisting}
 
 \end{document}
