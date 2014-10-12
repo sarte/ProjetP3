@@ -1,7 +1,7 @@
 function [n] = K(deltaS, deltaH, T)
 %K Calculates the equilibrum constant in fuction of the 
 %temperature
-R=8,34151; 
+R=8,31451; 
 n = exp((deltaS.*T-1000.*deltaH)./(R.*T))
 end
 
