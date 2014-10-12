@@ -1,10 +1,9 @@
 function [n] = K(deltaS, deltaH, T)
 %K Calculates the equilibrum constant in fuction of the 
 %temperature
-R=8,31451; 
-n = exp((deltaS.*T-1000.*deltaH)./(R.*T))
+R=8.31451
+n = exp ((deltaS*T-deltaH*1000)/(R*T));
 end
-
 ---------------------------------------------------------------
 function [n] = deltaH(vec1,vec2,vec3,vec4,coef,T,deltaHref)
 %DELTAH calculates the deltaH of a reaction
