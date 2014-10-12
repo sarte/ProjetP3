@@ -6,6 +6,8 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{fullpage}
 \author{Groupe 1246}
 \usepackage[squaren,Gray]{SIunits}
 \usepackage{numprint}
@@ -16,7 +18,7 @@
 \section*{Bilan d'énergie}
 
 Cette section traite le bilan énergétique du procédé étudié.
-Sur base du flowsheet simplifié disponible ci-après, nous avons déterminé que seulement trois réactions
+Sur base du flow-sheet simplifié disponible ci-après, nous avons déterminé que seulement trois réactions
 devaient être analysées pour réaliser un tel bilan: celle se produisant dans le bloc du four et celles dans 
 le réacteur du reformage primaire.
 
@@ -25,8 +27,8 @@ le réacteur du reformage primaire.
 Dans ce bloc, nous devons traiter les réactions suivantes, prenant place simultanément, à une certaine température $T$:
 
 \begin{itemize}
-\item{$CH_{4(g)} + H_{2}O_{(g)} \rightleftharpoons  3H_{2(g)} + CO_{(g)}$}
-\item{$CO_{(g)} + H_{2}O_{(g)} \rightleftharpoons  H_{2(g)} + CO_{2(g)}$}
+\item{\ce{CH_{4(g)} + H_{2}O_{(g)} <=> 3H_{2(g)} + CO_{(g)}}}
+\item{\ce{CO_{(g)} + H_{2}O_{(g)} <=>  H_{2(g)} + CO_{2(g)}}}
 \end{itemize}
 
 \bigbreak
@@ -35,32 +37,37 @@ $$\Delta H^o_{react1}(T)=3\Delta H^o_{H_{2(g)}}(T) + \Delta H^o_{CO_{(g)}}(T) - 
 \Delta H^o_{H_{2}O_{(g)}}(T)\rbrack$$
 
 Pour rappel, l'enthalpie standard d'une espèce chimique à une certaine température s'écrit: 
-$\Delta H^o(T)=\Delta H^o(T_{ref})  +\int_{T_{ref}}^{T} C_{p}(T)dT$ . Les enthalpies à une température de référence 
-sont disponibles dans des tables. Il ne nous reste donc plus qu'à trouver l'expression de $\Delta C_p$ en fonction de $T$.
-Après quelques recherches\footnote{http://webbook.nist.gov/chemistry/form-ser.html}, nous avons trouvé la formule 
-suivante: $\Delta C_p=A+\dfrac{BT}{1000}+C(\dfrac{T}{1000})^2+D(\dfrac{T}{1000})^3+E\cdot(\dfrac{1000}{T})^2$ , 
-où A,B,C,D,E sont des constantes propres à chaque composant (cfr Annexe).
+$$\Delta H^o(T)=\Delta H^o(T_{ref})  + \displaystyle \int_{T_{ref}}^{T} C_{p}(T) \mathrm{d}T$$. Les enthalpies à
+une température de référence sont disponibles dans des tables. Il ne nous reste donc plus qu'à trouver l'expression
+de $\Delta C_p$ en fonction de $T$.
+Après quelques recherches\footnote{http://webbook.nist.gov/chemistry/form-ser.html}, nous avons trouvétrouvé la formule suivante:
+
+$$\Delta C_p=A+\dfrac{BT}{1000}+C\left(\dfrac{T}{1000}\right)^2+D\left(\dfrac{T}{1000}\right)^3+
+E\cdot\left(\dfrac{1000}{T}\right)^2$$
+
+où $A,B,C,D,E$ sont des constantes propres à chaque composant (cfr. Annexe).
 En remplaçant, nous pouvons facilement obtenir une expression pour $\Delta H^o_{react1}$, que nous ne retranscrirons pas
-ici, mais qui est disponible dans le code \textsc{Matlab} en Annexe. Pour une illustration avec quelques valeurs de 
+ici, mais qui est disponible dans le code \textsc{MATLAB} en Annexe. Pour une illustration avec quelques valeurs de 
 température, se référer à la section "Analyse paramétrique".
 
 \subsection*{Le bloc 'Four'}
 La réaction traitée dans cette partie est la suivante:
 
-$$CH_{4(g)} + 2O_{2(g)} \Rightarrow 2H_{2}O_{(g)} + CO_{2(g)}$$
+\ce{CH_{4(g)} + H_{2}O_{(g)} <=> 3H_{2(g)} + CO_{(g)}}
 
 Nous savons que:
 
-$\Delta H^o_{react} = \Delta H^o_{CO_{2(g)}} + 2\cdot \Delta H^o_{H_{2}O_{(g)}} - (2\cdot \Delta H^o_{H_{2(g)}} + \Delta H^o_{CH_{4(g)}}) $
+$\Delta H^o_{react} = \Delta H^o_{CO_{2(g)}} + 2\cdot \Delta H^o_{H_{2}O_{(g)}} - \left(2\cdot \Delta H^o_{H_{2(g)}} +
+\Delta H^o_{CH_{4(g)}}\right)$
 
-Comme pour le réacteur primaire, le milieu réactionnel n'est pas à température ambiante, mais à la température T. 
+Comme pour le réacteur primaire, le milieu réactionnel n'est pas à température ambiante, mais à la température $T$. 
 Nous devons donc à nouveau trouver la valeur du $\Delta H^o(T)$ de chaque composé grâce aux formules utilisées plus haut,
-puis injecter ces valeurs dans l'équation du $\Delta H^o_{react}$ (ces calculs, vu leur longueur, ne sont pas repris dans
-ce document).
-Nous supputons que la réaction à la température T sera exothermique car le four sert à fournir de l'énergie à la réaction
+puis injecter ces valeurs dans l'équation du $\Delta H^o_{react}$ -- ces calculs, vu leur longueur, ne sont pas repris dans
+ce document.
+Nous supposons que la réaction à la température $T$ sera exothermique car le four sert à fournir de l'énergie à la réaction
 endothermique du réacteur primaire de reformage.
-Nous posons:$\Delta H_{Reacteur}$  = a et $\Delta H_{Four}$  = b, par mole de $CH_4$ dans les deux cas et Q  la quantité 
-de $CH_4$ nécessaire dans le four.
+Nous posons: $\Delta H_{Reacteur} = a$ et $\Delta H_{Four} = b$, par mole de \ce{CH_4} dans les deux cas et $Q$, la quantité 
+de \ce{CH_4} nécessaire dans le four.
 On trouve alors:
 
 $Q = \dfrac{a}{b}$
@@ -70,11 +77,12 @@ $Q = \dfrac{a}{b}$
 \section*{Annexe}
 \subsection*{Données et constantes}
 On connait les valeurs de $\Delta H^o (\unit{25}{\celsius})$ pour les éléments suivants:
+
 \begin{itemize}
-\item{$CH_{4(g)} \Rightarrow \unit{-74.6}{\kilo\joule\per\mole}$}
-\item{$H_2O_{(g)} \Rightarrow \unit{-241.83}{\kilo\joule\per\mole}$}
-\item{$CO_{(g)} \Rightarrow \unit{-110.53}{\kilo\joule\per\mole}$}
-\item{$CO_{2(g)} \Rightarrow \unit{-393.51}{\kilo\joule\per\mole}$}
+\item{\ce{CH_{4(g)}} $\Rightarrow \unit{-74.6}{\kilo\joule\per\mole}$}
+\item{\ce{H_2O_{(g)}} $\Rightarrow \unit{-241.83}{\kilo\joule\per\mole}$}
+\item{\ce{CO_{(g)}} $\Rightarrow \unit{-110.53}{\kilo\joule\per\mole}$}
+\item{\ce{CO_{2(g)}} $\Rightarrow \unit{-393.51}{\kilo\joule\per\mole}$}
 \end{itemize}
 
 On connaît les constantes permettant d'utiliser la formule $(2)$:
@@ -83,20 +91,20 @@ On connaît les constantes permettant d'utiliser la formule $(2)$:
 \hline 
 \rule[-1ex]{0pt}{2.5ex}  & A & B & C & D & E \\ 
 \hline 
-\rule[-1ex]{0pt}{2.5ex} $CH_{4(g)}$ & -0.703 & 108.471 & -42.521 & 5.862 & 0.678 \\ 
+\rule[-1ex]{0pt}{2.5ex} \ce{CH_{4(g)}} & -0.703 & 108.471 & -42.521 & 5.862 & 0.678 \\ 
 \hline 
-\rule[-1ex]{0pt}{2.5ex} $H_2O_{(g)}$ & 30.092 & 6.832 & 6.793 & -2.534 & 0.082 \\ 
+\rule[-1ex]{0pt}{2.5ex} \ce{H_2O_{(g)}} & 30.092 & 6.832 & 6.793 & -2.534 & 0.082 \\ 
 \hline 
-\rule[-1ex]{0pt}{2.5ex} $CO_{(g)}$ & 25.5675 & 6.0961 & 4.0546 & -2.6713 & 0.131 \\ 
+\rule[-1ex]{0pt}{2.5ex} \ce{CO_{(g)}} & 25.5675 & 6.0961 & 4.0546 & -2.6713 & 0.131 \\ 
 \hline 
-\rule[-1ex]{0pt}{2.5ex} $CO_{2(g)}$ & 34.2244 & 41.044 & -23.5297 & 5.5352 & -0.129 \\ 
+\rule[-1ex]{0pt}{2.5ex} \ce{CO_{2(g)}} & 34.2244 & 41.044 & -23.5297 & 5.5352 & -0.129 \\ 
 \hline 
-\rule[-1ex]{0pt}{2.5ex} $H_{2(g)}$ & 33.066 & -11.363 & 11.432 & -2.772 & -0.158 \\ 
+\rule[-1ex]{0pt}{2.5ex} \ce{H_{2(g)}} & 33.066 & -11.363 & 11.432 & -2.772 & -0.158 \\ 
 \hline 
 \end{tabular} 
-\subsection*{Code matlab}
-Voici une fonction en matlab créée par nos soins, nous permettant de calculer l'enthalpie d'un élément à une certaine
-température, en fonction des différentes constantes utilisées dans la formule $(3)$.
+\subsection*{Code \textsc{MATLAB}}
+Voici une fonction en \textsc{MATLAB} créée par nos soins, nous permettant de calculer l'enthalpie d'un élément à une certaine
+température $T$, en fonction des différentes constantes utilisées dans la formule $(3)$.
 
 function [Sol]= HmolT(Hfo,T2,A,B,C,D,E)
 
