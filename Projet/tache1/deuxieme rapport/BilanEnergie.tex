@@ -27,29 +27,31 @@ le réacteur du reformage primaire.
 
 \subsection*{Le bloc "Réacteur de reformage primaire"}
 
-Dans ce bloc, nous devons traiter les deux réactions à l'équilibre suivantes, prenant
-place simultanément, à une certaine température $T$:
+Dans ce bloc, nous devons traiter les deux réactions à l'équilibre suivantes, prenant bien place simultanément, à une certaine température $T$:
 
-\begin{enumerate}
-\item {\ce{CH_{4(g)} + H_{2}O_{(g)} <=> 3H_{2(g)} + CO_{(g)}}}
-\item {\ce{CO_{(g)} + H_{2}O_{(g)} <=>  H_{2(g)} + CO_{2(g)}}}
-\end{enumerate}
+\begin{equation}\label{eq:Reaction1}
+\ce{CH_{4(g)} + H_{2}O_{(g)} <=> 3H_{2(g)} + CO_{(g)}}
+\end{equation}
+\begin{equation}\label{eq:Reaction2} {\ce{CO_{(g)} + H_{2}O_{(g)} <=>  H_{2(g)} + CO_{2(g)}}}
+\end{equation}
+
 
 \bigbreak
 Nous ne nous intéresserons qu'à la première des deux; la démarche étant analogue pour la seconde. Nous savons que:
 $$\Delta H\degree_{Reaction1}(T)=3\Delta H\degree_{H_{2(g)}}(T) + \Delta H\degree_{CO_{(g)}}(T) -
 \lbrack\Delta H\degree_{CH_{4(g)}}(T) + \Delta H\degree_{H_{2}O_{(g)}}(T)\rbrack$$
 
-Pour rappel, l'enthalpie standard d'une espèce chimique à une certaine température s'écrit: 
-$$\Delta H\degree(T)=\Delta H\degree(T_{ref})  + \displaystyle \int_{T_{ref}}^{T} C_{p}(T) \mathrm{d}T$$
+Pour rappel, l'enthalpie standard d'une espèce chimique à une certaine température s'écrit: \begin{equation}\label{eq:deltaH}
+\Delta H\degree(T)=\Delta H\degree(T_{ref})  + \displaystyle \int_{T_{ref}}^{T} C_{p}(T) \mathrm{d}T
+\end{equation}
 
-Les enthalpies à une température de référence sont disponibles dans des tables. Il ne nous reste donc plus
+
+Les enthalpies à une température de référence (typiquement, $T_{ref}=\unit{25}{\celsius}=\unit{298}{\kelvin}$) sont disponibles dans des tables. Il ne nous reste donc plus
 qu'à trouver l'expression de $C_p$ en fonction de $T$.
 Après quelques recherches\footnote{Site du \textsc{NIST}, National Institute of Standards and Technology:
-\url{http://webbook.nist.gov/chemistry/form-ser.html}}, nous avons trouvé la formule suivante:
-$$C_p=A+\dfrac{BT}{1000}+C\left(\dfrac{T}{1000}\right)^2+D\left(\dfrac{T}{1000}\right)^3+
-E\cdot\left(\dfrac{1000}{T}\right)^2$$
-où $A,B,C,D,E$ sont des constantes propres à chaque composant (cfr. Annexe).
+\url{http://webbook.nist.gov/chemistry/form-ser.html}}, nous avons trouvé la formule suivante: \begin{equation}\label{eqref:capacite}
+C_p=A+\dfrac{BT}{1000}+C\left(\dfrac{T}{1000}\right)^2+D\left(\dfrac{T}{1000}\right)^3+E\left(\dfrac{1000}{T}\right)^2
+\end{equation} où $A,B,C,D,E$ sont des constantes propres à chaque composant (cfr. Annexe).
 En remplaçant, nous pouvons facilement obtenir une expression pour $\Delta H\degree_{Reaction1}$, que nous ne retranscrirons pas
 ici, mais qui est disponible dans le code \textsc{MATLAB} en Annexe. Pour une illustration avec quelques valeurs de 
 température, se référer à la section "Analyse paramétrique".
@@ -91,10 +93,14 @@ On connait les valeurs de $\Delta H\degree (\unit{25}{\celsius})$ pour les élé
 \item{\ce{H_2O_{(g)}} $\Rightarrow \unit{-241.83}{\kilo\joule\per\mole}$}
 \item{\ce{CO_{(g)}} $\Rightarrow \unit{-110.53}{\kilo\joule\per\mole}$}
 \item{\ce{CO_{2(g)}} $\Rightarrow \unit{-393.51}{\kilo\joule\per\mole}$}
+\item{\ce{H_{2(g)}} $\Rightarrow \unit{0}{\kilo\joule\per\mole}$}
+\item{\ce{O_{2(g)}} $\Rightarrow \unit{0}{\kilo\joule\per\mole}$}
 \end{itemize}
 
-On connaît les constantes permettant d'utiliser la formule $(2)$:
+On connaît les constantes permettant d'utiliser la formule (\ref{eqref:capacite}):
 
+\begin{table}[h]
+\centering
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline 
 \rule[-1ex]{0pt}{2.5ex}  & A & B & C & D & E \\ 
@@ -110,10 +116,13 @@ On connaît les constantes permettant d'utiliser la formule $(2)$:
 \rule[-1ex]{0pt}{2.5ex} \ce{H_{2(g)}} & 33.066 & -11.363 & 11.432 & -2.772 & -0.158 \\ 
 \hline 
 \end{tabular} 
+\caption{Tableau des constantes pour la formule (\ref{eqref:capacite})}
+\label{tab:my_label}
+\end{table}
 
 \subsection*{Code \textsc{MATLAB}}
 Voici une fonction en \textsc{MATLAB} créée par nos soins, nous permettant de calculer l'enthalpie d'un élément à une certaine
-température $T$, en fonction des différentes constantes utilisées dans la formule $(3)$.
+température $T$, en fonction des différentes constantes utilisées dans la formule (\ref{eqref:capacite}).
 \lstset{language=Matlab,breaklines=true}
 \begin{lstlisting}[frame=single]
 function [Sol]= HmolT(Hfo,T2,A,B,C,D,E)
