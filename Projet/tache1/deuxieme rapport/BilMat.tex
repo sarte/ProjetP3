@@ -93,8 +93,8 @@ $n_f$ & $0$ & $0$ & $x-n$ & $m+n+2x$ \\\hline
 \caption{Tableau d'avancement de la réaction du reformage secondaire}
 \end{figure}
 
-Dans le réacteur Water-Gas-Shift, tout le \ce{CO} aura réagi, mais il faudra par la suite séparer
-l'eau restante, et absorber le \ce{CO2}.
+Dans le réacteur Water-Gas-Shift, tout le \ce{CO} aura réagi, mais il faudra séparer
+l'eau restante, et absorber le \ce{CO2}. Nous obtenons l'expression du nombre de moles d'eau sortant grâce au tableau .
 
 \begin{figure}[h]
 \begin{center}
@@ -156,8 +156,8 @@ nombre de moles de \ce{CH4} introduites dans le réacteur (i.e. $x$) par les deu
 \right.
 \]
 En simplifiant, on obtient: $4x = 2.76\cdot a$. Nous avons maintenant la quantité de \ce{CH4} introduite
-dans le réacteur par jour en fonction de la quantité d'ammoniac produite. Mais nous n'avons pas encore
-d'information à propos de la quantité d'eau nécessaire.
+dans le réacteur par jour en fonction de la quantité d'ammoniac produite. Notons que la température n'a pas d'effet
+sur cette quantité. Mais nous n'avons pas encore d'information à propos de la quantité d'eau nécessaire.
 
 
 Afin d'obtenir une relation avec le nombre de moles d'\ce{H2O} introduites dans le réacteur (i.e. $y$), nous
@@ -173,9 +173,9 @@ constantes d'équilibre de la première et de la deuxième équation:
 \right.
 \]
 Nous pouvons calculer la valeur théorique de ces constantes d'équilibre en fonction de la température
-avec \textsc{Matlab} (voir code en Annexe), en posant la pression du reformeur primaire à \unit{30}{\bbar}.
+avec \textsc{Matlab} (voir code en Annexe), en posant la pression du reformeur primaire à \unit{30}{\bbar}\footnote{Valeur conseillée sur iCampus}.
 Il nous reste donc \numprint{4} équations à \numprint{4} inconnues et \numprint{2} paramètres: la
 température $T$ et $a$ le nombre de moles d'air introduites dans le réacteur. À partir de ces équations, nous avons
 créé un outil de gestion permettant de réaliser le calcul d'approvisionnement nécessaire en matière première, en
-fonction de la température et de la capacité d'ammoniac à produire (cfr section ??????? ). %prog final matlab complet
+fonction de la température et de la capacité d'ammoniac à produire. Le code est disponible en Annexe.%prog final matlab complet
 
