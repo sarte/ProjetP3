@@ -1,5 +1,13 @@
-\input{../head.tex}
-
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{chemist}
+\usepackage{array}
+\usepackage[version=3]{mhchem}
+\usepackage{amsmath}
+\usepackage[squaren,Gray]{SIunits}
+\usepackage{numprint}
 \begin{document}
 \subsection{Calcul du nombre de tuyaux dans le réacteur primaire de reformage}
 
@@ -9,13 +17,14 @@ $\dot{V} = v \cdot A$, où $A$ est l'aire de la section du tuyaux valant $\unit{
 
 $\dot{V} = \cdot 2 \pi \cdot 0.05^2 = \unit{0.016}{\meter ^3 \per\second}$
 
-Grâce à notre bilan de matière et en supposant que les gaz sont parfaits, nous pouvons trouver:
+Grâce à notre bilan de matière et en supposant que les gaz sont parfaits,nous pouvons trouver, grâce à la relation $p\cdot \dot{V}=\dot{n} \cdot R\cdot T$
+où $\cdot{n}$ est exprimé en $[\unit{}{\mol \per\second}]$:
 
-$F_{CH_4}$ = le flux de $CH_4$ en \unit{}{\meter ^3 \per\second}
+$\dot{V}_{\ce{CH_4}}$ = le flux de $\ce{CH_4}$ en \unit{}{\meter ^3 \per\second}
 
-$F_{H_2O}$ = le flux de $H_2O$ en \unit{}{\meter ^3 \per\second}
+$\dot{V}_{\ce{H_2O}}$ = le flux de $\ce{H_2O}$ en \unit{}{\meter ^3 \per\second}
 
 Les deux composés se déplaçant simultanément dans les tuyaux, le nombre de tuyaux $n$ se trouve grâce à la relation suivante:
 
-$n = \dfrac{F_{CH_4} + F_{H_2O}}{\dot{V}}$
+$n = \dfrac{\dot{V}_{\ce{CH_4}} + \dot{V}_{\ce{H_2O}}}{\dot{V}}$
 \end{document}
