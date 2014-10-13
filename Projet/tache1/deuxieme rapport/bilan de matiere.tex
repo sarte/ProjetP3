@@ -16,7 +16,7 @@
 Cette section met en avant l'évolution des réactifs et produits en terme de débit. 
 Nous pouvons ainsi gérer les quantités de matière nécessaires à la réaction par unité de temps, et
 moduler la production d'ammoniac. Nous avons procédé de manière systématique, en partant de la première
-équation jusqu'à la dernière, et posant quelques 
+équation jusqu'à la dernière, et en posant quelques 
 variables intermédiaires:
 
 \begin{itemize}
@@ -28,7 +28,7 @@ variables intermédiaires:
 \end{itemize}
 
 \subsection*{Analyse et commentaires}
-Dans la phase de reformage primaire, les réactions sont des équilibres; ce qui signifie qu'il faudra prendre en 
+Dans la phase de reformage primaire, les réactions sont à l'équilibres; ce qui signifie qu'il faudra prendre en 
 compte un degré d'avancement lié à la température par la constante d'équilibre. Pour le moment, nous ne devons pas 
 nous en préoccuper, et nous poserons seulement les variables $m$ et $n$ identifiées ci-dessus. 
 
@@ -130,7 +130,7 @@ $n_f$ & $0$ & $y-m-x$ & $m+3x$ & $x$ \\\hline
 
 Enfin, la dernière réaction permet la synthèse de \ce{NH3}. Nous imposons qu'il
 ne reste ni de \ce{N2} ni de \ce{H2}, étant donné que la réaction globale peut être considérée
-comme complète, grâce au "recyclage". Cette étape sera expliquée plus en profondeur dans la section "??????". %tâche 2
+comme complète, grâce au "recyclage".
 Nous obtenons ici une seconde équation:
 $$ 2\cdot0.78a = \frac{2}{3}\cdot (m + 3x) $$
 
@@ -187,5 +187,5 @@ avec \textsc{Matlab} (voir code en Annexe), en posant la pression du reformeur p
 Il nous reste donc \numprint{4} équations à \numprint{4} inconnues et \numprint{2} paramètres: la
 température $T$ et $a$ le nombre de moles d'air introduites dans le réacteur. À partir de ces équations, nous avons
 créé un outil de gestion permettant de réaliser le calcul d'approvisionnement nécessaire en matière première, en
-fonction de la température et de la capacité d'ammoniac à produire (cfr section ??????? ).
+fonction de la température et de la capacité d'ammoniac à produire (cfr section ??????? ). %prog final matlab complet
 \end{document}
