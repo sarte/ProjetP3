@@ -33,8 +33,7 @@ Pour rappel, l'enthalpie standard d'une espèce chimique à une certaine tempér
 
 Les enthalpies à une température de référence (typiquement, $T_{ref}=\unit{25}{\celsius}=\unit{298}{\kelvin}$) sont disponibles dans des tables. Il ne nous reste donc plus
 qu'à trouver l'expression de $C_p$ en fonction de $T$.
-Après quelques recherches\footnote{Site du \textsc{NIST}, National Institute of Standards and Technology:
-\url{http://webbook.nist.gov/chemistry/form-ser.html}}, nous avons trouvé la formule suivante: \begin{equation}\label{eqref:capacite}
+Après quelques recherches\cite{NIST}, nous avons trouvé la formule suivante: \begin{equation}\label{eqref:capacite}
 C_p=A+\dfrac{BT}{1000}+C\left(\dfrac{T}{1000}\right)^2+D\left(\dfrac{T}{1000}\right)^3+E\left(\dfrac{1000}{T}\right)^2
 \end{equation} où $A,B,C,D,E$ sont des constantes propres à chaque composant (cfr. Annexe).
 En remplaçant, nous pouvons facilement obtenir une expression pour $\Delta H\degree_{Reaction1}$, que nous ne retranscrirons pas
