@@ -68,5 +68,4 @@ dans le texte:
 ```
 \cite{ xxx }
 ```
-ensuite, aller dans sources.bib, et compléter, selon le type de source (web, livre, ...)
-http://fr.wikibooks.org/wiki/LaTeX/Gestion_de_la_bibliographie
+ensuite, aller dans sources.bib, et compléter, selon le type de source (web, livre, ...). Attention, le xxx doit correspondre avec la référence http://fr.wikibooks.org/wiki/LaTeX/Gestion_de_la_bibliographie
