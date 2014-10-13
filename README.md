@@ -52,7 +52,7 @@ Pour faire des parenthèses, crochets ou accolades dans des formules:
 \left( \right) \left[ \right] \left{ \right}
 ```
 
-**Pour faire un grapgique**
+**Pour faire un graphique**
 PGFPlots : http://pgfplots.sourceforge.net/pgfplots.pdf
 
 **Pour faire un circuit**
@@ -63,3 +63,10 @@ Circuitikz : http://ctan.math.washington.edu/tex-archive/graphics/pgf/contrib/ci
 ```
 \textsc{Laplace}
 ```
+**Citer ses sources**
+dans le texte:
+```
+\cite{ xxx }
+```
+ensuite, aller dans sources.bib, et compléter, selon le type de source (web, livre, ...)
+http://fr.wikibooks.org/wiki/LaTeX/Gestion_de_la_bibliographie
