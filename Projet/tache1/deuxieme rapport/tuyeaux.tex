@@ -1,20 +1,15 @@
 
-\subsection{Calcul du nombre de tuyaux dans le réacteur primaire de reformage}
+\section{Nombre de tuyaux dans le réacteur primaire de reformage}
+Dans cette section, nous allons déterminer le nombre de tuyaux de diamètre de \unit{10}{\centi\meter}, que doit comporter 
+le réacteur de reformage. On considère que la vitesse superficielle typique à l'entrée du réacteur est de 
+\unit{2}{\meter\per\second}. Le résultat que nous allons obtenir dépendra de deux paramètres: la température du réacteur,
+et la quantité d'ammoniac produite. En supposant que les gaz sont parfaits, nous pouvons exprimer le flux de $\ce{CH_4}$
+et d'$\ce{H_2O}$ , grâce à la relation $p\cdot \dot{V}=\dot{n} \cdot R\cdot T$ où $\dot{n}$ est exprimé en 
+$[\unit{}{\mole\per\second}]$. Les deux composés se déplaçant simultanément dans les tuyaux, le nombre de tuyaux $n$ se 
+trouve via la relation suivante:
 
-Dans cette section, nous allons déterminer le nombre de tuyaux de diamètre de \unit{10}{\centi\meter}, que doit comporter le réacteur de reformage. On considère que la vitesse superficielle typique à l'entrée du réacteur est de \unit{2}{\meter\per\second}, dans le cadre d'une production journalière de \unit{1500}{t} d'ammoniac. On pose que le flux '$\dot{V}$' s'exprime de la sorte:
+$$n = \dfrac{\dot{V}_{\ce{CH_4}} + \dot{V}_{\ce{H_2O}}}{\dot{V}}$$
 
-$\dot{V} = v \cdot A$, où $A$ est l'aire de la section du tuyaux valant $\unit{\pi \cdot 0.05^2}{\meter ^2}$. On trouve encore:
-
-$\dot{V} = \cdot 2 \pi \cdot 0.05^2 = \unit{0.016}{\meter ^3 \per\second}$
-
-Grâce à notre bilan de matière et en supposant que les gaz sont parfaits,nous pouvons trouver, grâce à la relation $p\cdot \dot{V}=\dot{n} \cdot R\cdot T$
-où $\dot{n}$ est exprimé en $[\unit{}{\mole\per\second}]$:
-
-$\dot{V}_{\ce{CH_4}}$ = le flux de $\ce{CH_4}$ en \unit{}{\meter ^3 \per\second}
-
-$\dot{V}_{\ce{H_2O}}$ = le flux de $\ce{H_2O}$ en \unit{}{\meter ^3 \per\second}
-
-Les deux composés se déplaçant simultanément dans les tuyaux, le nombre de tuyaux $n_{tuyaux}$ se trouve grâce à la relation suivante:
-
-$n_{tuyaux} = \dfrac{\dot{V}_{\ce{CH_4}} + \dot{V}_{\ce{H_2O}}}{\dot{V}}$
+Grâce à notre outil de calcul de bilan de matière (en Annexe), dans le cadre d'une production journalière de 
+\unit{1500}{t} d'ammoniac à \unit{1080}{\kelvin}, nous pouvons déterminer le nombre de tuyaux nécessaires:
 
