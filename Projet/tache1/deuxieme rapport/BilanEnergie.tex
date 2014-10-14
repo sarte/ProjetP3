@@ -19,7 +19,7 @@ Dans ce bloc, nous devons traiter les deux réactions à l'équilibre suivantes,
 
 
 \bigbreak
-Nous ne nous intéresserons qu'à la première des deux; la démarche étant analogue pour la seconde. Nous savons que:
+Dans un premier temps, nous ne nous intéresserons qu'à la première des deux réactions. Nous savons que:
 $$\Delta H\degree_{Reaction1}(T)=3\Delta H\degree_{H_{2(g)}}(T) + \Delta H\degree_{CO_{(g)}}(T) -
 \lbrack\Delta H\degree_{CH_{4(g)}}(T) + \Delta H\degree_{H_{2}O_{(g)}}(T)\rbrack$$
 
@@ -38,30 +38,31 @@ ici, mais qui est disponible dans le code \textsc{MATLAB} en Annexe. Pour une il
 température, se référer à la section "Analyse paramétrique".
 
 Les calculs pour la deuxième réaction à l'équilibre étant similaires, nous pouvons
-calculer $\Delta H\degree_{Reaction2}(T)$ sans difficulté. Nous pouvons donc additionner les deux pour trouver
-la différence d'enthalpie réactionnelle: $\Delta H\degree_{Reacteur}(T)=\Delta H\degree_{Reaction1}(T)+\Delta H\degree_{Reaction2}(T)$
+calculer $\Delta H\degree_{Reaction2}(T)$ sans difficulté. A fin de calculer la différence d'enthalpie dans le réacteur
+il nous faut connaître les degrés d'avancement des réactions calculées dans le bilan de matière. Ainsi, nous trouvons la relation suivante:
+\begin{equation}\label{eq:deltaHreacteur}\Delta H\degree_{Reacteur}(T)=m\cdot\Delta H\degree_{Reaction1}(T)+n\cdot\Delta H\degree_{Reaction2}(T)}\end{equation}
 
 \subsection{Le bloc "Four"}
-La réaction traitée dans cette partie est la suivante:
+La réaction ayant lieu dans le four n'est que la combustion du méthane:
 
 \ce{CH_{4(g)} + 2O_{2(g)} <=> 2H_2O_{(g)} + CO_{2(g)}}
 
-Nous savons que:
+Et en plus, nous savons que:
 
 $\Delta H\degree_{Four} = 2\cdot \Delta H\degree_{H_{2}O_{(g)}} + \Delta H\degree_{CO_{2(g)}}
 - \left(\Delta H\degree_{CH_{4(g)}} + 2\cdot \Delta H\degree_{O_{2(g)}}\right)$
 
 Comme pour le réacteur primaire, le milieu réactionnel n'est pas à température ambiante, mais à la température $T$. 
-Nous devons donc à nouveau trouver la valeur du $\Delta H\degree(T)$ de chaque composé grâce aux formules utilisées plus haut,
+Nous devons donc à nouveau trouver la valeur du $\Delta H\degree(T)$ de chaque composé grâce à la formule \ref(eq:deltaH),
 puis injecter ces valeurs dans l'équation du $\Delta H\degree_{Four}$ -- ces calculs, vu leur longueur, ne sont pas repris dans
 ce document.
 Nous supposons que la réaction à la température $T$ sera exothermique car le four sert à fournir de l'énergie à la réaction
 endothermique du réacteur primaire de reformage.
-Nous posons: $\Delta H_{Reacteur} = a$ et $\Delta H_{Four} = b$, par mole de \ce{CH_4} dans les deux cas et $DB$, la quantité 
-de \ce{CH_4} nécessaire dans le four.
+Nous posons: $\Delta H_{Reacteur} = a$ (trouvé à l'aide de la relation \ref(eqdeltaHreacteur)), $\Delta H_{Four} = b$, 
+et $DB$ la quantité de \ce{CH_4} nécessaire dans le four.
 On trouve alors:
 
-$DB = \dfrac{a}{b}$
+$DB = \unit{\dfrac{a}{b}}{\mol\per\day}$
 
 
 
