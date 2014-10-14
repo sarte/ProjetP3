@@ -13,13 +13,13 @@ variables intermédiaires:
 \begin{itemize}
 	\item Soit $x$ le nombre de moles de \ce{CH4} introduites dans le réacteur par jour.
 	\item Soit $y$ le nombre de moles d'\ce{H2O} introduites dans le réacteur par jour.
-	\item Soit $m$ le degré d'avancement de la réaction à l'équilibre 1.
-	\item Soit $n$ le degré d'avancement de la réaction à l'équilibre 2.
+	\item Soit $m$ le degré d'avancement de la réaction à l'équilibre (1).
+	\item Soit $n$ le degré d'avancement de la réaction à l'équilibre (2).
 	\item Soit $a$ le nombre de moles d'air introduites dans le réacteur par jour.
 \end{itemize}
 
 \subsection{Analyse et commentaires}
-Dans la phase de reformage primaire, les réactions sont à l'équilibres; ce qui signifie qu'il faudra prendre en 
+Dans la phase de reformage primaire, les réactions sont à l'équilibre; ce qui signifie qu'il faudra prendre en 
 compte un degré d'avancement lié à la température par la constante d'équilibre. Pour le moment, nous ne devons pas 
 nous en préoccuper, et nous poserons seulement les variables $m$ et $n$ identifiées ci-dessus. 
 
@@ -119,7 +119,7 @@ $n_f$ & $0$ & $y-m-x$ & $m+3x$ & $x$ \\\hline
 \end{figure}
 
 Enfin, la dernière réaction permet la synthèse de \ce{NH3}. Nous imposons qu'il
-ne reste ni de \ce{N2} ni de \ce{H2}, étant donné que la réaction globale peut être considérée
+ne reste ni de \ce{N2}, ni de \ce{H2}, étant donné que la réaction globale peut être considérée
 comme complète, grâce au "recyclage".
 Nous obtenons ici une seconde équation:
 $$ 2\cdot0.78a = \frac{2}{3}\cdot (m + 3x) $$
@@ -173,9 +173,9 @@ constantes d'équilibre de la première et de la deuxième équation:
 \right.
 \]
 Nous pouvons calculer la valeur théorique de ces constantes d'équilibre en fonction de la température
-avec \textsc{Matlab} (voir code en Annexe), en posant la pression du reformeur primaire à \unit{30}{\bbar}\footnote{Valeur conseillée sur iCampus}.
+avec \textsc{MATLAB} (voir code en Annexes), en posant la pression du reformeur primaire à \unit{30}{\bbar}\footnote{Valeur conseillée sur iCampus}.
 Il nous reste donc \numprint{4} équations à \numprint{4} inconnues et \numprint{2} paramètres: la
 température $T$ et $a$ le nombre de moles d'air introduites dans le réacteur. À partir de ces équations, nous avons
 créé un outil de gestion permettant de réaliser le calcul d'approvisionnement nécessaire en matière première, en
-fonction de la température et de la capacité d'ammoniac à produire. Le code est disponible en Annexe.%prog final matlab complet
+fonction de la température et de la capacité d'ammoniac à produire. Le code est disponible en Annexes.%prog final matlab complet
 
