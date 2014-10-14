@@ -1,25 +1,24 @@
 \section{Analyse paramétrique}
 
-Après avoir conçu l'outil de gestion du plant, il est intéressant d'analyser les résultats obtenus en faisant varier les 
-paramètres dans une plage réaliste. Le tableau ci-dessous reprend cette analyse. Nous avons considéré une variation de 
-température de \unit{700}{\kelvin} à \unit{1300}{\kelvin}, étant donné que les valeurs de référence utilisées dans le 
-calcul de $K(T)$ sont pour la plupart valables jusqu'à \unit{1300}{\kelvin}. En ce qui concerne la quantité d'ammoniac 
-produite, nous avons testé de \unit{1000}{\ton} à \unit{2000}{\ton}, avec un pas de \unit{100}{\ton}. C'est la capacité 
-typique d'un plant d'ammoniac par jour\footnote{voir Tache_1-suite_S2.pdf, iCampus}.
+\paragraph{} Après avoir conçu l'outil de gestion du plant, il est intéressant d'analyser les résultats obtenus en 
+faisant varier les paramètres dans une plage réaliste. Les tableaux ci-dessous reprennent cette analyse. Nous avons 
+considéré une variation de température de \unit{800}{\kelvin} à \unit{1300}{\kelvin}. Ce choix a été déterminé par 
+les valeurs de référence utilisées dans le calcul de $K(T)$, qui sont pour la plupart valables jusqu'à 
+\unit{1300}{\kelvin}. En ce qui concerne la quantité d'ammoniac produite, nous avons testé de \unit{1000}{\ton} à 
+\unit{2000}{\ton}, étant donné que c'est la capacité typique d'un plant d'ammoniac.
 
-Les deux tableaux suivants donnent les valeurs des débits volumiques en $m^3$ par jour des éléments suivant: le méthane \ce{CH_4}, l'eau \ce{H_{2}O} et l'air.
 
-Le premier tableau fait varier la température $T$ de $\unit{800}{\kelvin}$ à $\unit{1300}{\kelvin}$, en considérant la quantité d'ammoniac \ce{NH_3} produite par jour comme étant constante et valant $\unit{1500}{m^3}$ par jour. 
-
-Le deuxième tableau fait varier la quantité d'ammoniac \ce{NH_3} produite par jour de $\unit{1000}{m^3}$ à $\unit{2000}{m^3}$ par jour, en considérant la température $T$ constante et valant $\unit{1000}{\kelvin}$.
-
+\paragraph{} Le premier tableau fait varier la température, en considérant la quantité d'ammoniac \ce{NH_3} produite
+par jour constante et valant \unit{1500}{\meter^3\per jour}.
+Le deuxième tableau fait varier la quantité d'ammoniac \ce{NH_3}, en considérant la température $T$ constante et 
+valant \unit{1000}{\kelvin}.
 
 \begin{table}[h]
 \centering
 \begin{tabular}{|c||c|c|c|}
 \hline
-Température & Débit de méthane \ce{CH_4} & Débit de l'eau \ce{H_{2}O} & Débit de l'air \\
-(en $K$) & (en $m^3$ par jour) & (en $m^3$ par jour) & (en $m^3$ par jour) \\
+Température & Débit de méthane \ce{CH_4} & Débit de l'eau \ce{H_{2}O} & Débit d'air \\ 
+ & [\unit{\meter^3\per jour}] & [\unit{\meter^3\per jour}] & [\unit{\meter^3\per jour}] \\
 \hline
 800 & 86373.59 & 1044242.84 & 1.2518e+05 \\
 \hline
@@ -38,12 +37,13 @@ Température & Débit de méthane \ce{CH_4} & Débit de l'eau \ce{H_{2}O} & Déb
 \label{tab:tvarie}
 \end{table}
 
+
 \begin{table}[h]
 \centering
 \begin{tabular}{|c||c|c|c|}
 \hline
-Production journalière de \ce{NH_3} & Débit de méthane \ce{CH_4} & Débit de l'eau \ce{H_{2}O} en & Débit de l'air en  \\
-(en $m^3$ par jour) & (en $m^3$ par jour) & (en $m^3$ par jour) & (en $m^3$ par jour) \\
+Production journalière de \ce{NH_3} & Débit de méthane \ce{CH_4} & Débit de l'eau \ce{H_{2}O} & Débit d'air  \\ &
+[\unit{\meter^3\per jour}] & [\unit{\meter^3\per jour}] & [\unit{\meter^3\per jour}] \\
 \hline
 \hline
 1000 & 71978.00 & 156037.22 & 1.0432e+05 \\
@@ -72,3 +72,10 @@ Production journalière de \ce{NH_3} & Débit de méthane \ce{CH_4} & Débit de 
 \caption{La quantité d'ammoniac \ce{NH_3} produite par jour varie, la température $T$ est constante}
 \label{tab:nh3varie}
 \end{table}
+
+Nous devions surtout surveiller la quantité d'eau , étant donné qu'elle devait être en excès dans les réactions à
+l'équilibre, pour qu'il reste assez de vapeur pour permettre une conversion complète de  \ce{CO} en \{CO2} dans le 
+réacteur Water-Gas-Shift.
+Nous avons donc déterminé la température critique à partir de laquelle la quantité d'eau sortante devenait nulle. 
+Nous sommes arrivés à la conclusion qu'il faut limiter la température de sortie du reformeur primaire à 
+\unit{1049}{\kelvin}, si nous voulons une capacité d'ammoniac de \unit{1500}{\ton\per jour}.
