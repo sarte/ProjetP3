@@ -1,4 +1,14 @@
 \section{Annexe}
+
+\subsection{Flowsheet du plant}
+
+\begin{figure}[!h]
+\centering
+   \includegraphics[scale=0.5]{flowsh.png}
+\end{figure}
+
+\newpage
+
 \subsection{Donnees et constantes}
 On connait les valeurs de $\Delta H\degree (\unit{25}{\celsius})$ pour les éléments suivants:
 
@@ -34,19 +44,12 @@ On connaît les constantes permettant d'utiliser la formule (\ref{eqref:capacite
 \label{tab:my_label}
 \end{table}
 
-\subsection{Flowsheet du plant}
-
-\begin{figure}[h]
-\centering
-   \includegraphics[scale=0.4]]{flowsh.png}
-\end{figure}
 
 \subsection{Code \textsc{MATLAB}}
 Voici une fonction en \textsc{MATLAB} créée par nos soins, nous permettant de calculer l'enthalpie d'un élément à une certaine
 température $T$, en fonction des différentes constantes utilisées dans la formule (\ref{eqref:capacite}).
 
 
+\lstset{breaklines=true,frame=L,numbers=left}
 \lstinputlisting[language=Matlab]{T(K)matlab.m}
-\lstset{,breaklines=true}
-
 
