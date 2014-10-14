@@ -35,7 +35,7 @@ En remplaçant, nous pouvons facilement obtenir une expression pour $\Delta H\de
 ici, mais qui est disponible dans le code \textsc{MATLAB} en Annexe. 
 Les calculs pour la deuxième réaction à l'équilibre étant similaires, nous pouvons
 calculer $\Delta H\degree_{Reaction2}(T)$ sans difficulté. A fin de calculer la différence d'enthalpie dans le réacteur
-il nous faut connaître les degrés d'avancement des réactions calculées dans le bilan de matière. Ainsi, nous trouvons la relation suivante, où $m$ et $n$ sont respecitvement les degrés d'avancement de la réaction \ref{eq:Reaction1} et de la réaction \ref{eq:Reaction2}:
+il nous faut connaître les degrés d'avancement des réactions calculées dans le bilan de matière. Ainsi, nous trouvons la relation suivante, où $m$ et $n$ sont respecitvement les degrés d'avancement de la réaction (\ref{eq:Reaction1}) et de la réaction (\ref{eq:Reaction2}):
 \begin{equation}\label{eq:deltaHreacteur}\Delta H\degree_{Reacteur}(T)=m\cdot\Delta H\degree_{Reaction1}(T)+n\cdot\Delta H\degree_{Reaction2}(T)}\end{equation}
 
 \subsection{Le bloc "Four"}
@@ -49,10 +49,10 @@ $$\Delta H\degree_{Four} = 2\cdot \Delta H\degree_{H_{2}O_{(g)}} + \Delta H\degr
 - \left(\Delta H\degree_{CH_{4(g)}} + 2\cdot \Delta H\degree_{O_{2(g)}}\right)$$
 
 Nous considèrerons que la réaction du four se passe également à la température $T$. 
-Nous devons donc à nouveau trouver la valeur du $\Delta H\degree(T)$ de chaque composé grâce à la formule \ref{eq:deltaH},
+Nous devons donc à nouveau trouver la valeur du $\Delta H\degree(T)$ de chaque composé grâce à la formule (\ref{eq:deltaH}),
 puis injecter ces valeurs dans l'équation du $\Delta H\degree_{Four}$ -- ces calculs, vu leur longueur, ne sont pas repris dans
 ce document. Nous supposons que la réaction à la température $T$ sera exothermique car le four sert à fournir de l'énergie à la réaction
-endothermique du réacteur primaire de reformage. Nous posons: $\Delta H_{Reacteur} = a$ (trouvé à l'aide de la relation \ref{eq:deltaHreacteur}), $\Delta H_{Four} = b$, 
+endothermique du réacteur primaire de reformage. Nous posons: $\Delta H_{Reacteur} = a$ (trouvé à l'aide de la relation (\ref{eq:deltaHreacteur})), $\Delta H_{Four} = b$, 
 et $DB$ la quantité de \ce{CH_4} nécessaire dans le four.
 On trouve alors:
 
