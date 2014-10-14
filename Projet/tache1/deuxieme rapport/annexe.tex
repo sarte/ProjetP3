@@ -34,16 +34,17 @@ On connaît les constantes permettant d'utiliser la formule (\ref{eqref:capacite}
 \label{tab:my_label}
 \end{table}
 
+\subsection{Flowsheet du plant}
+
+\begin{figure}[h]
+   \includegraphics[scale=0.4]]{flowsh}
+\end{figure}
+
 \subsection{Code \textsc{MATLAB}}
 Voici une fonction en \textsc{MATLAB} créée par nos soins, nous permettant de calculer l'enthalpie d'un élément à une certaine
 température $T$, en fonction des différentes constantes utilisées dans la formule (\ref{eqref:capacite}).
 \lstset{language=Matlab,breaklines=true}
 \begin{lstlisting}[frame=single]
-function [Sol]= HmolT(Hfo,T2,A,B,C,D,E)
-%% Hfo est le delta H formation a 298K en kJ/mol, T2 est la temperature pour laquelle on desire connaitre le nouveau delta H, A,B,C,D et E sont des donnees qui doivent etre prises sur le site NIST et qui dependent de la molecule pour laquelle on calcule le nouveau H.
-%%
-Intcp1 = A*298 + B* (298^2)/2000 + C*(298^3)/(3*1000^2) + D*(298^4)/(4*1000^3) + (-1000^2)*E/298;
-= A*T2 + B* (T2^2)/2000 + C*(T2^3)/(3*1000^2) + D*(T2^4)/(4*1000^3) + (-1000^2)*E/T2;
-Sol = Hfo*1000 + Intcp2 - Intcp1
-end
+
 \end{lstlisting}
+
