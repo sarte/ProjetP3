@@ -69,6 +69,7 @@ function [Sol] = Findxymn(T,M)
 % m represents the first stage of completion of the reaction 
 % n represents the second stage of completion of the reaction 
 % a corresponds to the number of moles of air needed per day.
+% B corresponds to the number of moles of methane needed in the oven.
 
 
 % valeurs de reference utilisees dans les calculs
@@ -98,8 +99,8 @@ syms x y m n positive
 [solx, soly, solm, soln] = solve(x - m - 0.42*a == 0 , 3*x + m - 2.34*a == 0 , -K1/900 + (((3*m + n)^3) * (m - n))/(((x + 2*m + y)^2) * (y - n - m) * (x - m)) , -K2 + ((3*m + n) * n)/((m - n) * (y - n - m)) ,x,y,m,n,'Real',true);
 %on retourne les solutions x,y et a
 B=(abs((solm*deltaHH1+soln*deltaHH2)/DHfour));
-
-Sol = [solx*16/10^6 soly*18/10^6 a B*16/10^6];
+a*8.31451*T/30/10^5
+Sol = [solx*8.31451*T/30/10^5 soly*8.31451*T/30/10^5 a*8.31451*T/30/10^5 B*8.31451*T/30/10^5];
 end
 
 
