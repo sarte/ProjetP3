@@ -62,7 +62,8 @@ end
 ----------------------------------------------------------------
 function [Sol] = Findxymn(T,M)
 % Findxymn calculates the amount of methane [T], water [T] and air [T] needed to produce M
-% [T] of ammoniac, in fuction of the temperature [K].
+% [T] of ammoniac, in fuction of the temperature [K]. Calculates also the amount of methane
+% needed to supply the oven.
 % x corresponds to the number of moles of methane needed per day.
 % y corresponds to the number of moles of water needed per day.
 % m represents the first stage of completion of the reaction 
@@ -75,9 +76,11 @@ CH4 = [-0.703029 108.4773 -42.52157 5.862788 0.678565 158.7163];
 H2O = [30.09200 6.832514 6.793435 -2.534480	0.082139 223.3967];
 H2 = [33.066178 -11.363417 11.432816 -2.772874 -0.158558 172.707974]; 
 CO = [25.56759 6.096130 4.054656 -2.671301 0.131021 227.3665] ;
-CO2 = [24.99735 55.18696 -33.69137 7.948387 -0.136638 228.2431]; 
+CO2 = [24.99735 55.18696 -33.69137 7.948387 -0.136638 228.2431];
+O2 = [30.03235 8.772972 -3.988133 0.788313 -0.741599 236.1663];
 deltaHref1 = [-74.810 -241.820 0 -110.530];
 deltaHref2 = [-110.530 -241.820 0 -393.510];
+deltaHref3 = [-74.810 0 -393.510 -241.820];
 
 % calcul des differentes valeurs en fonction des arguments
 deltaSS1 = deltaS(CH4,H2O,H2,CO,[1 1 3 1],T);
@@ -86,6 +89,7 @@ K1 = K(deltaSS1,deltaHH1,T);
 deltaSS2 = deltaS(CO,H2O,H2,CO2,[1 1 1 1],T);
 deltaHH2 = deltaH(CO,H2O,H2,CO2,[1 1 1 1],T, deltaHref2);
 K2 = K(deltaSS2,deltaHH2,T);
+DHfour = deltaH(CH4,O2,CO2,H2O, [1 2 1 2],1300, deltaHref3);
 nummol= (M*(10^6))/(17.031);
 a = nummol/(2*0.78);
 
@@ -93,7 +97,9 @@ a = nummol/(2*0.78);
 syms x y m n positive
 [solx, soly, solm, soln] = solve(x - m - 0.42*a == 0 , 3*x + m - 2.34*a == 0 , -K1/900 + (((3*m + n)^3) * (m - n))/(((x + 2*m + y)^2) * (y - n - m) * (x - m)) , -K2 + ((3*m + n) * n)/((m - n) * (y - n - m)) ,x,y,m,n,'Real',true);
 %on retourne les solutions x,y et a
-Sol = [solx*16/10^6 soly*18/10^6 a];
+B=(abs((solm*deltaHH1+soln*deltaHH2)/DHfour));
+
+Sol = [solx*16/10^6 soly*18/10^6 a B*16/10^6];
 end
 
 
