@@ -37,14 +37,16 @@ On connaît les constantes permettant d'utiliser la formule (\ref{eqref:capacite
 \subsection{Flowsheet du plant}
 
 \begin{figure}[h]
-   \includegraphics[scale=0.4]]{flowsh}
+\centering
+   \includegraphics[scale=0.4]]{flowsh.png}
 \end{figure}
 
 \subsection{Code \textsc{MATLAB}}
 Voici une fonction en \textsc{MATLAB} créée par nos soins, nous permettant de calculer l'enthalpie d'un élément à une certaine
 température $T$, en fonction des différentes constantes utilisées dans la formule (\ref{eqref:capacite}).
-\lstset{language=Matlab,breaklines=true}
-\begin{lstlisting}[frame=single]
-\lstinputlisting{T(K)matlab.m}
-\end{lstlisting}
+
+
+\lstinputlisting[language=Matlab]{T(K)matlab.m}
+\lstset{,breaklines=true}
+
 
