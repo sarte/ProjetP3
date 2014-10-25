@@ -95,12 +95,89 @@ nummol= (M*(10^6))/(17.031);
 a = nummol/(2*0.78);
 
 %resolution de l'eq
-syms x y m n positive
-[solx, soly, solm, soln] = solve(x - m - 0.42*a == 0 , 3*x + m - 2.34*a == 0 , -K1/900 + (((3*m + n)^3) * (m - n))/(((x + 2*m + y)^2) * (y - n - m) * (x - m)) , -K2 + ((3*m + n) * n)/((m - n) * (y - n - m)) ,x,y,m,n,'Real',true);
-%on retourne les solutions x,y et a
+syms x y m n b positive 
+[solx, soly, solm, soln, solb] = solve(x - m - 0.42*a == 0 , 3*x + m - 2.34*a == 0 , b == a, -K1/900 + (((3*m + n)^3) * (m - n))/(((x + 2*m + y)^2) * (y - n - m) * (x - m)) , -K2 + ((3*m + n) * n)/((m - n) * (y - n - m)) ,x,y,m,n,b,'Real',true);
 B=(abs((solm*deltaHH1+soln*deltaHH2)/DHfour));
-Sol = [solx*8.31451*T/30/10^5 soly*8.31451*T/30/10^5 a*8.31451*T/30/10^5 B*8.31451*T/30/10^5];
+%conversion en tonnes par jour, non pas mole par jour
+solx = solx/1000000*16;
+soly = soly/1000000*18;
+solb = solb/1000000*29;
+
+
+disp ('REFORMAGE PRIMAIRE')
+disp ('Flux entrant')
+disp (['CH4',solx])
+disp (['H2O',soly])
+disp ('Flux sortant')
+disp (['CH4',solx-solm/1000000*16])
+disp (['H2O',soly-solm/1000000*18-soln/1000000*18])
+disp (['CO',(solm-soln)/1000000*28])
+disp (['CO2',soln/1000000*44])
+disp (['H2', (3*solm+n)/1000000*2])
+disp ('REFORMAGE SECONDAIRE')
+disp ('Flux entrant')
+disp(['N2', 0.78*solb])
+disp(['Ar', 0.01*solb])
+disp(['O2', 0.21*solb])
+disp (['CH4',solx-solm/1000000*16])
+disp (['H2O',soly-(solm+soln)/1000000*18])
+disp (['CO',(solm-soln)/1000000*28])
+disp (['CO2',soln/1000000*44])
+disp (['H2', (3*solm+n)/1000000*2])
+disp ('Flux sortant')
+disp (['H2O',soly-(solm+soln)/1000000*18])
+disp (['CO',solx-soln/1000000*28])
+disp (['CO2',soln/1000000*44])
+disp (['H2',(solm+soln)/1000000*2+2*solx])
+disp(['N2', 0.78*solb])
+disp(['Ar', 0.01*solb])
+disp ('REACTEURS WATER GAS SHIFT')
+disp ('Flux entrant')
+disp (['H2O',soly-(solm+soln)/1000000*18])
+disp (['CO',solx-soln/1000000*28])
+disp (['CO2',soln/1000000*44])
+disp (['H2',(solm+soln)/1000000*2+2*solx])
+disp(['N2', 0.78*solb])
+disp(['Ar', 0.01*solb])
+disp ('Flux sortant')
+disp (['H2O',soly-solm/1000000*18-solx])
+disp (['CO2',solx])
+disp (['H2',solm/1000000*2+3*solx])
+disp(['N2', 0.78*solb])
+disp(['Ar', 0.01*solb])
+disp ('ABSORPTION DE CO2 & COMPRESSION')
+disp ('Flux entrant')
+disp (['H2O',soly-solm/1000000*18-solx])
+disp (['CO2',solx])
+disp (['H2',solm/1000000*2+3*solx])
+disp(['N2', 0.78*solb])
+disp(['Ar', 0.01*solb])
+disp ('Flux sortant')
+disp (['H2',solm/1000000*2+3*solx])
+disp(['N2', 0.78*solb])
+disp(['Ar', 0.01*solb])
+disp ('SYNTHESE DE NH3 & SEPARATION')
+disp ('Flux entrant')
+disp (['H2',solm/1000000*2+3*solx])
+disp(['N2', 0.78*solb])
+disp(['Ar', 0.01*solb])
+disp ('Flux sortant')
+disp(['NH3', 1.56*solb])
+
 end
 
+--------------------------------------------------------------------------------------------
+GUIDE D'UTILISATION DE L'OUTIL MATLAB
 
+Rappelons tout d'abord que cet outil a été conçu dans le but d'avoir un aperçu des flux de matière 
+lors de chaque étape du procédé de conception d'ammoniac.
+
+Le fonction principale est "Findxymn", les autres sont des sous-fonctions appelées dans Findxymn.
+Ce guide ne traite que la fonction principale. Pour plus d'informations sur les sous-fonctions, se
+rapporter aux codes commentés.
+
+Findxymn prend en arguments la température de sortie du reformage primaire, en Kelvin, ainsi que le 
+flux final d'ammoniac voulu, en tonnes par jour. Cette fonction, lorsqu'elle est appelée, affiche
+la valeur de chaque flux de matière à l'entrée et à la sortie de chaque "bloc".
+Toutes les données de sortie sont exprimées en tonnes par jour.
 
