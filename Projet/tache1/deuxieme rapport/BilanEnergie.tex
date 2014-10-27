@@ -9,7 +9,8 @@ quantité de \ce{CH4} nécessaire pour la production d'une certaine quantité d'
 
 \subsection{Le bloc "Réacteur de reformage primaire"}
 
-Dans ce bloc, nous devons traiter les deux réactions à l'équilibre suivantes, prenant bien place simultanément, à une certaine température $T$:
+Dans ce bloc, nous devons traiter les deux réactions à l'équilibre suivantes, prenant
+bien place simultanément, à une certaine température $T$:
 
 \begin{equation}\label{eq:Reaction1}
 \ce{CH_{4(g)} + H_{2}O_{(g)} <=> 3H_{2(g)} + CO_{(g)}}
@@ -19,7 +20,9 @@ Dans ce bloc, nous devons traiter les deux réactions à l'équilibre suivantes,
 
 
 \bigbreak
-Nous allons développer le raisonnement que nous avons effectué afin d'obtenir l'expression de la différence d'enthalpie dans le réacteur et, dans un premier temps, nous ne nous intéresserons qu'à la première des deux réactions. Fondamentalement, nous savons que:
+Nous allons développer le raisonnement que nous avons effectué afin d'obtenir l'expression de la différence
+d'enthalpie dans le réacteur et, dans un premier temps, nous ne nous intéresserons qu'à la première des
+deux réactions. Fondamentalement, nous savons que:
 $$\Delta H\degree_{Reaction1}(T)=3 \cdot \Delta H\degree_{H_{2(g)}}(T) + \Delta H\degree_{CO_{(g)}}(T) -
 \lbrack\Delta H\degree_{CH_{4(g)}}(T) + \Delta H\degree_{H_{2}O_{(g)}}(T)\rbrack$$
 
@@ -28,16 +31,24 @@ Pour rappel, l'enthalpie standard d'une espèce chimique à une certaine tempér
 \end{equation}
 
 
-Les enthalpies à une température de référence (typiquement, $T_{ref}=\unit{25}{\celsius}=\unit{298}{\kelvin}$) sont disponibles dans des tables de mesures expérimentales. Il ne nous reste donc plus qu'à trouver l'expression de $C_p$, la capacité thermique à pression constante, en fonction de $T$.
-Après quelques recherches \cite{NIST}, nous avons trouvé la formule suivante: \begin{equation}\label{eqref:capacite}
+Les enthalpies à une température de référence (typiquement, $T_{ref}=\unit{25}{\celsius}=\unit{298}{\kelvin}$) sont
+disponibles dans des tables de mesures expérimentales. Il ne nous reste donc plus qu'à trouver
+l'expression de $C_p$, la capacité thermique à pression constante, en fonction de $T$.
+Après quelques recherches, nous avons trouvé la formule suivante \cite{NIST}: \begin{equation}\label{eqref:capacite}
 C_p=A+\dfrac{BT}{1000}+C\left(\dfrac{T}{1000}\right)^2+D\left(\dfrac{T}{1000}\right)^3+E\left(\dfrac{1000}{T}\right)^2
 \end{equation} où $A,B,C,D,E$ sont des constantes propres à chaque composant (cfr. Annexes).
 En remplaçant, nous pouvons facilement obtenir une expression pour $\Delta H\degree_{Reaction1}$, que nous ne retranscrirons pas
 ici, mais qui est disponible dans le code \textsc{MATLAB} en Annexes. 
 Les calculs pour la deuxième réaction à l'équilibre étant similaires, nous pouvons
 calculer $\Delta H\degree_{Reaction2}(T)$ sans difficulté. Afin de calculer la différence d'enthalpie dans le réacteur,
-il nous faut connaître les degrés d'avancement des réactions calculés dans le bilan de matière. Ainsi, nous trouvons la relation suivante, où $m$ et $n$ sont respecitvement les degrés d'avancement de la réaction (\ref{eq:Reaction1}) et de la réaction (\ref{eq:Reaction2}):
-\begin{equation}\label{eq:deltaHreacteur}\Delta H\degree_{Reacteur}(T)=m\cdot\Delta H\degree_{Reaction1}(T)+n\cdot\Delta H\degree_{Reaction2}(T)}\end{equation}
+il nous faut connaître les degrés d'avancement des réactions calculés dans le bilan de matière. Ainsi, nous
+trouvons la relation suivante, où $\xi_1$ et $\xi_2$ sont respectivement les degrés d'avancement de la
+réaction (\ref{eq:Reaction1}) et de la réaction (\ref{eq:Reaction2}):
+\begin{equation}\label{eq:deltaHreacteur}{\Delta H\degree_{Reacteur}(T)=\xi_1\cdot\Delta H\degree_{Reaction1,m}(T)+\xi_2\cdot\Delta H\degree_{Reaction2,m}(T)}\end{equation}
+où nous avons ajouté un indice $m$ pour faire la différence entre $\Delta H\degree_{Reacteur}(T)$ qui est une quantité absolue, 
+et $\Delta H\degree_{Reaction1,m}(T)$ ou $\Delta H\degree_{Reaction2,m}(T)$ qui sont des quantités molaires.
+
+\newpage
 
 \subsection{Le bloc "Four"}
 La réaction ayant lieu dans le four n'est autre que la combustion du méthane:
@@ -46,7 +57,7 @@ La réaction ayant lieu dans le four n'est autre que la combustion du méthane:
 
 De plus, nous savons que:
 
-$$\Delta H\degree_{Four} = 2\cdot \Delta H\degree_{H_{2}O_{(g)}} + \Delta H\degree_{CO_{2(g)}}
+$$\Delta H\degree_{Four,m} = 2\cdot \Delta H\degree_{H_{2}O_{(g)}} + \Delta H\degree_{CO_{2(g)}}
 - \left(\Delta H\degree_{CH_{4(g)}} + 2\cdot \Delta H\degree_{O_{2(g)}}\right)$$
 
 Nous considèrerons que la réaction du four se passe également à la température $T$. 
@@ -54,7 +65,12 @@ Nous devons donc à nouveau trouver la valeur du $\Delta H\degree(T)$ de chaque 
 puis injecter ces valeurs dans l'équation du $\Delta H\degree_{Four}$ -- ces calculs, vu leur longueur, ne sont pas repris dans
 ce document. Nous supposons que la réaction à la température $T$ sera exothermique car le four sert à fournir de l'énergie à la réaction
 endothermique du réacteur primaire de reformage. 
-Nous sommes maintenant en mesure d'exprimer $DB$, la quantité de \ce{CH_4} nécessaire dans le four:
+Nous sommes maintenant en mesure d'exprimer la quantité de \ce{CH_4} nécessaire dans le four:
 
-$$DB = \dfrac{\Delta H_{Reacteur}}{\Delta H_{Four} }\unit{}{\mole\per jour}$$
+$$\text{Quantité de \ce{CH_4}} = \dfrac{\Delta H_{Reacteur}}{\Delta H_{Four,m}}$$
+
+où nous avons une nouvelle fois rajouté un indice $m$ pour distinguer $\Delta H_{Reacteur}$ qui est une puissance
+absolue, et $\Delta H_{Four,m}$ qui est une puissance molaire.
+
+
 
