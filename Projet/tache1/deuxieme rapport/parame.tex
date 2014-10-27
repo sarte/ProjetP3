@@ -4,12 +4,12 @@
 faisant varier les paramètres dans une plage réaliste. Les tableaux ci-dessous reprennent cette analyse. Nous avons 
 considéré une variation de température de \unit{800}{\kelvin} à \unit{1300}{\kelvin}. Ce choix a été déterminé par 
 les valeurs de référence utilisées dans le calcul de $K(T)$, qui sont pour la plupart valables jusqu'à 
-\unit{1300}{\kelvin}. En ce qui concerne la quantité d'ammoniac produite, nous avons testé de \unit{1000}{\ton} à 
-\unit{2000}{\ton}, étant donné que c'est la capacité typique d'un plant d'ammoniac.
+\unit{1300}{\kelvin}. En ce qui concerne la quantité d'ammoniac produite, nous avons testé de \unit{1000}{\ton \per jour} à 
+\unit{2000}{\ton \per jour}, étant donné que c'est la capacité typique d'un plant d'ammoniac.
 
 
 \paragraph{} Le premier tableau fait varier la température, en considérant la quantité d'ammoniac \ce{NH_3} produite
-par jour constante et valant \unit{1500}{\meter^3\per jour}.
+par jour constante et valant \unit{1500}{\ton \per jour}.
 Le deuxième tableau fait varier la quantité d'ammoniac \ce{NH_3}, en considérant la température $T$ constante et 
 valant \unit{1000}{\kelvin}.
 
@@ -18,7 +18,7 @@ valant \unit{1000}{\kelvin}.
 \begin{tabular}{|c||c|c|c|}
 \hline
 Température & Débit de méthane \ce{CH_4} & Débit de l'eau \ce{H_{2}O} & Débit d'air \\ 
- & [\unit{\meter^3\per jour}] & [\unit{\meter^3\per jour}] & [\unit{\meter^3\per jour}] \\
+\unit{\kelvin} & [\unit{\meter^3\per jour}] & [\unit{\meter^3\per jour}] & [\unit{\meter^3\per jour}] \\
 \hline
 800 & 86373.59 & 1044242.84 & 1.2518e+05 \\
 \hline
@@ -42,8 +42,8 @@ Température & Débit de méthane \ce{CH_4} & Débit de l'eau \ce{H_{2}O} & Déb
 \centering
 \begin{tabular}{|c||c|c|c|}
 \hline
-Production journalière de \ce{NH_3} & Débit de méthane \ce{CH_4} & Débit de l'eau \ce{H_{2}O} & Débit d'air  \\ &
-[\unit{\meter^3\per jour}] & [\unit{\meter^3\per jour}] & [\unit{\meter^3\per jour}] \\
+Production journalière de \ce{NH_3} & Débit de méthane \ce{CH_4} & Débit de l'eau \ce{H_{2}O} & Débit d'air \\
+\unit{\ton \per jour} & [\unit{\meter^3\per jour}] & [\unit{\meter^3\per jour}] & [\unit{\meter^3\per jour}] \\
 \hline
 \hline
 1000 & 71978.00 & 156037.22 & 1.0432e+05 \\
