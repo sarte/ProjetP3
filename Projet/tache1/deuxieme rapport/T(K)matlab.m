@@ -40,7 +40,7 @@ n = coef*[-elem1 -elem2 elem3 elem4]'; %deltaS of the whole reaction
 end
 ----------------------------------------------------------------
 function [n] = Cp(vec,T)
-%Cp calculates the integral of Cp from 298.15 to T
+%Cp calculates the integral of Cp from 298,15 to T
 %from the expression A + B*t + C*t^2 + D*t^3 + E/t^2.
 %vec1 must be a 6-order vector (A,B,C,D,E,G) associated to this element, and containing gas phase
 %thermochemistry data (see nist.gov).
@@ -61,8 +61,8 @@ n = vec(1).*log(t) + vec(2).*t + vec(3).*(t.^2)./2 + vec(4).*(t.^3)./3 - vec(5).
 end
 ----------------------------------------------------------------
 function [Sol] = Findxymn(T,M)
-% Findxymn calculates the amount of methane [T], water [T] and air [T] needed to produce M
-% [T] of ammoniac, in fuction of the temperature [K]. Calculates also the amount of methane
+% Findxymn calculates the amount of methane t/day, water t/day and air t/day needed to produce M
+% t/day of ammoniac, as a fuction of the temperature [K]. Calculates also the amount of methane
 % needed to supply the oven.
 % x corresponds to the number of moles of methane needed per day.
 % y corresponds to the number of moles of water needed per day.
