@@ -97,13 +97,8 @@ a = nummol/(2*0.78);
 %resolution de l'eq
 syms x y m n b positive 
 [solx, soly, solm, soln, solb] = solve(x - m - 0.42*a == 0 , 3*x + m - 2.34*a == 0 , b == a, -K1/900 + (((3*m + n)^3) * (m - n))/(((x + 2*m + y)^2) * (y - n - m) * (x - m)) , -K2 + ((3*m + n) * n)/((m - n) * (y - n - m)) ,x,y,m,n,b,'Real',true);
-B=(abs((solm*deltaHH1+soln*deltaHH2)/DHfour));
-%conversion en tonnes par jour, non pas mole par jour
-solx = solx/1000000*16;
-soly = soly/1000000*18;
-solb = solb/1000000*29;
-
-
+B=(abs((solm*deltaHH1+soln*deltaHH2)/DHfour)/1000000*16);
+D=(abs((solm*deltaHH1+soln*deltaHH2)/DHfour)/1000000*32);
 
 disp ('REFORMAGE PRIMAIRE')
 disp ('Flux entrant')
@@ -115,16 +110,19 @@ disp (['H2O',(soly-solm-soln)/1000000*18])
 disp (['CO',(solm-soln)/1000000*28])
 disp (['CO2',soln/1000000*44])
 disp (['H2', (3*solm+soln)/1000000*2])
+disp ('FOUR')
+disp (['CH4', B])
+disp (['O2', D])
 disp ('REFORMAGE SECONDAIRE')
 disp ('Flux entrant')
-disp(['N2', 0.78*solb/1000000*28])
-disp(['Ar', 0.01*solb/1000000*40])
-disp(['O2', 0.21*solb/1000000*32])
 disp (['CH4',(solx-solm)/1000000*16])
 disp (['H2O',(soly-solm+soln)/1000000*18])
 disp (['CO',(solm-soln)/1000000*28])
 disp (['CO2',soln/1000000*44])
 disp (['H2', (3*solm+soln)/1000000*2])
+disp(['O2', 0.21*solb/1000000*32])
+disp(['N2', 0.78*solb/1000000*28])
+disp(['Ar', 0.01*solb/1000000*40])
 disp ('Flux sortant')
 disp (['H2O',(soly-solm+soln)/1000000*18])
 disp (['CO',(solx-soln)/1000000*28])
@@ -134,12 +132,12 @@ disp(['N2', 0.78*solb/1000000*28])
 disp(['Ar', 0.01*solb/1000000*40])
 disp ('REACTEURS WATER GAS SHIFT')
 disp ('Flux entrant')
-disp (['H2O',(soly-solm-soln)/1000000*18])
 disp (['CO',(solx-soln)/1000000*28])
 disp (['CO2',soln/1000000*44])
-disp (['H2',(solm+soln+2*solx)/1000000*2])
 disp(['N2', 0.78*solb/1000000*28])
+disp (['H2',(solm+soln+2*solx)/1000000*2])
 disp(['Ar', 0.01*solb/1000000*40])
+disp (['H2O',(soly-solm-soln)/1000000*18])
 disp ('Flux sortant')
 disp (['H2O',(soly-solm)/1000000*18-solx])
 disp (['CO2',solx/1000000*44])
@@ -148,23 +146,23 @@ disp(['N2', 0.78*solb/1000000*28])
 disp(['Ar', 0.01*solb/1000000*40])
 disp ('ABSORPTION DE CO2 & COMPRESSION')
 disp ('Flux entrant')
-disp (['H2O',(soly-solm-solx)/1000000*18]) %%%
 disp (['CO2',solx/1000000*44])
-disp (['H2',(solm+3*solx)/1000000*2])
 disp(['N2', 0.78*solb/1000000*28]) %%%%
+disp (['H2',(solm+3*solx)/1000000*2])
 disp(['Ar', 0.01*solb/1000000*40])
+disp (['H2O',(soly-solm-solx)/1000000*18])
 disp ('Flux sortant')
 disp (['H2',(solm+3*solx)/1000000*2])
 disp(['N2', 0.78*solb/1000000*28])
 disp(['Ar', 0.01*solb/1000000*40])
 disp ('SYNTHESE DE NH3 & SEPARATION')
 disp ('Flux entrant')
-disp (['H2',(solm+3*solx)/1000000*2])
 disp(['N2', 0.78*solb/1000000*28])
+disp (['H2',(solm+3*solx)/1000000*2])
 disp(['Ar', 0.01*solb/1000000*40])
 disp ('Flux sortant')
+disp(['Ar', 0.01*solb/1000000*40])
 disp(['NH3', 1.56*solb/1000000*17])
-
 end
 
 --------------------------------------------------------------------------------------------
