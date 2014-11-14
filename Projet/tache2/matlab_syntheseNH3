@@ -1,0 +1,31 @@
+function [] = synthese(N,H,A,T,p)
+%calculates everything for the last reaction, the synthetisis of ammonia
+% N is the number of moles/day of N2 entering the reactor
+% H is the number of moles/day oh H2 entering the reactor
+% T is the tempertaure of the reaction = 500 d'apres icampus
+%p must be expressed in terms of bar
+% j'ai fait synhtese(44037343.66743,132112031.00229,564581.329,1500,500),
+% en reprenant les valeurs calculées avec la tache 1 pour 1500 tonnes et
+% une température de 100K. Il faut mnt faire varier T et p.
+
+% valeurs de reference utilisees dans les calculs
+N2 = [19.50583 19.88705 -8.598535 1.369784 0.527601	212.3900];
+H2 = [33.066178 -11.363417 11.432816 -2.772874 -0.158558 172.707974]; 
+NH3 = [19.99563 49.77119 -15.37599 1.921168	0.189174 203.8591];
+R = [0 0 0 0 0 0]; %3e element nul
+deltaHref1 = [0 0 0 -45.90];
+
+% calcul des differentes valeurs en fonction des arguments
+deltaSS1 = deltaS(N2,H2,R,NH3,[1 3 0 2],T);
+deltaHH1 = deltaH(N2,H2,R,NH3,[1 3 0 2],T, deltaHref1);
+K1 = K(deltaSS1,deltaHH1,T);
+
+%resolution de l'eq
+format bank
+syms x positive
+solx = double(solve(-K1 * p^2 + (2 * x * (N + H - 2 * x)^2) / ( (N - x) * (H - 3 * x)^3) == 0, x<=N, x, 'Real', true));
+
+soln = (N-solx)/1000000*28 %quantité de N2 restante
+solh = (H-3*solx)/1000000*2 %quantité de H2 restante
+solNH3 = (2*solx)/1000000*17 % quantite de NH3 produite sans  reinjection
+end
