@@ -1,22 +1,4 @@
-\documentclass[10pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{natbib}
-\usepackage[T1]{fontenc}
-\usepackage[francais]{babel}
-\usepackage{chemist}
-\usepackage{array}
-\usepackage{amsmath}
-\usepackage[squaren,Gray]{SIunits}
-\usepackage{numprint}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{mathtools}
-\usepackage{fullpage}
-\usepackage{mhchem}
-\usepackage{listings}
-\usepackage{hyperref}
-
+\input{head.tex}
 
 \begin{document}
 
