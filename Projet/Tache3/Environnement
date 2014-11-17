@@ -1,0 +1,78 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{chemist}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage[squaren,Gray]{SIunits}
+\usepackage{numprint}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{fullpage}
+\usepackage{mhchem}
+\usepackage{listings}
+\usepackage{hyperref}
+
+
+\begin{document}
+
+
+Cette partie traite de l'étude de l'impact environnemental de notre procédé, nous chercons donc à
+écrire une étude technique visant à apprécier les conséquences environnementales de notre projet pour tenter
+d'en limiter, atténuer ou compenser les impacts négatifs. 
+
+
+Les impacts toxicologiques de l'ammoniac semblent assez bien connus, mais quand il s'agit de ses impacts
+écotoxicologiques, autres que liés à son caractère basique, ils sont moins bien étudiés.
+Nous pouvons noter les deux points suivants, avec comme
+source: \url{http://fr.wikipedia.org/wiki/Ammoniac#Impact_environnemental}.
+
+\begin{enumerate}
+    \item Premièrement, les quantités d'ammoniac rejetées dans l'atmosphère en font l'un des principaux responsables
+    de l'acidification de l'eau et des sols, ainsi qu'un facteur favorisant les pluies acides, et il s'agit du
+    principal responsable de l'eutrophisation des milieux aquatiques --- l'eutrophisation est le processus par
+    lequel des nutriments s'accumulent dans un milieu.
+    \item Nous continuons en mentionnant le GWP (le Global Warming Potential) de l'ammoniac qui est de $0$, ainsi
+    que son ODP (l'Ozone Depletion Potential) nul également, ce qui en font donc un fluide sans effet sur le réchauffement
+    climatique, ni sur la couche d'ozone, contrairement aux fluides frigorigènes type HFC couramment utilisés dans les
+    climatiseurs et pompes à chaleur --- un fluide frigorigène (ou réfrigérant) est un fluide pur ou un mélange de
+    fluides purs présents en phase liquide, gazeuse ou les deux à la fois en fonction de la température et de la
+    pression de celui-ci.
+\end{enumerate}
+
+
+Nous pouvons également valoriser la quantité du dioxyde de carbone produit: c'est une étape importante car
+la production de \ce{CO_2} peut atteindre \unit{750}{kg} par tonne d’ammoniac produit. Une bonne valorisation
+permet d’augmenter le rendement global de l’installation. Le dioxyde de carbone produit est utilisé pour produire
+de l’urée (un engrais) à partir, entre autres, d’ammoniac.
+
+Passons à présent à la gestion énergétique: grâce à une exploitation judicieuse de l’énergie produite, presque tous
+les procédés liés à la synthèse d'ammoniac peuvent fonctionner de façon autonome, c'est-à-dire que seule la mise en route
+nécessite de la vapeur d'origine externe ou produite par une chaudière d'appoint. Les besoins en énergie d'installations
+modernes autonomes sont environ de \unit{29}{\giga\joule}\per{\ton} de NH3 produit --- rappelons
+que $\unit{1}{\giga\joule} = \unit{10^9}{J}$.
+
+Nous terminons en nous attardant sur la gestion des déchets, en mentionnant les éléments suivants:
+
+\begin{itemize}
+    \item Les gaz du reformeur primaire et des chaudières à vapeur sont rejetés dans l’atmosphère par les cheminées, et
+    nous devons évidemment veiller à respecter les valeurs limites admissibles quand il s'agit du \ce{NO_x} ou du \ce{SO_2}.
+    \item Les eaux usées seront évacuées avec ou sans traitement préalable au rejet, selon leur degré de pollution, et
+    les résidus boueux recueillis à l'épuration des circuits de refroidissement doivent faire l'objet d'une mise en
+    décharge appropriée à leur nature.
+    \item Catalyseurs épuisés et produits d'épuration: selon l'usage prévu et le mode de fonctionnement des
+    installations, la durée de vie des catalyseurs employés dans les installations de production d'ammoniac varie entre
+    2 et 8 ans et les catalyseurs dont l'activité est devenue insuffisante sont remplacés. La plupart des catalyseurs
+    renferment des quantités notables d'oxydes et de sulfures des métaux lourds comme le cobalt \ce{CO}, le nickel \ce{Ni},
+    le molybdène \ce{Mo}, le cuivre \ce{Cu}, le zink \ce{Zn} ou le fer \ce{Fe}, qui sont non solubles
+    dans l'eau. Les déchets retournent en partie chez le fabricant en vue d'un retraitement, ou ils sont récupérés par
+    des usines métallurgiques en vue du recyclage des métaux. À défaut, il faut prévoir une mise en décharge
+    réglementaire en fonction de la composition des produits.
+\end{itemize}
+
+
+\end{document}
