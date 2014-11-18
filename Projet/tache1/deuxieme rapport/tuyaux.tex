@@ -5,15 +5,14 @@ le réacteur de reformage. On considère que la vitesse superficielle typique à
 \unit{2}{\meter\per\second}. Le résultat que nous allons obtenir dépendra de deux paramètres: la température du réacteur,
 et la quantité d'ammoniac produite. Nous introduisons la notation $\dot{V}$ pour désigner le débit volumique (exprimé
 en unités de volume par unité de temps). En supposant que les gaz sont parfaits, nous pouvons exprimer le flux
-de $\ce{CH_4}$ et d'$\ce{H_2O}$, grâce à la relation $p\cdot \dot{V}=\dot{n} \cdot R\cdot T$ où $\dot{n}$ est le débit
-molaire. Les deux composés se déplaçant simultanément dans les tuyaux, le nombre de tuyaux $N$ se trouve via la relation suivante:
+de $\ce{CH_4}$ et d'$\ce{H_2O}$, grâce à la relation $p\cdot \dot{V}=F_{x}\cdot R\cdot T$ où $F_{x}$ est le flux
+molaire d'un composé x. Les deux composés se déplaçant simultanément dans les tuyaux, le nombre de tuyaux $N$ se trouve via la relation suivante:
 
 $$N = \dfrac{\dot{V}_{\ce{CH_4}} + \dot{V}_{\ce{H_2O}}}{\dot{V}}$$
 
 Grâce à notre outil de calcul de bilan de matière (en Annexes), dans le cadre d'une production journalière de 
 \unit{1500}{t} d'ammoniac à \unit{1080}{\kelvin}, nous pouvons déterminer le nombre de tuyaux nécessaires:
 
-$$N = (n_{\ce{CH_4}}+n_{\ce{H_2O}}) \cdot \dfrac{R \cdot T}{p \cdot \dot{V}}} = (3.8956\cdot 10^7+4.10957\cdot 10^7}}) \cdot \dfrac{8.31451 \cdot 1080}{30\cdot 10^5 \cdot1382.4}} = 173$$
+$$N = (F_{\ce{CH_4}}+F_{\ce{H_2O}}) \cdot \dfrac{R \cdot T}{p \cdot \dot{V}}} = (3.8956\cdot 10^7+4.10957\cdot 10^7}}) \cdot \dfrac{8.31451 \cdot 1080}{30\cdot 10^5 \cdot1382.4}} = 173$$
 
 Le résultat est donc \numprint{173} tuyaux.
-
