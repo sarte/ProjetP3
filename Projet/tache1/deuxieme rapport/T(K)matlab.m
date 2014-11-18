@@ -1,7 +1,6 @@
 function [n] = K(deltaS, deltaH, T)
 %K Calculates the equilibrum constant in fuction of the 
 %temperature
-R=8.31451; %universal gas constant
 n = exp ((deltaS*T-deltaH*1000)/(R*T)); %definition of K(T)
 end
 ---------------------------------------------------------------
@@ -61,8 +60,8 @@ n = vec(1).*log(t) + vec(2).*t + vec(3).*(t.^2)./2 + vec(4).*(t.^3)./3 - vec(5).
 end
 ----------------------------------------------------------------
 function [Sol] = Findxymn(T,M)
-% Findxymn calculates the amount of methane t/day, water t/day and air t/day needed to produce M
-% t/day of ammoniac, as a fuction of the temperature [K]. Calculates also the amount of methane
+% Findxymn calculates the amount of methane [t/day], water [t/day] and air [t/day] needed to produce M
+% [t/day] of ammoniac, as a fuction of the temperature [K]. Calculates also the amount of methane
 % needed to supply the oven.
 % x corresponds to the number of moles of methane needed per day.
 % y corresponds to the number of moles of water needed per day.
@@ -73,6 +72,7 @@ function [Sol] = Findxymn(T,M)
 
 
 % valeurs de reference utilisees dans les calculs
+R=8.31451; %universal gas constant
 CH4 = [-0.703029 108.4773 -42.52157 5.862788 0.678565 158.7163];
 H2O = [30.09200 6.832514 6.793435 -2.534480	0.082139 223.3967];
 H2 = [33.066178 -11.363417 11.432816 -2.772874 -0.158558 172.707974]; 
