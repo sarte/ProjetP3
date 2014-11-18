@@ -65,11 +65,11 @@ diminution de production.
 Notons que nous avons seulement considéré les contraintes thermodynamiques, sans nous préoccuper des contraintes 
 cinétiques. Or, ces contraintes cinétiques ont déterminé nos choix de gamme de pression et de température. Nous nous 
 devons donc d'y apporter quelques explications.
+
 La réaction de production d'ammoniac doit se faire à l'aide d'un catalyseur. Ce catalyseur contient généralement de 
-l'hydroxyde de potassium, et permet d'accélérer la réaction. Il a besoin d'une température minimale de \unit{400}{\celsius} 
-pour être 
-efficace. Nous avons cependant commencé l'étude paramétrique à partir de la température ambiante. Nous nous sommes
-arrêtés à \unit{700}{\celsius}pour la clarté des graphes, et parce que la réaction Haber-Bosh se produit généralement à \unit{500}{\celsius}. 
+l'hydroxyde de potassium, il permet d'accélérer la réaction, et il a besoin d'une température minimale de \unit{400}{\celsius} 
+pour être efficace. Nous avons cependant commencé l'étude paramétrique à partir de la température ambiante. Nous nous sommes
+arrêtés à \unit{700}{\celsius} pour la clarté des graphes, et parce que la réaction \textsc{Haber-Bosh} se produit généralement à \unit{500}{\celsius}. 
 En ce qui concerne la pression, étant donné que la réaction \textsc{Haber-Bosh} se produit généralement entre \unit{100}{\bbar} et \unit{1000}{\bbar},
 nous avons analysé nos résultats dans cette gamme, et nous avons conclu qu'une pression de \unit{250}{\bbar} était déjà 
 suffisante pour avoir un bon rendement. Augmenter d'avantage la pression n'est pas rentable économiquement parlant.
@@ -78,9 +78,10 @@ suffisante pour avoir un bon rendement. Augmenter d'avantage la pression n'est p
 toute la discussion ci-dessus nous conseillerions une température de \unit{500}{\celsius}, et une pression aux environs de \unit{200}{\bbar}. 
 Malheureusement, un tel choix ne nous procure  pas encore un rendement suffisant. Il faut donc considérer un 
 "recyclage" des réactifs qui n'auront pas réagi au cours de la réaction, ainsi qu'une séparation de l'ammoniac 
-formé et de l'argon restant.
+formé et de l'argon restant. Notre outil \textsc{Matlab} ne comprend pas cette fonctionnalité; c'est pourquoi une
+analyse parmétrique avec un logiciel tel que \textsc{Aspen+} est indispensable.
 
-\section{Comparaison des études paramétriques réalisées avec \textsc{Matlab} et \textsc{Aspen +}}
+\section{Comparaison des études paramétriques réalisées avec \textsc{Matlab} et \textsc{Aspen+}}
 %to do
 
 \section{Conclusion} Finalement, nous pouvons tirer de tout ceci qu'une conversion totale dans le réacteur n'est
