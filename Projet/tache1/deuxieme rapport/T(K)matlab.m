@@ -1,7 +1,6 @@
 function [n] = K(deltaS, deltaH, T)
 %K Calculates the equilibrum constant in fuction of the 
 %temperature
-R=8.31451; %universal gas constant
 n = exp ((deltaS*T-deltaH*1000)/(R*T)); %definition of K(T)
 end
 ---------------------------------------------------------------
@@ -61,8 +60,8 @@ n = vec(1).*log(t) + vec(2).*t + vec(3).*(t.^2)./2 + vec(4).*(t.^3)./3 - vec(5).
 end
 ----------------------------------------------------------------
 function [Sol] = Findxymn(T,M)
-% Findxymn calculates the amount of methane t/day, water t/day and air t/day needed to produce M
-% t/day of ammoniac, as a fuction of the temperature [K]. Calculates also the amount of methane
+% Findxymn calculates the amount of methane [t/day], water [t/day] and air [t/day] needed to produce M
+% [t/day] of ammoniac, as a fuction of the temperature [K]. Calculates also the amount of methane
 % needed to supply the oven.
 % x corresponds to the number of moles of methane needed per day.
 % y corresponds to the number of moles of water needed per day.
@@ -73,6 +72,7 @@ function [Sol] = Findxymn(T,M)
 
 
 % valeurs de reference utilisees dans les calculs
+R=8.31451; %universal gas constant
 CH4 = [-0.703029 108.4773 -42.52157 5.862788 0.678565 158.7163];
 H2O = [30.09200 6.832514 6.793435 -2.534480	0.082139 223.3967];
 H2 = [33.066178 -11.363417 11.432816 -2.772874 -0.158558 172.707974]; 
@@ -92,11 +92,12 @@ deltaHH2 = deltaH(CO,H2O,H2,CO2,[1 1 1 1],T, deltaHref2);
 K2 = K(deltaSS2,deltaHH2,T);
 DHfour = deltaH(CH4,O2,CO2,H2O, [1 2 1 2],T, deltaHref3);
 nummol= (M*(10^6))/(17.031);
-a = nummol/(2*0.78);
+format long
+a =  nummol/(2*0.78);
 
 %resolution de l'eq
 syms x y m n b positive 
-[solx, soly, solm, soln, solb] = solve(x - m - 0.42*a == 0 , 3*x + m - 2.34*a == 0 , b == a, -K1/900 + (((3*m + n)^3) * (m - n))/(((x + 2*m + y)^2) * (y - n - m) * (x - m)) , -K2 + ((3*m + n) * n)/((m - n) * (y - n - m)) ,x,y,m,n,b,'Real',true);
+[solx, soly, solm, soln, solb] = solve(x - m - 0.42*a, 3*x + m - 2.34*a , b == a, -K1/900 + (((3*m + n)^3) * (m - n))/(((x + 2*m + y)^2) * (y - n - m) * (x - m)) , -K2 + ((3*m + n) * n)/((m - n) * (y - n - m)) ,x,y,m,n,b,'Real',true);
 B=(abs((solm*deltaHH1+soln*deltaHH2)/DHfour)/1000000*16);
 D=(abs((solm*deltaHH1+soln*deltaHH2)/DHfour)/1000000*32);
 
@@ -147,7 +148,7 @@ disp(['Ar', 0.01*solb/1000000*40])
 disp ('ABSORPTION DE CO2 & COMPRESSION')
 disp ('Flux entrant')
 disp (['CO2',solx/1000000*44])
-disp(['N2', 0.78*solb/1000000*28]) %%%%
+disp(['N2', 0.78*solb/1000000*28]) 
 disp (['H2',(solm+3*solx)/1000000*2])
 disp(['Ar', 0.01*solb/1000000*40])
 disp (['H2O',(soly-solm-solx)/1000000*18])
@@ -163,7 +164,6 @@ disp(['Ar', 0.01*solb/1000000*40])
 disp ('Flux sortant')
 disp(['Ar', 0.01*solb/1000000*40])
 disp(['NH3', 1.56*solb/1000000*17])
-end
 
 --------------------------------------------------------------------------------------------
 GUIDE D'UTILISATION DE L'OUTIL MATLAB

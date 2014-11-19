@@ -11,7 +11,7 @@ d'en limiter, atténuer ou compenser les impacts négatifs.
 Les impacts toxicologiques de l'ammoniac semblent assez bien connus, mais quand il s'agit de ses impacts
 écotoxicologiques, autres que liés à son caractère basique, ils sont moins bien étudiés.
 Nous pouvons noter les deux points suivants, avec comme
-source: \url{http://fr.wikipedia.org/wiki/Ammoniac#Impact_environnemental}.
+source \cite {wiki}.
 
 \begin{enumerate}
     \item Premièrement, les quantités d'ammoniac rejetées dans l'atmosphère en font l'un des principaux responsables
@@ -56,5 +56,7 @@ Nous terminons en nous attardant sur la gestion des déchets, en mentionnant les
     réglementaire en fonction de la composition des produits.
 \end{itemize}
 
+\bibliographystyle{plain}
+\bibliography{sourcespourlatache3}
 
 \end{document}
