@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper]{article}
+\documentclass[10pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{natbib}
 \usepackage[T1]{fontenc}
@@ -18,6 +18,8 @@
 \usepackage{listings}
 \usepackage{hyperref}
 \usepackage{tabularx}
+\usepackage{lscape}
+
 
 
 \begin{document}
@@ -97,11 +99,11 @@ et la pression du shell va augmenter, les disques redirigent le contenu du shell
 d'autres mots, ce sont les disques qui exploseront avant que le shell ne le fasse, et ils permettront alors de rediriger le
 contenu du shell (qui est alors un mélange gaz/eau) vers un endroit sûr.
 
-
+\begin{landscape}
 \begin{table}
 \centering
 
-\begin{tabular}{|p{2cm}|p{3cm}|p{3cm}|p{4cm}|p{3cm}|}
+\begin{tabular}{|p{2cm}|p{3cm}|p{4cm}|p{6cm}|p{5cm}|}
 \hline 
 Noeud & Mot guide & Cause & Conséquence & Mesures \\ 
 \hline 
@@ -134,27 +136,33 @@ Noeud & Mot guide & Cause & Conséquence & Mesures \\
   
   
  & & & & \\
-  & & & & \\
+ & & & & \\
+ & & & & \\
 
  Shell échangeur calorifique 124MC & MORE PRESSURE & Rupture du tube interne (le gaz se répend dans l'enceinte de
  l'échangeur & Contamination & Alarme \\
  
   & & & & \\
 
- & & & Risque d'explosion de l'échangeur  & Activation du disque de rupture + Déversement dans réservoir alternatif sûr \\
+  & & & Risque d'explosion de l'échangeur  & Activation du disque de rupture + Déversement dans réservoir alternatif sûr \\
  
   & & & & \\
 
- & LESS PRESSURE & Fuite dans le shell & Perte d'eau & Alarme \\
+  & LESS PRESSURE & Fuite dans le shell & Perte d'eau & Alarme \\
  
   & & & & \\
 
- & & & Mauvais refroidissement & Réparation \\
+  & & & Mauvais refroidissement & Réparation \\
+  
+   & & & & \\
+
  
  \hline
 
 
 \end{tabular} 
+\caption{HAZOP}
 \end{table}
+\end{landscape}
 
 \end{document}
