@@ -1,33 +1,4 @@
-\documentclass{article}
-\usepackage[Latin1]{inputenc}
-\usepackage{natbib}
-\usepackage[T1]{fontenc}
-\usepackage[francais]{babel}
-\usepackage{chemist}
-\usepackage{array}
-\usepackage[version=3]{mhchem}
-\usepackage{amsmath}
-\usepackage[squaren,Gray]{SIunits}
-\usepackage{numprint}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{mathtools}
-\usepackage{fullpage}
-\usepackage{mhchem}
-\usepackage{listings}
-\usepackage{hyperref}
-\usepackage{lscape}
-\usepackage{tabularx}
-
-\author{Groupe 1246 \\ Tutrice: Audrey Favache \\ \\
-Sparenberg Marie-Charlotte - 5408-13-00\\
-Pirson Félix - 6838-13-00\\
-Muguerza Bengoechea Gauthier - 7865-13-00\\
-Momin Charles - 3920-13-00\\
-Hoedenaeken Adrien - 4114-13-00\\
-Colpin Lionel - 3965-12-00 \\
-Arteaga Michaux Sayri - 3149-12-00\\ }
+\input{head}
 \title{\vspace{\fill}\begin{LARGE} \begin{bf}
 Rapport de la quatrième tâche: Analyse de sécurité ciblée sur une des unités de production\\
 LFSAB1503 \\
@@ -41,35 +12,47 @@ LFSAB1503 \\
 \newpage
 \section{Introduction}
 
-	Cette quatrième tâche présente une analyse, selon la procédure \textsc{Hazop}, des risques liés au fonctionnement du réacteur de
-synthèse de l’ammoniac. Cette tâche a été principalement rédigée lors de la séance tutorée en S10. Le rapport se divise comme suit:
-Dans un premier lieu, nous rappellerons ce qu'est une procédure \textsc{Hazop}, son utilité ainsi que sa structure. Ensuite, nous proposerons une mini-\textsc{Hazop} pour une section de notre procédé: la synthèse même de l'ammoniac. Les risques ne seront pas estimés quantitativement.
+	Cette quatrième tâche présente une analyse, selon la procédure \textsc{Hazop}, des risques liés au fonctionnement 
+du réacteur de synthèse de l’ammoniac. Cette tâche a été principalement rédigée lors de la séance tutorée en S10. Le rapport 
+se divise comme suit: Dans un premier lieu, nous rappellerons ce qu'est une procédure \textsc{Hazop}, son utilité ainsi 
+que sa structure. Ensuite, nous proposerons une mini-\textsc{Hazop} pour une section de notre procédé: la synthèse même 
+de l'ammoniac. Les risques ne seront pas estimés quantitativement.
 
 \section{Analyse \textsc{Hazop}}
 
 \subsection{Section du procédé analysé et composants utilisés}
-\begin{figure}[ht!]
+\begin{table}[ht!]
  \centering
- \includegraphics[scale=0.5]{TabComp.PNG}
+ \includegraphics[scale=0.6]{TabComp.PNG}
  \caption{Comparaison des différents composants en réaction}
  \label{TabComp}
-\end{figure}
+\end{table}
 
-Nous n'avons réalisé qu'une \textsc{Hazop} partielle de notre procédé de production d'ammoniac. Nous n'avons considéré que la dernière étape du procédé, c'est-à-dire la réaction de synthèse d'ammoniac. La section du procédé peut être visualisée sur la Figure \ref{section_procede}. Il apparaît dès lors que les seuls composants étudiés sont le diazote, le dihydrogène et l'ammoniac. Afin d'effectuer une analyse de risques, il est nécessaire de réaliser une pré-étude concernant ces composés et leurs dangers potentiels. Nous avons résumé tout cela dans la Figure \ref{TabComp}.\cite{CSST}\cite{Ontario}
+Nous n'avons réalisé qu'une \textsc{Hazop} partielle de notre procédé de production d'ammoniac. Nous n'avons considéré 
+que la dernière étape du procédé, c'est-à-dire la réaction de synthèse d'ammoniac. La section du procédé peut être visualisée 
+sur la Figure \ref{section_procede}. Il apparaît dès lors que les seuls composants étudiés sont le diazote, le dihydrogène 
+et l'ammoniac. Afin d'effectuer une analyse de risques, il est nécessaire de réaliser une pré-étude concernant ces composés 
+et leurs dangers potentiels. Nous avons résumé tout cela dans le Tableau \ref{TabComp}.\cite{CSST}\cite{Ontario}
 
 \begin{figure}[ht!]
  \centering
  \includegraphics[scale=0.3]{section_procede.PNG}
- \caption{Secion du procédé étudiée}
+ \caption{Section du procédé étudiée}
  \label{section_procede}
 \end{figure}
 
 \subsection{La procédure \textsc{Hazop}}
 
-L’objectif de l’\textsc{Hazop} est d’identifier et d’évaluer les dangers liés au procédé et de déterminer les problèmes d’opérations préjudiciables à la marche de l’unité et à la qualité des produits finis. Une telle analyse est nécessaire en entreprise étant donné que certaines substances dangereuses sont parfois utilisées, il peut y avoir des activités humaines importantes autour des installations, et tout ce qui concerne la sécurité et l'anticipation est très réglementé. Une \textsc{Hazop} tourne autour d'une structure de noeuds et de mots-clefs très concis et explicites. Cela rend l'analyse plus facilement compréhensible et très efficace.
+L’objectif de l’\textsc{Hazop} est d’identifier et d’évaluer les dangers liés au procédé et de déterminer les problèmes 
+d’opérations préjudiciables à la marche de l’unité et à la qualité des produits finis. Une telle analyse est nécessaire 
+en entreprise étant donné que certaines substances dangereuses sont parfois utilisées, il peut y avoir des activités 
+humaines importantes autour des installations, et tout ce qui concerne la sécurité et l'anticipation est très réglementé.
+Une \textsc{Hazop} tourne autour d'une structure de noeuds et de mots-clefs très concis et explicites. Cela rend l'analyse 
+plus facilement compréhensible et très efficace.
 Une telle analyse doit se réitérer de nombreuses fois durant la démarche de conception d'un projet.\cite{icamp}
 
-\paragraph{Questions de départ} Pour réaliser cette analyse \textsc{Hazop}, nous nous sommes basés sur les quelques questions suivantes:
+\paragraph{Questions de départ} Pour réaliser cette analyse \textsc{Hazop}, nous nous sommes basés sur les quelques questions 
+suivantes:
 \begin{enumerate}
 \item Comment les flux de matière circulent-ils dans la section en question et au sein du réacteur de conversion?
 Utilisez des surligneurs pour indiquer ces circulations sur le PFD et sur les PIDs de la section. Seules
@@ -79,21 +62,27 @@ servent à protéger un équipement ou une ligne contre les surpressions) sur le
 \item Pourquoi y a-t-il des disques de rupture sur l’échangeur 124-MC?
 \end{enumerate}
 
-\paragraph{Elements de réponse} La première question a été traitée en séance. Par conséquent, nous ne nous y attarderons plus. Les deux autres questions sont des pistes pour trouver quelques endroits sensibles dans le procédé.
+\paragraph{Elements de réponse} La première question a été traitée en séance. Par conséquent, nous ne nous y attarderons 
+plus. Les deux autres questions sont des pistes pour trouver quelques endroits sensibles dans le procédé.
 
 \begin{enumerate}
 \item Traité en séance.
 \item Nous n'avons pas de risque de surpression. Premièrement, étant donné que la réaction de formation de \ce{NH_3} tend à
-réduire le nombre de môles de gaz, elle tend à réduire la pression. Par conséquent, nous n'aurons pas d'augmentation de
+réduire le nombre de moles de gaz, elle tend à réduire la pression. Par conséquent, nous n'aurons pas d'augmentation de
 pression en activité, il n'est donc pas nécessaire de gérer cette augmentation. Deuxièmement, nous pouvons mentionner le
 fait qu'une augmentation de la pression va seulement provoquer une augmentation de la vitesse de déplacement du gaz, étant
 donné qu'il circule "librement" sur toute cette partie du circuit.
 \item Les disques de rupture fonctionnent de la manière suivante: ils
-redirigent le contenu du shell vers un tank sécurisé. L'échangeur 124MC peut être assimilé à un radiateur: il est compose d'un shell et d'une série de tubes qui le traversent; le but étant un échange de chaleur entre le contenu du shell et les tubes. Le shell est rempli d'eau et peut supporter une pression de plus au moins \unit{15}{bar}. Les tubes par contre contiennent le gaz à \unit{150}{bar} environ qui vient du réacteur. Dès lors, si un de ces tuyaux venait à se briser, son contenu se répandrait et donc la pression maximale que l'enveloppe peut contenir sera dépassée. Ceci provoquerait une explosion de l'enveloppe; chose que
-les disques de rupture permettent justement d'éviter. 
+redirigent le contenu du shell vers un tank sécurisé. L'échangeur 124MC peut être assimilé à un radiateur: 
+il est compose d'un shell et d'une série de tubes qui le traversent; le but étant un échange de chaleur entre le 
+contenu du shell et les tubes. Le shell est rempli d'eau et peut supporter une pression de plus au moins \unit{15}{bar}. 
+Les tubes par contre contiennent le gaz à \unit{150}{bar} environ qui vient du réacteur. Dès lors, si un de ces tuyaux 
+venait à se briser, son contenu se répandrait et donc la pression maximale que l'enveloppe peut contenir sera dépassée. 
+Ceci provoquerait une explosion de l'enveloppe; chose que les disques de rupture permettent justement d'éviter. 
 \end{enumerate}
 
-\paragraph{Analyse \textsc{Hazop}} Le tableau \ref{Hazop} reprend quelques scénarios possibles, analysés de la manière \textsc{Hazop}.
+\paragraph{Analyse \textsc{Hazop}} Le tableau \ref{Hazop} reprend quelques scénarios possibles, analysés de la 
+manière \textsc{Hazop}.
 \begin{landscape}
 \begin{table}
 \centering
@@ -136,7 +125,11 @@ l'échangeur & Contamination & Alarme \\
 
 \newpage
 \section{Conclusion}
-Au terme de cette analyse, nous pouvons remettre l'accent sur l'importance d'une telle démarche: analyser les risques est indispensable durant toute création de projet. Il y a énormément de paramètres à prendre en compte, énormément de tests à effectuer, et une infinité de cas à envisager. Les risques n'ont pas été estimés ici quantitativement, mais rien qu'une approche qualitative nous permet déjà de visualiser l'ampleur du travail que représente une analyse \textsc{Hazop}, ainsi que tous les danger présents dans notre procédé de production d'ammoniac.
+Au terme de cette analyse, nous pouvons remettre l'accent sur l'importance d'une telle démarche: analyser les risques est 
+indispensable durant toute création de projet. Il y a énormément de paramètres à prendre en compte, énormément de tests à 
+effectuer, et une infinité de cas à envisager. Les risques n'ont pas été estimés ici quantitativement, 
+mais rien qu'une approche qualitative nous permet déjà de visualiser l'ampleur du travail que représente une 
+analyse \textsc{Hazop}, ainsi que tous les danger présents dans notre procédé de production d'ammoniac.
 
 \nocite{*}
 \bibliographystyle{plain} % Le style est mis entre accolades.
