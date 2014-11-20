@@ -1,0 +1,160 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{chemist}
+\usepackage{array}
+\usepackage[version=3]{mhchem}
+\usepackage{amsmath}
+\usepackage[squaren,Gray]{SIunits}
+\usepackage{numprint}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{fullpage}
+\usepackage{mhchem}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{tabularx}
+
+
+\begin{document}
+
+\section{Questions}
+
+\begin{enumerate}
+
+    \item Quels sont les dangers présentés par les substances mises en œuvre durant la synthèse de l’ammoniac?
+    
+    \item Comment les flux de matière circulent-ils dans la section en question et au sein du réacteur de conversion?
+          Utilisez des surligneurs pour indiquer ces circulations sur le PFD et sur les PIDs de la section. Seules
+          les circulations concernant le procédé en régime seront prises en compte.
+    
+    \item Pourquoi n’y a-t-il pas de soupape de sécurité ou de disque de rupture (les deux types de dispositifs
+          servent à protéger un équipement ou une ligne contre les surpressions) sur le réacteur de synthèse du \ce{NH_3}?
+    
+    \item Pourquoi y a-t-il des disques de rupture sur l’échangeur 124-MC?
+    
+\end{enumerate}
+
+\section{Réponses}
+
+\subsection{Réponse 1}
+
+La tableau ci-dessous reprend les trois substances mises en œuvre durant la synthèse de l’ammoniac et
+donne une idée des dangers.
+
+
+
+\begin{tabular}{|c||p{4cm}|p{4cm}|p{4cm}|}
+\hline 
+ & Diazote \ce{N_2} & Dihydrogène \ce{H_2} & Ammoniac \ce{NH_3} \\ 
+\hline 
+\hline
+Stabilité & Très stable & Composant extrêment inflammable & Inflammable \\ 
+\hline 
+Nocivité & Risque d'anoxie & Pas toxique & Toxique par inhalation, brûlure au contact direct \\ 
+\hline 
+Environnement & Aucune dégradation de l'environnement & Risque majeur pour la couche d'ozone & Toxique, aucun effet
+au niveau du réchauffement climatique \\ 
+\hline 
+Stockage & Le réservoir doit pouvoir supporter une grosse détente & Les normes imposent un stockage externe & Conservation
+à l'écart de toute flamme et bonne ventilation du lieu de stockage imposée (fuite) \\ 
+\hline 
+Détection & Capteur électronique & Capteur électronique & Odeur particulière, baguette souffrée \\ 
+\hline 
+\end{tabular} 
+
+\subsection{Réponse 2}
+
+Voir séance.
+
+\subsection{Réponse 3}
+
+Nous n'avons pas de risque de surpression. Premièrement, étant donné que la réaction de formation de \ce{NH_3} tend à
+réduire le nombre de môles de gaz, elle tend à réduire la pression. Par conséquent, nous n'aurons pas d'augmentation de
+pression en activité, il n'est donc pas nécessaire de gérer cette augmentation. Deuxièmement, nous pouvons mentionner le
+fait qu'une augmentation de la pression va seulement provoquer une augmentation de la vitesse de déplacement du gaz, étant
+donné qu'il circule "librement" sur toute cette partie du circuit.
+
+\subsection{Réponse 4}
+
+Si un des tuyaux se brise, à cause de sa pression interne par exemple, son contenu va se répandre et donc la pression
+maximale que le shell (la coquille, la coque) peut contenir, sera dépassée. Ceci provoquera une explosion du shell, ce que
+les disques de rupture permettent justement d'éviter. Les disques de rupture fonctionnent de la manière suivante: ils
+redirigent le contenu du shell vers un tank sécurisé, "a safe place".
+
+L'échangeur 124MC peut être assimilé à un radiateur: il est compose d'un shell et d'une série de tubes qui le
+traversent, le but étant un échange de chaleur entre le contenu du shell et les tubes. Le shell est rempli d'eau
+(a priori elle reste liquide) et elle peut supporter une pression de plus au moins \unit{15}{bar}. Les tubes par contre
+contiennent le gaz qui vient du réacteur, ce gaz se trouve à \unit{150}{bar} environ. Dès lors, si un de ces tuayx venait
+à se briser, à cause de sa pression interne par exemple, son contenu va se répandre et donc la pression maximale que le
+shell (la coquille, la coque) peut contenir, sera dépassée. Ceci provoquera une explosion du shell, ce que les disques de
+rupture permettent justement d'éviter. Les disques de rupture fonctionnent de la manière suivante: lorsque le tube se casse
+et la pression du shell va augmenter, les disques redirigent le contenu du shell vers un tank sécurisé, "a safe place". En
+d'autres mots, ce sont les disques qui exploseront avant que le shell ne le fasse, et ils permettront alors de rediriger le
+contenu du shell (qui est alors un mélange gaz/eau) vers un endroit sûr.
+
+
+\begin{table}
+\centering
+
+\begin{tabular}{|p{2cm}|p{3cm}|p{3cm}|p{4cm}|p{3cm}|}
+\hline 
+Noeud & Mot guide & Cause & Conséquence & Mesures \\ 
+\hline 
+\hline
+
+ Entrée A2 Réacteur 105MD & LESS/NO FLOW & Vanne HV1046 pas assez ouverte & Mauvais refroidissement au sein du
+ réacteur & Alarme \\ 
+
+ & & & & \\
+
+ & & & Augmentation de la température dans le réacteur & Dispositif d'ouverture automatique \\ 
+ 
+ & & & & \\
+
+ & & & Augmentation dans la sortie B du réacteur &  \\ 
+ 
+ & & & & \\
+ 
+ & MORE FLOW & Vanne HV1046 trop ouverte & Plus de refroidissement au niveau des lits & Alarme \\
+ 
+ & & & Diminution de la température au sein du réacteur & Dispositif de fermeture automatique \\
+ 
+ & & & & \\
+ 
+ & & & Pas de conséquence en terme de sécurité & \\
+ 
+ & & & & \\
+  
+ & REVERSE FLOW & pas considéré & pas considéré & pas considéré \\
+  
+  
+ & & & & \\
+  & & & & \\
+
+ Shell échangeur calorifique 124MC & MORE PRESSURE & Rupture du tube interne (le gaz se répend dans l'enceinte de
+ l'échangeur & Contamination & Alarme \\
+ 
+  & & & & \\
+
+ & & & Risque d'explosion de l'échangeur  & Activation du disque de rupture + Déversement dans réservoir alternatif sûr \\
+ 
+  & & & & \\
+
+ & LESS PRESSURE & Fuite dans le shell & Perte d'eau & Alarme \\
+ 
+  & & & & \\
+
+ & & & Mauvais refroidissement & Réparation \\
+ 
+ \hline
+
+
+\end{tabular} 
+\end{table}
+
+\end{document}
