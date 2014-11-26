@@ -5,7 +5,7 @@
 
 \section{Introduction}
 
-Cette partie traite de l'étude de l'impact environnemental de notre procédé, nous cherchons donc à écrire une étude technique visant à apprécier les conséquences environnementales de notre projet pour tenter d'en limiter, atténuer ou compenser les impacts négatifs. Concrètement, on nous demande d'identifier les causes de la consommation d'énergie, de l'émission de \ce{CO_2} et les sources principales des produits secondaires, potentiellement dangereux, dans notre processus. Ces points d'attention doivent être détaillés en spécifiant les unités du processus qui sont liées à chacun de ces points d'attention, en mentionnant également les conséquences pour la société, en donnant des arguments concrets. 
+Cette partie traite de l'étude de l'impact environnemental de notre procédé, nous cherchons donc à écrire une étude technique visant à apprécier les conséquences environnementales de notre projet pour tenter d'en limiter, atténuer ou compenser les impacts négatifs. Concrètement, on nous demande d'identifier les causes de la consommation d'énergie, de l'émission de \ce{CO_2} et les sources principales des produits secondaires, potentiellement dangereux, dans notre processus. Ces points d'attention doivent être détaillés en spécifiant les unités du processus qui sont liées à chacun d'eux, en mentionnant également les conséquences pour la société, en donnant des arguments concrets. 
 
 
 Commençons par introduire une abréviation anglophone très employée dans le secteur des analyses environnementales: Best Available Techniques ou BAT. Donnons une définition précise de chaque mot:
@@ -25,7 +25,7 @@ Une BAT désigne donc l'étape la plus avancée dans le développement d'une act
 
 
 Les impacts toxicologiques de l'ammoniac semblent assez bien connus, mais quand il s'agit de ses impacts écotoxicologiques, autres que liés à son caractère basique, ils sont moins bien étudiés.
-Nous pouvons noter les deux points suivants, avec notre source (ici il faut que ce soit bô) \url{http://fr.wikipedia.org/wiki/Ammoniac#Impact_environnemental}.
+Nous pouvons noter les deux points suivants (source: wiki):
 
 \begin{enumerate}
     \item Premièrement, les quantités d'ammoniac rejetées dans l'atmosphère en font l'un des principaux responsables de l'acidification de l'eau et des sols, ainsi qu'un facteur favorisant les pluies acides, et il s'agit du principal responsable de l'eutrophisation des milieux aquatiques --- l'eutrophisation est le processus par lequel des nutriments s'accumulent dans un milieu.
@@ -35,9 +35,8 @@ Nous pouvons noter les deux points suivants, avec notre source (ici il faut que 
 
 \section{Analyse de l'énergie de consommation}
 
-Dans les années nonante, après des décennies de recherche pour abaisser le consommation énergétique de la production d'ammoniac, une valeur de \unit{7}{\giga cal \per \ton} de \ce{NH_3} mais depuis, l'industrie ne s'est pas intéressée à continuer à essayer de diminuer ce chiffre. Ce fait est à plaindre car, outre une économie financière importante, la réduction de ne serait-ce que \unit{0,1}{\giga cal \per \ton} de \ce{NH_3} permettrait de limiter l'impact environnemental du procédé car les émissions de \ce{CO_2} seraient revues à la baisse.
-
-Passons à présent à la gestion énergétique: grâce à une exploitation judicieuse de l’énergie produite, presque tous les procédés liés à la synthèse d'ammoniac peuvent fonctionner de façon autonome, c'est-à-dire que seule la mise en route nécessite de la vapeur d'origine externe ou produite par une chaudière d'appoint. Les besoins en énergie d'installations modernes autonomes sont environ de \unit{29}{\giga\joule}\per{\ton} de NH3 produit --- rappelons que $\unit{1}{\giga\joule} = \unit{10^9}{J}$.
+Grâce à une exploitation judicieuse de l’énergie produite, presque tous les procédés liés à la synthèse d'ammoniac peuvent fonctionner de façon autonome, c'est-à-dire que seule la mise en route nécessite de la vapeur d'origine externe ou produite par une chaudière d'appoint. Les besoins en énergie d'installations modernes autonomes sont environ de \unit{29}{\giga\joule\per\ton} de NH3 produit --- rappelons que $\unit{1}{\giga\joule} = \unit{10^9}{J}$.
+Dans les années nonante, après des décennies de recherche pour abaisser le consommation énergétique de la production d'ammoniac, une valeur de \unit{7}{\giga cal \per \ton} de \ce{NH_3} a été atteinte (un chiffre quasi équivalant à \unit{29}{\giga\joule\per\ton} car nous pouvons rappeler que \unit{1}{cal} = \unit{4,1868}{\joule}) mais depuis, l'industrie ne s'est plus intéressée à continuer à essayer de diminuer ce chiffre. Ce fait est à plaindre car, outre une économie financière importante, la réduction de ne serait-ce que \unit{0,1}{\giga cal \per \ton} de \ce{NH_3} permettrait de limiter l'impact environnemental du procédé car les émissions de \ce{CO_2} seraient revues à la baisse.
 
 \section{Outputs indésirables}
 
@@ -95,6 +94,7 @@ La suffocation due au manque d'oxygène, quelque part dans notre usine, peut avo
 \begin{itemize}
 \item \url{http://www.ocinitrogen.com/Media%20Library/Ammonia%20process%20-%20BAT%20Production%20of%20ammonia%20(2000)%20-%20Brochure.pdf}
 \item \url{http://www.thyssenkrupp-industrial-solutions.com/fileadmin/documents/publications/Nitrogen-Syngas-2011/Low_Energy_Consumption_Ammonia_Production_2011_paper.pdf}
+\item \url{http://fr.wikipedia.org/wiki/Ammoniac#Impact_environnemental}
 \end{itemize}
 
 
