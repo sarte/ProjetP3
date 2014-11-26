@@ -56,7 +56,61 @@ Nous terminons en nous attardant sur la gestion des déchets, en mentionnant les
     réglementaire en fonction de la composition des produits.
 \end{itemize}
 
-\bibliographystyle{plain}
-\bibliography{sourcespourlatache3}
+
+\pagebreak
+
+
+\textbf{Justification: pourquoi s'intéresser à l'ammoniac?}
+
+Près de $80 \%$ de la quantité d'ammoniac est utilisée comme source d'azote pour des produits comme les engrais. Les $20
+\%$ restant servent pour diverses applications industrielles comme la fabrication de matières plastiques, de fibres,
+d'explosifs, d'amines, d'amides ou d'autres composés organiques à base d'azote, qui à terme seront employés comme
+intermédiaires pour la production de colorants ou de produits pharmaceutiques. L'ammoniac est également utile pour des
+mesures de protection environnementale, par exemple dans l'élimination de gaz \ce{NO_x} provenant de gaz à
+combustion. L'ammoniac liquide est un important solvant et c'est également un réfrigérant. En 2003, la capacité mondiale
+de production annuelle était de l'ordre de $109$ de tonnes!
+
+
+\textbf{Produits: quels sont les outputs de notre procédé (en plus de l'ammoniac)?}
+
+Premièrement, du \ce{CO_2}, qui peut être réemployé pour un tas d'applications, pour la production de méthanol, à
+l'industrie des boissons, en passant par liquide de refroidissement pour les réacteurs nucléaires. Ceci étant dit, il
+est inévitable qu'un important excès de \ce{CO_2} soit dispersé, du \ce{CO_2} provenant de la réaction dans le réformeur
+primaire (steam/air reformer). 
+
+
+
+
+\textbf{Prévisions: quelle est l'origine des polluants que nous pouvons attendre de notre production d'ammoniac?}
+
+\begin{itemize}
+    \item Du \ce{CO_2}, du \ce{NO_x}, du \ce{SO_2} et du \ce{CO} provenant de réactions ayant lieu dans le réformeur à
+    vapeur, avec un réformeur primaire et/ou des boilers auxiliaires.
+    \item Du \ce{SO_2} provenant de la suppression du souffre, et des systèmes de récupération dans les processus
+    d'oxydation partielle 
+    \item Du \ce{CO_2} et des traces de solvants ainsi que de gaz de synthèse provenant des processus de suppression
+    du dioxyde de carbone.
+\end{itemize}
+
+\textbf{Écologie: quelles sont les problèmes relatifs à la santé et la sécurité associés à notre production
+d'ammoniac, ainsi qu'à la conservation de l'ammnoiac produit?}
+
+Nous pouvons mentionner les trois points suivants:
+
+\begin{enumerate}
+    \item Le risque d'inflammation et/ou d'explosion
+    \item L'empoisonnement
+    \item La suffocation
+\end{enumerate}
+
+Les incendies ou les explosions dues à l'allumage involontaire des fuites ne sont pas si rares que cela, plus
+particulièrement quand ceux-ci ont lieu dans les systèmes de gaz d'alimentation et de synthèse.
+
+Le \ce{CO} représente le plus important composé toxique, provenant des potentielles fuites dans les zones de (...)
+
+La suffocation due au manque d'oxygène, quelque part dans notre usine, peut avoir lieu à des endroits où l'air
+respirable a été dilué avec des gaz inertes. Le \ce{CO} et le \ce{N_2} sont des gaz dangereux pour l'homme.
+
+
 
 \end{document}
