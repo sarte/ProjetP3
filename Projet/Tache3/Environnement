@@ -16,7 +16,7 @@ Commençons par introduire une abréviation anglophone très employée dans le s
     \item \textbf{Techniques}: les technologies employées ainsi que l'installation, tout ce qui touche à son design, la manière dont elle a été construite et dont elle est maintenue.
 \end{enumerate}
 
-Une BAT désigne donc l'étape la plus avancée dans le développement d'une activité et ses méthodes d'opération dans le secteur considéré, en indiquant la durabilité, l'efficacité d'un procédé qui permettent de réduire les émissions nocives, ou de manière plus général, l'impact sur l'environnement.
+Une BAT désigne donc l'étape la plus avancée dans le développement d'une activité et ses méthodes d'opération dans le secteur considéré, en indiquant la durabilité et l'efficacité d'un procédé, qui permettent de réduire les émissions nocives, ou de manière plus générale, l'impact sur l'environnement.
 
 
 
@@ -28,19 +28,18 @@ Les impacts toxicologiques de l'ammoniac semblent assez bien connus, mais quand 
 Nous pouvons noter les deux points suivants (source: wiki):
 
 \begin{enumerate}
-    \item Premièrement, les quantités d'ammoniac rejetées dans l'atmosphère en font l'un des principaux responsables de l'acidification de l'eau et des sols, ainsi qu'un facteur favorisant les pluies acides, et il s'agit du principal responsable de l'eutrophisation des milieux aquatiques --- l'eutrophisation est le processus par lequel des nutriments s'accumulent dans un milieu.
-    \item Nous continuons en mentionnant le GWP (le Global Warming Potential) de l'ammoniac qui est de $0$, ainsi que son ODP (l'Ozone Depletion Potential) nul également, ce qui en font donc un fluide sans effet sur le réchauffement climatique, ni sur la couche d'ozone, contrairement aux fluides frigorigènes type HFC couramment utilisés dans les climatiseurs et pompes à chaleur --- un fluide frigorigène (ou réfrigérant) est un fluide pur ou un mélange de fluides purs présents en phase liquide, gazeuse ou les deux à la fois en fonction de la température et de la pression de celui-ci.
+    \item Premièrement, les quantités d'ammoniac rejetées dans l'atmosphère en font l'un des principaux responsables de l'acidification de l'eau et des sols, ainsi qu'un facteur favorisant les pluies acides, et il s'agit du principal responsable de l'eutrophisation des milieux aquatiques --- l'eutrophisation est la manière dont un écosystème réagit suite à l'addition dans un système aquatique de substances artificielles.
+    \item Nous continuons en mentionnant le GWP (Global Warming Potential) de l'ammoniac qui vaut $0$, ainsi que son ODP (Ozone Depletion Potential) nul également, ce qui en font donc un fluide sans effet sur le réchauffement climatique, ni sur la couche d'ozone, contrairement aux fluides frigorigènes couramment utilisés dans les climatiseurs et pompes à chaleur --- un fluide frigorigène (ou réfrigérant) est un fluide typiquement présent dans une pompe à chaleur ou dans un cycle de refroidissement, qui subit souvent des transformations de phase
 \end{enumerate}
 
 
 \section{Analyse de l'énergie de consommation}
 
-Grâce à une exploitation judicieuse de l’énergie produite, presque tous les procédés liés à la synthèse d'ammoniac peuvent fonctionner de façon autonome, c'est-à-dire que seule la mise en route nécessite de la vapeur d'origine externe ou produite par une chaudière d'appoint. Les besoins en énergie d'installations modernes autonomes sont environ de \unit{29}{\giga\joule\per\ton} de NH3 produit --- rappelons que $\unit{1}{\giga\joule} = \unit{10^9}{J}$.
-Dans les années nonante, après des décennies de recherche pour abaisser le consommation énergétique de la production d'ammoniac, une valeur de \unit{7}{\giga cal \per \ton} de \ce{NH_3} a été atteinte (un chiffre quasi équivalant à \unit{29}{\giga\joule\per\ton} car nous pouvons rappeler que \unit{1}{cal} = \unit{4,1868}{\joule}) mais depuis, l'industrie ne s'est plus intéressée à continuer à essayer de diminuer ce chiffre. Ce fait est à plaindre car, outre une économie financière importante, la réduction de ne serait-ce que \unit{0,1}{\giga cal \per \ton} de \ce{NH_3} permettrait de limiter l'impact environnemental du procédé car les émissions de \ce{CO_2} seraient revues à la baisse.
+Grâce à une exploitation judicieuse de l’énergie produite, presque tous les procédés liés à la synthèse d'ammoniac peuvent fonctionner de façon autonome, c'est-à-dire que seule la mise en route nécessite de la vapeur d'origine externe ou produite par une chaudière d'appoint. Les besoins en énergie d'installations modernes autonomes sont environ de \unit{29}{\giga\joule\per\ton} de NH3 produit --- rappelons que $\unit{1}{\giga\joule} = \unit{10^9}{J}$. Dans les années nonante, après des décennies de recherche pour abaisser le consommation énergétique de la production d'ammoniac, une valeur de \unit{7}{\giga cal \per \ton} de \ce{NH_3} a été atteinte (un chiffre quasi équivalant aux \unit{29}{\giga\joule\per\ton} ci-dessus, car nous pouvons rappeler que \unit{1}{cal} = \unit{4,1868}{\joule}) mais depuis, l'industrie ne s'est plus intéressée à continuer à essayer de diminuer ce chiffre. Ce fait est à plaindre car, outre une économie financière importante, la réduction de ne serait-ce que \unit{0,1}{\giga cal \per \ton} de \ce{NH_3} permettrait de limiter l'impact environnemental du procédé car les émissions de \ce{CO_2} seraient revues à la baisse.
 
 \section{Outputs indésirables}
 
-Nous terminons en nous attardant sur la gestion des déchets, en mentionnant les éléments suivants:
+Nous poursuivons en nous attardant sur la gestion des déchets, en mentionnant les éléments suivants:
 
 \begin{itemize}
     \item Les gaz du reformeur primaire et des chaudières à vapeur sont rejetés dans l’atmosphère par les cheminées, et nous devons évidemment veiller à respecter les valeurs limites admissibles quand il s'agit du \ce{NO_x} ou du \ce{SO_2}.
@@ -48,6 +47,15 @@ Nous terminons en nous attardant sur la gestion des déchets, en mentionnant les
     \item Catalyseurs épuisés et produits d'épuration: selon l'usage prévu et le mode de fonctionnement des installations, la durée de vie des catalyseurs employés dans les installations de production d'ammoniac varie entre 2 et 8 ans. Les catalyseurs dont l'activité est devenue insuffisante sont remplacés. La plupart des catalyseurs renferment des quantités notables d'oxydes et de sulfures des métaux lourds Co, Ni, Mo, Cu, Zn, Fe, non solubles dans l'eau. Les déchets retournent en partie chez le fabricant en vue d'un retraitement ou sont récupérés par des usines métallurgiques en vue du recyclage des métaux. À défaut, il faut prévoir une mise en décharge réglementaire en fonction de la composition des produits.
 \end{itemize}
 
+\section{Analyse de notre procédé}
+
+En inspectant notre flow-sheet et notre bilan d'énergie, nous remarquons que les produits à surveiller sont:
+
+\begin{itemize}
+\item Le \ce{CO} de la réaction (1) du reformage primaire
+\item Le \ce{CO_2} de la réaction (2) du reformage primaire
+\item Le \ce{CO_2} de la réaction dans le four
+\end{itemize}
 
 
 \textbf{Justification: pourquoi s'intéresser à l'ammoniac?}
@@ -55,11 +63,11 @@ Nous terminons en nous attardant sur la gestion des déchets, en mentionnant les
 Près de $80 \%$ de la quantité d'ammoniac est utilisée comme source d'azote pour des produits comme les engrais. Les $20 \%$ restant servent pour diverses applications industrielles comme la fabrication de matières plastiques, de fibres, d'explosifs, d'amines, d'amides ou d'autres composés organiques à base d'azote, qui à terme seront employés comme intermédiaires pour la production de colorants ou de produits pharmaceutiques. L'ammoniac est également utile pour des mesures de protection environnementale, par exemple dans l'élimination de gaz \ce{NO_x} provenant de gaz à combustion. L'ammoniac liquide est un important solvant et c'est également un réfrigérant. En 2003, la capacité mondiale de production annuelle était de l'ordre de $109$ de tonnes!
 
 
-\textbf{Produits: quels sont les outputs de notre procédé (en plus de l'ammoniac)?}
+\textbf{Produits: quels sont les produits de notre procédé (en plus de l'ammoniac)?}
 
-C'est principalement dans le réformeur primaire et dans la phase de supression du \ce{CO_2} que nous pouvons nous attendre à des emissions de gaz comme du \ce{NO_x} ou du \ce{SO_2}. 
+C'est principalement dans le reformeur primaire et dans la phase de suppression du \ce{CO_2} que nous pouvons nous attendre à des emissions de gaz comme du \ce{NO_x} ou du \ce{SO_2}. 
 
-Premièrement, nous retrouvons du \ce{CO_2} en tant que produit, qui peut être réemployé pour un tas d'applications, pour la production de méthanol, à l'industrie des boissons, en passant par liquide de refroidissement pour les réacteurs nucléaires. Ceci étant dit, il est inévitable qu'un important excès de \ce{CO_2} soit dispersé, du \ce{CO_2} provenant de la réaction dans le réformeur primaire (steam/air reformer). Le dioxyde de carbone est produit en fonction de la conversion stoechiométrique et peut être récupéré pour des applications mentionnées ci-dessus. La production du \ce{CO_2} varie entre $1,15$ et $1,30$\unit{}{\kilogram \per \kilogram} de \ce{NH_3}, dépendant du degré de réformage de l'air. Dans le réformeur de chaleur nous pouvons atteindre un rapport molaire de \ce{CO_2} sur \ce{NH_3} aux alentours de $0,5$, soit un rapport massique de $1,29$.
+Premièrement, nous retrouvons du \ce{CO_2} en tant que produit, qui peut être réemployé pour un tas d'applications, pour la production de méthanol, à l'industrie des boissons, en passant par liquide de refroidissement pour les réacteurs nucléaires. Ceci étant dit, il est inévitable qu'un important excès de \ce{CO_2} soit dispersé, du \ce{CO_2} provenant de la réaction dans le reformeur primaire (steam/air reformer). Le dioxyde de carbone est produit en fonction de la conversion stoechiométrique et peut être récupéré pour des applications mentionnées ci-dessus. La production du \ce{CO_2} varie entre $1,15$ et $1,30$\unit{}{\kilogram \per \kilogram} de \ce{NH_3}, dépendant du degré de reformage de l'air. Dans le reformeur de chaleur nous pouvons atteindre un rapport molaire de \ce{CO_2} sur \ce{NH_3} aux alentours de $0,5$, soit un rapport massique de $1,29$.
 
 
 
@@ -67,9 +75,9 @@ Premièrement, nous retrouvons du \ce{CO_2} en tant que produit, qui peut être 
 \textbf{Prévisions: quelle est l'origine des polluants que nous pouvons attendre de notre production d'ammoniac?}
 
 \begin{itemize}
-    \item Du \ce{CO_2}, du \ce{NO_x}, du \ce{SO_2} et du \ce{CO} provenant de réactions ayant lieu dans le réformeur à vapeur, avec un réformeur primaire et/ou des boilers auxiliaires.
-    \item Du \ce{SO_2} provenant de la absorption du souffre, et des systèmes de récupération dans les processus d'oxydation partielle 
-    \item Du \ce{CO_2} et des traces de solvants ainsi que de gaz de synthèse provenant des processus de absorption du dioxyde de carbone.
+    \item Du \ce{CO_2}, du \ce{NO_x}, du \ce{SO_2} et du \ce{CO} provenant de réactions ayant lieu dans le reformeur à vapeur (primaire).
+    \item Du \ce{SO_2} provenant de l'absorption du souffre et des systèmes de récupération dans les processus d'oxydation partielle.
+    \item Du \ce{CO_2} et des traces de solvants ainsi que des gaz de synthèse provenant des processus d'absorption du dioxyde de carbone.
 \end{itemize}
 
 \textbf{Écologie: quels sont les problèmes relatifs à la santé et la sécurité associés à notre production d'ammoniac, ainsi qu'à la conservation de l'ammoniac produit?}
@@ -84,7 +92,7 @@ Nous pouvons mentionner les trois points suivants:
 
 Les incendies ou les explosions dues à l'allumage involontaire des fuites ne sont pas si rares que cela, plus particulièrement quand ceux-ci ont lieu dans les systèmes de gaz d'alimentation et de synthèse.
 
-Le \ce{CO} représente le plus important composé toxique, provenant des potentielles fuites dans les zones de (...)
+Le \ce{CO} représente le plus important composé toxique, provenant des potentielles fuites dans les zones de (...).
 
 La suffocation due au manque d'oxygène, quelque part dans notre usine, peut avoir lieu à des endroits où l'air respirable a été dilué avec des gaz inertes. Le \ce{CO} et le \ce{N_2} sont des gaz dangereux pour l'homme.
 
