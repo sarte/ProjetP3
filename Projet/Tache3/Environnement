@@ -3,12 +3,14 @@
 
 \begin{document}
 
-\section{Introduction}
+\subsection{Introduction}
 
 Cette partie traite de l'étude de l'impact environnemental de notre procédé, nous cherchons donc à écrire une étude technique visant à apprécier les conséquences environnementales de notre projet pour tenter d'en limiter, atténuer ou compenser les impacts négatifs. Concrètement, on nous demande d'identifier les causes de la consommation d'énergie, de l'émission de \ce{CO_2} et les sources principales des produits secondaires, potentiellement dangereux, dans notre processus. Ces points d'attention doivent être détaillés en spécifiant les unités du processus qui sont liées à chacun d'eux, en mentionnant également les conséquences pour la société, en donnant des arguments concrets. 
 
+Cette tâche sera structurée de la manière suivante: nous distinguerons les deux éléments le plus importants de cette analyse, à savoir les rejets en terme de matière, d'une part, et les rejets en terme énergétique, d'autre part. En terme de matière, nous analyserons les composants rejetés en se demandant s'ils sont dangeureux, en quelle quantité, s'il est utile de les récupérer, à quelles fins, et caetera. Quant à la consommation énergétique, nous allons l'évaluer, en analysant la température à laquelle
 
-Commençons par introduire une abréviation anglophone très employée dans le secteur des analyses environnementales: Best Available Techniques ou BAT. Donnons une définition précise de chaque mot:
+
+Commençons par introduire une abréviation anglophone très employée dans le secteur des analyses environnementales: Best Available Techniques ou BAT. Nous pouvons donner une définition précise de chaque mot:
 
 \begin{enumerate}
     \item \textbf{Best}: efficace, donnant un haut niveau de protection environnemental.
@@ -16,9 +18,14 @@ Commençons par introduire une abréviation anglophone très employée dans le s
     \item \textbf{Techniques}: les technologies employées ainsi que l'installation, tout ce qui touche à son design, la manière dont elle a été construite et dont elle est maintenue.
 \end{enumerate}
 
-Une BAT désigne donc l'étape la plus avancée dans le développement d'une activité et ses méthodes d'opération dans le secteur considéré, en indiquant la durabilité et l'efficacité d'un procédé, qui permettent de réduire les émissions nocives, ou de manière plus générale, l'impact sur l'environnement.
+Les BAT désignent donc l'étape la plus avancée dans le développement d'une activité et ses méthodes d'opération dans le secteur considéré. Elles indiquent la durabilité et l'efficacité d'un procédé, qui permettent de réduire les émissions nocives, ou de manière plus générale, l'impact sur l'environnement.
 
 
+\section{Rejets en terme de matière}
+
+\section{Rejets en terme d'énergie}
+
+%
 
 
 \section{Impact (éco)toxicologiques}
