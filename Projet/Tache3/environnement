@@ -23,6 +23,8 @@ Les BAT désignent donc l'étape la plus avancée dans le développement d'une a
 
 \section{Rejets en terme de matière}
 
+Notre outil de gestion nous permet de réaliser le calcul d'approvisionnement nécessaire en matière première en fonction de la température et de la quantité d'ammnoniac à produire. Avec la constante d'équilibre K nous pouvons quantifier la quantité de \ce{CO_2}  
+
 \section{Rejets en terme d'énergie}
 
 %
@@ -36,7 +38,7 @@ Nous pouvons noter les deux points suivants (source: wiki):
 
 \begin{enumerate}
     \item Premièrement, les quantités d'ammoniac rejetées dans l'atmosphère en font l'un des principaux responsables de l'acidification de l'eau et des sols, ainsi qu'un facteur favorisant les pluies acides, et il s'agit du principal responsable de l'eutrophisation des milieux aquatiques --- l'eutrophisation est la manière dont un écosystème réagit suite à l'addition dans un système aquatique de substances artificielles.
-    \item Nous continuons en mentionnant le GWP (Global Warming Potential) de l'ammoniac qui vaut $0$, ainsi que son ODP (Ozone Depletion Potential) nul également, ce qui en font donc un fluide sans effet sur le réchauffement climatique, ni sur la couche d'ozone, contrairement aux fluides frigorigènes couramment utilisés dans les climatiseurs et pompes à chaleur --- un fluide frigorigène (ou réfrigérant) est un fluide typiquement présent dans une pompe à chaleur ou dans un cycle de refroidissement, qui subit souvent des transformations de phase
+    \item Nous continuons en mentionnant le GWP (Global Warming Potential) de l'ammoniac qui vaut $0$, ainsi que son ODP (Ozone Depletion Potential) nul également, ce qui en font donc un fluide sans effet sur le réchauffement climatique, ni sur la couche d'ozone, contrairement aux fluides frigorigènes couramment utilisés dans les climatiseurs et pompes à chaleur --- un fluide frigorigène (ou réfrigérant) est un fluide typiquement présent dans une pompe à chaleur ou dans un cycle de refroidissement, qui subit souvent des transformations de phase.
 \end{enumerate}
 
 
@@ -51,7 +53,7 @@ Nous poursuivons en nous attardant sur la gestion des déchets, en mentionnant l
 \begin{itemize}
     \item Les gaz du reformeur primaire et des chaudières à vapeur sont rejetés dans l’atmosphère par les cheminées, et nous devons évidemment veiller à respecter les valeurs limites admissibles quand il s'agit du \ce{NO_x} ou du \ce{SO_2}.
     \item Les eaux usées seront évacuées avec ou sans traitement préalable au rejet, selon leur degré de pollution, et les résidus boueux recueillis à l'épuration des circuits de refroidissement doivent faire l'objet d'une mise en décharge appropriée à leur nature.
-    \item Catalyseurs épuisés et produits d'épuration: selon l'usage prévu et le mode de fonctionnement des installations, la durée de vie des catalyseurs employés dans les installations de production d'ammoniac varie entre 2 et 8 ans. Les catalyseurs dont l'activité est devenue insuffisante sont remplacés. La plupart des catalyseurs renferment des quantités notables d'oxydes et de sulfures des métaux lourds Co, Ni, Mo, Cu, Zn, Fe, non solubles dans l'eau. Les déchets retournent en partie chez le fabricant en vue d'un retraitement ou sont récupérés par des usines métallurgiques en vue du recyclage des métaux. À défaut, il faut prévoir une mise en décharge réglementaire en fonction de la composition des produits.
+    \item Catalyseurs épuisés et produits d'épuration: selon l'usage prévu et le mode de fonctionnement des installations, la durée de vie des catalyseurs employés dans les installations de production d'ammoniac varie entre 2 et 8 ans. Les catalyseurs dont l'activité est devenue insuffisante sont remplacés. La plupart des catalyseurs renferment des quantités notables d'oxydes et de sulfures des métaux lourds comme le cobalt \ce{Co}, le nickel \ce{Ni}, le manganèse \ce{Mo}, le cuivre \ce{Cu}, le zink \ce{Zn} et le fer \ce{Fe}, non solubles dans l'eau. Les déchets retournent en partie chez le fabricant en vue d'un retraitement ou sont récupérés par des usines métallurgiques en vue du recyclage des métaux. A défaut, il faut prévoir une mise en décharge réglementaire en fonction de la composition des produits.
 \end{itemize}
 
 \section{Analyse de notre procédé}
