@@ -20,12 +20,16 @@ Commençons par introduire une abréviation anglophone très employée dans le s
 
 Les BAT désignent donc l'étape la plus avancée dans le développement d'une activité et ses méthodes d'opération dans le secteur considéré. Elles indiquent la durabilité et l'efficacité d'un procédé, qui permettent de réduire les émissions nocives, ou de manière plus générale, l'impact sur l'environnement.
 
-
-\section{Rejets en terme de matière}
+ 
 
 \section{Rejets en terme d'énergie}
 
-%
+Notre outil de gestion nous permet 
+
+
+\section{Rejets en terme de matière}
+
+Notre outil de gestion nous permet également de réaliser le calcul d'approvisionnement nécessaire en matière première en fonction de la température et de la quantité d'ammnoniac à produire. Avec la constante d'équilibre K nous pouvons quantifier la quantité de \ce{CO} et de \ce{CO_2}. 
 
 
 \section{Impact (éco)toxicologiques}
@@ -36,7 +40,7 @@ Nous pouvons noter les deux points suivants (source: wiki):
 
 \begin{enumerate}
     \item Premièrement, les quantités d'ammoniac rejetées dans l'atmosphère en font l'un des principaux responsables de l'acidification de l'eau et des sols, ainsi qu'un facteur favorisant les pluies acides, et il s'agit du principal responsable de l'eutrophisation des milieux aquatiques --- l'eutrophisation est la manière dont un écosystème réagit suite à l'addition dans un système aquatique de substances artificielles.
-    \item Nous continuons en mentionnant le GWP (Global Warming Potential) de l'ammoniac qui vaut $0$, ainsi que son ODP (Ozone Depletion Potential) nul également, ce qui en font donc un fluide sans effet sur le réchauffement climatique, ni sur la couche d'ozone, contrairement aux fluides frigorigènes couramment utilisés dans les climatiseurs et pompes à chaleur --- un fluide frigorigène (ou réfrigérant) est un fluide typiquement présent dans une pompe à chaleur ou dans un cycle de refroidissement, qui subit souvent des transformations de phase
+    \item Nous continuons en mentionnant le GWP (Global Warming Potential) de l'ammoniac qui vaut $0$, ainsi que son ODP (Ozone Depletion Potential) nul également, ce qui en font donc un fluide sans effet sur le réchauffement climatique, ni sur la couche d'ozone, contrairement aux fluides frigorigènes couramment utilisés dans les climatiseurs et pompes à chaleur --- un fluide frigorigène (ou réfrigérant) est un fluide typiquement présent dans une pompe à chaleur ou dans un cycle de refroidissement, qui subit souvent des transformations de phase.
 \end{enumerate}
 
 
@@ -51,42 +55,34 @@ Nous poursuivons en nous attardant sur la gestion des déchets, en mentionnant l
 \begin{itemize}
     \item Les gaz du reformeur primaire et des chaudières à vapeur sont rejetés dans l’atmosphère par les cheminées, et nous devons évidemment veiller à respecter les valeurs limites admissibles quand il s'agit du \ce{NO_x} ou du \ce{SO_2}.
     \item Les eaux usées seront évacuées avec ou sans traitement préalable au rejet, selon leur degré de pollution, et les résidus boueux recueillis à l'épuration des circuits de refroidissement doivent faire l'objet d'une mise en décharge appropriée à leur nature.
-    \item Catalyseurs épuisés et produits d'épuration: selon l'usage prévu et le mode de fonctionnement des installations, la durée de vie des catalyseurs employés dans les installations de production d'ammoniac varie entre 2 et 8 ans. Les catalyseurs dont l'activité est devenue insuffisante sont remplacés. La plupart des catalyseurs renferment des quantités notables d'oxydes et de sulfures des métaux lourds Co, Ni, Mo, Cu, Zn, Fe, non solubles dans l'eau. Les déchets retournent en partie chez le fabricant en vue d'un retraitement ou sont récupérés par des usines métallurgiques en vue du recyclage des métaux. À défaut, il faut prévoir une mise en décharge réglementaire en fonction de la composition des produits.
+    \item Catalyseurs épuisés et produits d'épuration: selon l'usage prévu et le mode de fonctionnement des installations, la durée de vie des catalyseurs employés dans les installations de production d'ammoniac varie entre 2 et 8 ans. Les catalyseurs dont l'activité est devenue insuffisante sont remplacés. La plupart des catalyseurs renferment des quantités notables d'oxydes et de sulfures des métaux lourds comme le cobalt \ce{Co}, le nickel \ce{Ni}, le manganèse \ce{Mo}, le cuivre \ce{Cu}, le zink \ce{Zn} et le fer \ce{Fe}, non solubles dans l'eau. Les déchets retournent en partie chez le fabricant en vue d'un retraitement ou sont récupérés par des usines métallurgiques en vue du recyclage des métaux. A défaut, il faut prévoir une mise en décharge réglementaire en fonction de la composition des produits.
 \end{itemize}
 
 \section{Analyse de notre procédé}
 
-En inspectant notre flow-sheet et notre bilan d'énergie, nous remarquons que les produits à surveiller sont:
+En inspectant notre flow-sheet et notre bilan d'énergie, nous pouvons faire une prévision quant à l'origine des polluants que nous pouvons attendre de notre production d'ammoniac. Nous remarquons que les produits à surveiller sont:
 
 \begin{itemize}
-\item Le \ce{CO} de la réaction (1) du reformage primaire
-\item Le \ce{CO_2} de la réaction (2) du reformage primaire
-\item Le \ce{CO_2} de la réaction dans le four
-\item Le 
+\item Le \ce{CO} de la réaction (1) du reformage primaire.
+\item Le \ce{CO_2} de la réaction (2) du reformage primaire.
+\item Le \ce{CO_2} de la réaction dans le four.
+\item 
+\item Le \ce{CO_2} et les traces de solvants ainsi que des gaz de synthèse provenant des processus d'absorption du dioxyde de carbone.
 \end{itemize}
 
 
-\textbf{Justification: pourquoi s'intéresser à l'ammoniac?}
+
+\paragraph{Justification: pourquoi s'intéresser à l'ammoniac?}
 
 Près de $80 \%$ de la quantité d'ammoniac est utilisée comme source d'azote pour des produits comme les engrais. Les $20 \%$ restant servent pour diverses applications industrielles comme la fabrication de matières plastiques, de fibres, d'explosifs, d'amines, d'amides ou d'autres composés organiques à base d'azote, qui à terme seront employés comme intermédiaires pour la production de colorants ou de produits pharmaceutiques. L'ammoniac est également utile pour des mesures de protection environnementale, par exemple dans l'élimination de gaz \ce{NO_x} provenant de gaz à combustion. L'ammoniac liquide est un important solvant et c'est également un réfrigérant. En 2003, la capacité mondiale de production annuelle était de l'ordre de $109$ de tonnes!
 
 
-\textbf{Produits: quels sont les produits de notre procédé (en plus de l'ammoniac)?}
+\paragraph{Produits: quels sont les produits de notre procédé (en plus de l'ammoniac)?}
 
-C'est principalement dans le reformeur primaire et dans la phase de suppression du \ce{CO_2} que nous pouvons nous attendre à des emissions de gaz comme du \ce{NO_x} ou du \ce{SO_2}. 
+Premièrement, nous retrouvons du \ce{CO_2} en tant que produit, qui peut être réemployé pour un tas d'applications, pour la production de méthanol, à l'industrie des boissons, en passant par liquide de refroidissement pour les réacteurs nucléaires. Ceci étant dit, il est inévitable qu'un important excès de \ce{CO_2} soit dispersé, du \ce{CO_2} provenant de la réaction dans le reformeur primaire (steam/air reformer). Le dioxyde de carbone est produit en fonction de la conversion stoechiométrique et peut être récupéré pour des applications mentionnées ci-dessus.
 
-Premièrement, nous retrouvons du \ce{CO_2} en tant que produit, qui peut être réemployé pour un tas d'applications, pour la production de méthanol, à l'industrie des boissons, en passant par liquide de refroidissement pour les réacteurs nucléaires. Ceci étant dit, il est inévitable qu'un important excès de \ce{CO_2} soit dispersé, du \ce{CO_2} provenant de la réaction dans le reformeur primaire (steam/air reformer). Le dioxyde de carbone est produit en fonction de la conversion stoechiométrique et peut être récupéré pour des applications mentionnées ci-dessus. La production du \ce{CO_2} varie entre $1,15$ et $1,30$\unit{}{\kilogram \per \kilogram} de \ce{NH_3}, dépendant du degré de reformage de l'air. Dans le reformeur de chaleur nous pouvons atteindre un rapport molaire de \ce{CO_2} sur \ce{NH_3} aux alentours de $0,5$, soit un rapport massique de $1,29$.
+%%La production du \ce{CO_2} varie entre $1,15$ et $1,30$\unit{}{\kilogram \per \kilogram} de \ce{NH_3}, dépendant du degré de reformage de l'air. Dans le reformeur de chaleur nous pouvons atteindre un rapport molaire de \ce{CO_2} sur \ce{NH_3} aux alentours de $0,5$, soit un rapport massique de $1,29$.
 
-
-
-
-\textbf{Prévisions: quelle est l'origine des polluants que nous pouvons attendre de notre production d'ammoniac?}
-
-\begin{itemize}
-    \item Du \ce{CO_2}, du \ce{NO_x}, du \ce{SO_2} et du \ce{CO} provenant de réactions ayant lieu dans le reformeur à vapeur (primaire).
-    \item Du \ce{SO_2} provenant de l'absorption du souffre et des systèmes de récupération dans les processus d'oxydation partielle.
-    \item Du \ce{CO_2} et des traces de solvants ainsi que des gaz de synthèse provenant des processus d'absorption du dioxyde de carbone.
-\end{itemize}
 
 \textbf{Écologie: quels sont les problèmes relatifs à la santé et la sécurité associés à notre production d'ammoniac, ainsi qu'à la conservation de l'ammoniac produit?}
 
@@ -112,9 +108,6 @@ La suffocation due au manque d'oxygène, quelque part dans notre usine, peut avo
 \item \url{http://www.thyssenkrupp-industrial-solutions.com/fileadmin/documents/publications/Nitrogen-Syngas-2011/Low_Energy_Consumption_Ammonia_Production_2011_paper.pdf}
 \item \url{http://fr.wikipedia.org/wiki/Ammoniac#Impact_environnemental}
 \end{itemize}
-
-
-
 
 
 

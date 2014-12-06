@@ -5,11 +5,11 @@ n = exp ((deltaS*T-deltaH*1000)/(R*T)); %definition of K(T)
 end
 ---------------------------------------------------------------
 function [n] = deltaH(vec1,vec2,vec3,vec4,coef,T,deltaHref)
-%deltaS calculates the deltaH (in kJ) of a reaction in function of the temperature
-%The reaction must involve 4 elements,and vec1,2,3,4 are associated to these elements.
-%The vec1,2,3,4 must be vectors of order 4, and containing gas phase
+%deltaH calculates the deltaH (in kJ) of a reaction in function of the temperature.
+%The reaction must involve 4 elements: vec1, vec2, vec3 and vec4 are associated to these elements.
+%vec1, vec2, vec3 and vec4 must be vectors of the fourth order, and containing gas phase
 %thermochemistry data (see nist.gov).
-%coef is a 4-order vector containing the stoechiometric coefficients of the
+%coef is a fourth order vector containing the stoechiometric coefficients of the
 %reaction.
 %The temperature must be expressed in Kelvin.
 
@@ -22,11 +22,11 @@ n = coef*[-elem1 -elem2 elem3 elem4]';
 end
 ---------------------------------------------------------------
 function [n] = deltaS(vec1,vec2,vec3,vec4,coef,T)
-%deltaS calculates the deltaS (in J) of a reaction in function of the temperature
-%The reaction must involve 4 elements,and vec1,2,3,4 are associated to these elements.
-%The vec1,2,3,4 must be vectors of order 6, and containing gas phase
+%deltaS calculates the deltaS (in J) of a reaction in function of the temperature.
+%The reaction must involve 4 elements: vec1, vec2, vec3 and vec4 are associated to these elements.
+%vec1,2,3,4 must be vectors of the sixth order, and containing gas phase
 %thermochemistry data (see nist.gov).
-%coef is a 4-order vector containing the stoechiometric coefficients of the
+%coef is a fourth order vector containing the stoechiometric coefficients of the
 %reaction.
 %The temperature must be expressed in Kelvin.
 
