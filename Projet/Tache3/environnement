@@ -24,12 +24,23 @@ Les BAT désignent donc l'étape la plus avancée dans le développement d'une a
 
 \section{Rejets en terme d'énergie}
 
-Notre outil de gestion nous permet 
+Notre outil de gestion nous permet de calculer l'enthalpie de réaction des deux réactions à l'équilibre dans le réacteur de reformage primaire, ainsi que celle de la réaction dans le réacteur de reformage secondaire, c'est-à-dire le four. 
+
 
 
 \section{Rejets en terme de matière}
 
-Notre outil de gestion nous permet également de réaliser le calcul d'approvisionnement nécessaire en matière première en fonction de la température et de la quantité d'ammnoniac à produire. Avec la constante d'équilibre K nous pouvons quantifier la quantité de \ce{CO} et de \ce{CO_2}. 
+Notre outil de gestion nous permet également de réaliser le calcul d'approvisionnement nécessaire en matière première en fonction de la température et de la quantité d'ammnoniac à produire. Avec la constante d'équilibre $K$ nous pouvons quantifier la quantité de \ce{CO} et de \ce{CO_2}. Nous cherchons à optimiser $K$ afin que les quantités de \ce{CO} et de \ce{CO_2} soient minimales, en d'autres termes nous cherchons la valeur de la température $T$ qui donnera la "meilleure" valeur pour $K$.
+
+\section{Recommandation pour réduire l'impact de l'activité de production sur l'environnement}
+
+\section{Consommation d'énergie et émissions de dioxyde de carbone provenant de la production d'ammoniac}
+Commençons par mentionner le fait que les coûts du gaz naturel représentent entre 70 et 90 \% du coût des intrants pour le production. Ce gaz naturel produit deux importantes sources d'émission de \ce{CO_2}: le combustible et le procédé.
+
+\paragraph{Le combustible} Les émissions de \ce{CO_2} générées par le combustible proviennent principalement de la combustion du gaz naturel ou d'autres combustibles d'hydrocarbures qui apporte la chaleur pour le reformage primaire. D'autres sources sont l'alimentation des chaudières à vapeur, des dispositifs de chauffage, des turbines à gaz et d'autres équipement de l'usine. Pendant la combustion, tout le carbone du combustible est converti en \ce{CO_2} et rejeté dans l'atmosphère. 
+
+\paragraph{Le procédé} Les émissions de \ce{CO_2} générées par le procédé proviennent de la conversion du carbone contenu dans le gaz naturel en \ce{CO_2} en en \ce{H_2}. Ce carbone est utilisé comme matière de base pendant la production du gaz de synthèse. L'hydrogène est combiné à l'azote provenant de l'air au cours du procédé de synthèse de l'ammoniac --- le dernier bloc de notre flow-sheet. Le système d'absorption du \ce{CO_2} retire ce composé chimique du flux gazeux issu du procédé afin d'éviter la contamination du catalyseur de synthèse d'ammoniac. Ce \ce{CO_2} relativement pur est rejeté dans l'atmosphère, à défaut de lui trouver une autre utilisation: certaines usines transforment ce \ce{CO_2} pour produire de l'urée, ce qui permet de réduire la quantité de \ce{CO_2} émise dans l'atmosphère et donc la contribution aux gaz à effet de serre. 
+
 
 
 \section{Impact (éco)toxicologiques}
@@ -103,10 +114,14 @@ La suffocation due au manque d'oxygène, quelque part dans notre usine, peut avo
 
 \section{Sources}
 
+‰ Je sais que ce n'est pas comme ça qu'il faut citer ses sources mais comme ce partie ne fait pas partie du rapport final, je propose de ne pas perdre de temps pour la mise en page.
+
 \begin{itemize}
 \item \url{http://www.ocinitrogen.com/Media%20Library/Ammonia%20process%20-%20BAT%20Production%20of%20ammonia%20(2000)%20-%20Brochure.pdf}
 \item \url{http://www.thyssenkrupp-industrial-solutions.com/fileadmin/documents/publications/Nitrogen-Syngas-2011/Low_Energy_Consumption_Ammonia_Production_2011_paper.pdf}
 \item \url{http://fr.wikipedia.org/wiki/Ammoniac#Impact_environnemental}
+\item \url{http://www.societechimiquedefrance.fr/extras/Donnees/mine/nh3/texnh3.htm}
+\item \url{http://www.nrcan.gc.ca/sites/oee.nrcan.gc.ca/files/pdf/industriel/info-technique/analyse-comparative/ammoniac/pdf/ammoniac-etude.pdf}
 \end{itemize}
 
 
