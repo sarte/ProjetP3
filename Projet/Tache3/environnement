@@ -5,7 +5,7 @@
 
 \subsection{Introduction}
 
-Cette partie traite de l'étude de l'impact environnemental de notre procédé, nous cherchons donc à écrire une étude technique visant à apprécier les conséquences environnementales de notre projet pour tenter d'en limiter, atténuer ou compenser les impacts négatifs. Concrètement, on nous demande d'identifier les causes de la consommation d'énergie, de l'émission de \ce{CO_2} et les sources principales des produits secondaires, potentiellement dangereux, dans notre processus. Ces points d'attention doivent être détaillés en spécifiant les unités du processus qui sont liées à chacun d'eux, en mentionnant également les conséquences pour la société, en donnant des arguments concrets. 
+Cette partie traite de l'étude de l'impact environnemental de notre procédé, nous cherchons donc à écrire une étude technique visant à apprécier les conséquences environnementales de notre projet pour tenter d'en limiter, atténuer ou compenser les impacts négatifs. Concrètement, on nous demande d'identifier les causes de la consommation d'énergie, de l'émission de \ce{CO_2} et les sources principales des produits secondaires, potentiellement dangereux, dans notre processus. Ces points d'attention doivent être détaillés en spécifiant les unités du processus qui sont liées à chacun d'eux, en mentionnant également les conséquences pour la société et en donnant des arguments concrets. 
 
 Cette tâche sera structurée de la manière suivante: nous distinguerons les deux éléments le plus importants de cette analyse, à savoir les rejets en terme de matière, d'une part, et les rejets en terme énergétique, d'autre part. En terme de matière, nous analyserons les composants rejetés en se demandant s'ils sont dangeureux, en quelle quantité, s'il est utile de les récupérer, à quelles fins, et caetera. Quant à la consommation énergétique, nous allons l'évaluer, en analysant la température à laquelle
 
@@ -40,6 +40,20 @@ Commençons par mentionner le fait que les coûts du gaz naturel représentent e
 \paragraph{Le combustible} Les émissions de \ce{CO_2} générées par le combustible proviennent principalement de la combustion du gaz naturel ou d'autres combustibles d'hydrocarbures qui apporte la chaleur pour le reformage primaire. D'autres sources sont l'alimentation des chaudières à vapeur, des dispositifs de chauffage, des turbines à gaz et d'autres équipement de l'usine. Pendant la combustion, tout le carbone du combustible est converti en \ce{CO_2} et rejeté dans l'atmosphère. 
 
 \paragraph{Le procédé} Les émissions de \ce{CO_2} générées par le procédé proviennent de la conversion du carbone contenu dans le gaz naturel en \ce{CO_2} en en \ce{H_2}. Ce carbone est utilisé comme matière de base pendant la production du gaz de synthèse. L'hydrogène est combiné à l'azote provenant de l'air au cours du procédé de synthèse de l'ammoniac --- le dernier bloc de notre flow-sheet. Le système d'absorption du \ce{CO_2} retire ce composé chimique du flux gazeux issu du procédé afin d'éviter la contamination du catalyseur de synthèse d'ammoniac. Ce \ce{CO_2} relativement pur est rejeté dans l'atmosphère, à défaut de lui trouver une autre utilisation: certaines usines transforment ce \ce{CO_2} pour produire de l'urée, ce qui permet de réduire la quantité de \ce{CO_2} émise dans l'atmosphère et donc la contribution aux gaz à effet de serre. 
+
+\section{Efficacité énergétique et émission de dioxyde de carbone à l'échelle mondiale}
+
+\subsection{Efficacité énergétique}
+
+La production et les émissions de CO2 des usines d’ammoniac sont calculées à l’aide des mesures d’efficacité énergétique liées à l’énergie provenant de la matière de base, et de l’énergie tirée du combustible, au lieu des mesures d’efficacité énergétique nette. En effet, les premières mesures sont directement liées à la production de \ce{CO_2} dans l'usine, alors que les secondes comprennent l’utilisation de l’électricité et les ajustements relatifs aux autres débits et crédits d’énergie, auxquels peuvent être associées des émissions de \ce{CO_2} provenant d’installations extérieures et non directement de l’usine d’ammoniac.
+
+En analysant les valeurs mondiales, nous trouvons des valeurs entre \unit{33,1}{\giga\joule\per\tonne} et \unit{40,1}{\giga\joule\per\tonne} \ce{NH_3} avec comme premiers de classe le Canada et et l'Europe Occidentale, et comme cancres l'Asie et le Trinité-et-Tobago. 
+
+\subsection{Estimation des émissions de dioxyde de carbone}
+
+Les émissions de \ce{CO_2} ont été estimées d'après les évaluation de production d'ammoniac et d'urée. Les émissions provenant de la production d'ammoniac sont dérivées de la combustion du gaz naturel utilisé comme source d'énergie et du procédé de reformage primaire employé pour obtenir le flux d'hydrogène du gaz naturel servant de matière de base. Ces flux d'émissions de \ce{CO_2} sont respetivement appelés combustible et procédé ou matière de base (voir plus haut).
+
+Le production mondiale totale d'ammoniac est estimée à \unit{128}{\mega\tonne}. La quantité totale de \ce{CO_2} produit par les usines est estimée à \unit{275}{\mega\tonne}, dont près de \unit{170}{\mega\tonne} (soit environ 62 \%) sont liées au procédé ou à la matière de base. Heureusement, près de \unit{78}{\mega\tonne} de ce \ce{CO_2} est récupéré pour la production d'urée, ce qui porte à \unit{197}{\mega\tonne} les émissions de \ce{CO_2} des l'ensemble des usines d'ammoniac du monde. 
 
 
 
