@@ -1,11 +1,11 @@
 function [n] = K(deltaS, deltaH, T)
 %K Calculates the equilibrum constant in fuction of the 
-%temperature
+%temperature [K]
 n = exp ((deltaS*T-deltaH*1000)/(R*T)); %definition of K(T)
 end
 ---------------------------------------------------------------
 function [n] = deltaH(vec1,vec2,vec3,vec4,coef,T,deltaHref)
-%deltaH calculates the deltaH (in kJ) of a reaction in function of the temperature.
+%deltaH calculates the deltaH (in kJ) of a reaction in function of the temperature [K].
 %The reaction must involve 4 elements: vec1, vec2, vec3 and vec4 are associated to these elements.
 %vec1, vec2, vec3 and vec4 must be vectors of the fourth order, and containing gas phase
 %thermochemistry data (see nist.gov).
@@ -22,7 +22,7 @@ n = coef*[-elem1 -elem2 elem3 elem4]';
 end
 ---------------------------------------------------------------
 function [n] = deltaS(vec1,vec2,vec3,vec4,coef,T)
-%deltaS calculates the deltaS (in J) of a reaction in function of the temperature.
+%deltaS calculates the deltaS (in J) of a reaction in function of the temperature [K].
 %The reaction must involve 4 elements: vec1, vec2, vec3 and vec4 are associated to these elements.
 %vec1,2,3,4 must be vectors of the sixth order, and containing gas phase
 %thermochemistry data (see nist.gov).
@@ -60,8 +60,8 @@ n = vec(1).*log(t) + vec(2).*t + vec(3).*(t.^2)./2 + vec(4).*(t.^3)./3 - vec(5).
 end
 ----------------------------------------------------------------
 function [] = Findxymn(T,M)
-% Findxymn calculates the amount of methane [t], water [t] and air [t] needed to produce M
-% [t] of ammoniac, in fuction of the temperature [K].
+% Findxymn calculates the amount of methane [t/day], water [t/day] and air [t/day] needed to produce M
+% [t/day] of ammoniac, in fuction of the temperature [K].
 % x corresponds to the number of moles of methane needed per day.
 % y corresponds to the number of moles of water needed per day.
 % m represents the first stage of completion of the reaction 
