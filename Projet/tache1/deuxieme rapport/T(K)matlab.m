@@ -59,10 +59,9 @@ t = T./1000;
 n = vec(1).*log(t) + vec(2).*t + vec(3).*(t.^2)./2 + vec(4).*(t.^3)./3 - vec(5)./(2.*t.^2)+ vec(6);
 end
 ----------------------------------------------------------------
-function [Sol] = Findxymn(T,M)
-% Findxymn calculates the amount of methane [t/day], water [t/day] and air [t/day] needed to produce M
-% [t/day] of ammoniac, as a fuction of the temperature [K]. Calculates also the amount of methane
-% needed to supply the oven.
+function [] = Findxymn(T,M)
+% Findxymn calculates the amount of methane [t], water [t] and air [t] needed to produce M
+% [t] of ammoniac, in fuction of the temperature [K].
 % x corresponds to the number of moles of methane needed per day.
 % y corresponds to the number of moles of water needed per day.
 % m represents the first stage of completion of the reaction 
@@ -71,7 +70,8 @@ function [Sol] = Findxymn(T,M)
 % B corresponds to the number of moles of methane needed in the oven.
 
 
-% valeurs de reference utilisees dans les calculs
+% reference values used in the calculations
+global R
 R=8.31451; %universal gas constant
 CH4 = [-0.703029 108.4773 -42.52157 5.862788 0.678565 158.7163];
 H2O = [30.09200 6.832514 6.793435 -2.534480	0.082139 223.3967];
@@ -83,7 +83,7 @@ deltaHref1 = [-74.810 -241.820 0 -110.530];
 deltaHref2 = [-110.530 -241.820 0 -393.510];
 deltaHref3 = [-74.810 0 -393.510 -241.820];
 
-% calcul des differentes valeurs en fonction des arguments
+% calculation of the different values
 deltaSS1 = deltaS(CH4,H2O,H2,CO,[1 1 3 1],T);
 deltaHH1 = deltaH(CH4,H2O,H2,CO,[1 1 3 1],T, deltaHref1);
 K1 = K(deltaSS1,deltaHH1,T);
@@ -95,9 +95,9 @@ nummol= (M*(10^6))/(17.031);
 format long
 a =  nummol/(2*0.78);
 
-%resolution de l'eq
+%resolution of the equation
 syms x y m n b positive 
-[solx, soly, solm, soln, solb] = solve(x - m - 0.42*a, 3*x + m - 2.34*a , b == a, -K1/900 + (((3*m + n)^3) * (m - n))/(((x + 2*m + y)^2) * (y - n - m) * (x - m)) , -K2 + ((3*m + n) * n)/((m - n) * (y - n - m)) ,x,y,m,n,b,'Real',true);
+[solx, soly, solm, soln, solb] = solve(x - m - 0.42*a == 0 , 3*x + m - 2.34*a == 0 , b == a, -K1/900 + (((3*m + n)^3) * (m - n))/(((x + 2*m + y)^2) * (y - n - m) * (x - m)) , -K2 + ((3*m + n) * n)/((m - n) * (y - n - m)) ,x,y,m,n,b,'Real',true);
 B=(abs((solm*deltaHH1+soln*deltaHH2)/DHfour)/1000000*16);
 D=(abs((solm*deltaHH1+soln*deltaHH2)/DHfour)/1000000*32);
 
@@ -140,7 +140,7 @@ disp (['H2',(solm+soln+2*solx)/1000000*2])
 disp(['Ar', 0.01*solb/1000000*40])
 disp (['H2O',(soly-solm-soln)/1000000*18])
 disp ('Flux sortant')
-disp (['H2O',(soly-solm)/1000000*18-solx])
+disp (['H2O',(soly-solm-solx)/1000000*18])
 disp (['CO2',solx/1000000*44])
 disp (['H2',(solm+3*solx)/1000000*2])
 disp(['N2', 0.78*solb/1000000*28])
@@ -148,7 +148,7 @@ disp(['Ar', 0.01*solb/1000000*40])
 disp ('ABSORPTION DE CO2 & COMPRESSION')
 disp ('Flux entrant')
 disp (['CO2',solx/1000000*44])
-disp(['N2', 0.78*solb/1000000*28]) 
+disp(['N2', 0.78*solb/1000000*28]) %%%%
 disp (['H2',(solm+3*solx)/1000000*2])
 disp(['Ar', 0.01*solb/1000000*40])
 disp (['H2O',(soly-solm-solx)/1000000*18])
@@ -164,6 +164,8 @@ disp(['Ar', 0.01*solb/1000000*40])
 disp ('Flux sortant')
 disp(['Ar', 0.01*solb/1000000*40])
 disp(['NH3', 1.56*solb/1000000*17])
+
+end
 
 --------------------------------------------------------------------------------------------
 GUIDE D'UTILISATION DE L'OUTIL MATLAB
