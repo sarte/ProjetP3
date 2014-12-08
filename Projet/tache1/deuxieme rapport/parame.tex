@@ -48,23 +48,13 @@ Production journalière de \ce{NH_3} & Débit de méthane \ce{CH_4} & Débit de 
 \hline
 1000 & 71978.00 & 156037.22 & 1.0432e+05 \\
 \hline
-1100 & 79175.80 & 171640.95 & 1.1475e+05 \\
-\hline
 1200 & 86373.59 & 187244.67 & 1.2518e+05 \\
-\hline
-1300 & 93571.39 & 202848.39 & 1.3561e+05 \\
 \hline
 1400 & 100769.19 & 218452.11 & 1.4604e+05 \\
 \hline
-1500 & 107966.99 & 234055.84 & 1.5647e+05 \\
-\hline
 1600 & 115164.79 & 249659.56 & 1.6691e+05 \\
 \hline
-1700 & 122362.59 & 265263.28 & 1.7734e+05 \\
-\hline
 1800 & 129560.39 & 280867.00 & 1.8777e+05 \\
-\hline
-1900 & 136758.19 & 296470.73 & 1.9820e+05 \\
 \hline
 2000 & 143955.99 & 312074.45 & 2.0863e+05 \\
 \hline
@@ -79,3 +69,16 @@ réacteur Water-Gas-Shift.
 Nous avons donc déterminé la température critique à partir de laquelle la quantité d'eau sortante devenait nulle. 
 Nous sommes arrivés à la conclusion qu'il faut limiter la température de sortie du reformeur primaire à 
 \unit{1049.472}{\kelvin}, si nous voulons une capacité d'ammoniac de \unit{1500}{\ton\per jour}.
+
+Le graphe suivant permet de visualiser ce qui sort vraiment de notre installation. Les valeurs ont été calculées pour
+avoir 1500t d'ammoniac au final. Il est donc normal de constater que l'ammoniac apparaît en ligne droite.
+Nous pouvons égalemnt bien visualiser qu'à partir de la température de \unit{10500}{\kelvin}, le débit d'eau sortant devient
+négatif; chose problématique comme expliqué ci-dessus.
+Le \ce{CO2} et l'argon sortant sont quant à eux constants en fonction de la température. L'argon est rejeté en petites quatités, mais le \ce{CO2} 
+apparaît en quantités plus importantes malheureusement.
+
+\begin{figure}[ht!]
+ \centering
+ \includegraphics[scale=0.6]{produits_sortants.png}
+ \label{produits_sortants}
+\end{figure}
