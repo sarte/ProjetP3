@@ -1,5 +1,4 @@
-\title{tache5}
-\begin{document}
+
 \section{Pression normale de stockage ($\unit{20}{\degre \celsius}$)}
 Comme observer sur la Figure \ref{graph1} la pression normale de stockage à $\unit{20}{\degre \celsius}$ est de 8 Barg (trait rouge).
 \section{Pression normale de stockage en été (\unit{30}{\degre \celsius})}
@@ -39,4 +38,3 @@ Il nous reste alors à calculer $C$:$$C=\sqrt{k\left( \dfrac{2}{k+1}\right)^{\le
 Il faut dans ce cas appliquer la même procédure que ci-dessus en changeant quelques données. En effet la pression $P_1$ vaudra dans ce cas \unit{2553.39}{\kilo \pascal}, la temperature $T$ sera de \unit{50}{\degre \celsius} (Voir Figure\ref{graph1}) et $\Delta H_{vap}=1100$ car influencer par la temperature (Voir Figure \ref{graph2}). Le calcul de $A$ nous donneras une valeur de $\unit{16.6}{\centi \metre}^2$.
 \section*{Conséquence de l'isolation thermique du tank}
 Nous revenons dans le cas du premier calcul de $A$ sauf que dans ce cas c'est le facteur environemental $F$ qui sera différent et qui sera égale à 0.132. Ce qui nous donne $A=\unit{0.28}{\centi \metre}^2$. Ce résultat est logique car dans ce cas l'élévation de temperature à l'intérieur sera très faible voire inexistente pour un incendie.
-\end{document}
