@@ -1,0 +1,48 @@
+\title{tache5}
+
+\begin{document}
+
+
+
+\section*{Pression normale de stockage ($\unit{20}{\degre \celsius}$)}
+Comme observer sur la Figure \ref{graph1} la pression normale de stockage à $\unit{20}{\degre \celsius}$ est de 8 Barg (trait rouge).
+\section*{Pression normale de stockage en été (\unit{30}{\degre \celsius})}
+De nouveau sur base de la Figure \ref{graph1} nous trouvons que la pression normale de stockage est de 10 Barg (trait orange).
+\begin{figure}[ht!]
+ \centering
+ \includegraphics[scale=0.6]{tache5.PNG}
+ \caption{Pl vs. Temperature}
+ \label{graph1}
+\end{figure}
+\section*{Pression maximale de tarage de la soupape}
+Lors de la conférence, monsieur Minion nous a expliqué que dans le cas d'un incendie, la pression maximale de tarage valait $121\%$ de la pression de design. Dans notre cas la pression de design du tank est de $\unit{15}{Barg}$ ce qui correspond à une pression de tarage de $\unit{18}{Barg}$.
+\section*{Dimensionnement de la soupape}
+Dans cette section nous allons dimensionner la soupape pour la pression de tarage décrite ci-dessus c'est à dire $\unit{18}{Barg}$.
+Premierement nous avons déterminer que la pression durant la décharge était de $\unit{18}{Barg}$ c'est à dire la pression de tarage. De nouveau grâce à la Figure \ref{graph1} nous avons pu trouver la temperature de sortie du liquide à savoir $\unit{45}{\degre \celsius}$. 
+
+Nous devons maintenant calculer la surface nécessaire de l'orifice de la soupape et grâce à cela déterminer quel soupape disponible sur le marché devront nous commander. Nous nous trouvons dans le cas d'une soupape sur un tank ne contenant qu'une seule phase gazeuse. A partir de ce constat nous pouvons utiliser la formule suivante qui nous permet de trouver la surface de la soupape: 
+\begin{equation}
+A=\dfrac{W}{CK_dP_1K_bK_c}\cdot \sqrt{\dfrac{TZ}{M}}
+\label{1}
+\end{equation}
+ où $K_d=0.975$, $K_b=K_c=Z=1$\footnote{donées disponibles sur le site Icampus}, $P1$ vaut $121\%$ dela pression de tarage (en Bar) soit $\unit{1925.175}{\kilo \pascal}$, $T$ est la temperature pour une pression de $18$Barg (voir Figure \ref{graph1}), $M$ la masse molaire du $NH_3$ soit $\unit{17.031}{\gram\per \mole}$ et enfin $C$ et $W$ deux constantes à calculer. La première étape consiste donc à calculer $W$ c'est à dire le debit massique par heure de matière à évacuer. Par la relation suivante:$$W=\dfrac{Q}{\Delta H_{vap}}$$ où $Q=C_1FA_{ws}^{0.82}$ avec $C_1=43200$ et $F=1$(facteur environemental) et $A_ {ws}$ la surface mouillée qui vaut $48\pi$ \footnote{calcul "élémentaire" sur base de la forme du tank}. de la on trouve que $Q=\unit{2779974753}{\joule \per \hour$. 
+  \begin{figure}[ht!]
+ \centering
+ \includegraphics[scale=0.6]{tache51.PNG}
+ \caption{enthalpie de vaporisation}
+ \label{graph2}
+\end{figure}
+ Sur base de la Figure \ref{graph2} on trouve que $\Delta H_{vap}=\unit{1125}{\kilo \joule \per \kilo \gram}$ ce qui nous donne un débit de sortie de $\unit{2471}{\kilo \gram \per \hour}$.
+
+Il nous reste alors à calculer $C$:$$C=\sqrt{k\left( \dfrac{2}{k+1}\right)^{\left( \dfrac{k+1}{k-1}\right)}}$$ où $K=\dfrac{C_p}{C_v}=1.33}$ ce qui nous donne C=0.02655. En remplacant le tout dans la formule \ref{1} on obtient une aire de $\unit{2.10}{\centi \metre}^2$ soit $\unit{0.32}{in}^2$. Reste maintenant a trouver dans le tableau (Figure \ref{tab}) à quelle soupape cela correspond. Il nous faudra donc une soupape de type G.
+ \begin{figure}[ht!]
+ \centering
+ \includegraphics[scale=0.6]{tab.PNG}
+ \caption{modele standard de soupape}
+ \label{tab}
+\end{figure}
+\section*{tank avec une pression de design de 20 Barg}
+Il faut dans ce cas appliquer la même procédure que ci-dessus en changeant quelques données. En effet la pression $P_1$ vaudra dans ce cas \unit{2553.39}{\kilo \pascal}, la temperature $T$ sera de \unit{50}{\degre \celsius} (Voir Figure\ref{graph1}) et $\Delta H_{vap}=1100$ car influencer par la temperature (Voir Figure \ref{graph2}). Le calcul de $A$ nous donneras une valeur de $\unit{16.6}{\centi \metre}^2$.
+\section*{Conséquence de l'isolation thermique du tank}
+Nous revenons dans le cas du premier calcul de $A$ sauf que dans ce cas c'est le facteur environemental $F$ qui sera différent et qui sera égale à 0.132. Ce qui nous donne $A=\unit{0.28}{\centi \metre}^2$. Ce résultat est logique car dans ce cas l'élévation de temperature à l'intérieur sera très faible voire inexistente pour un incendie.
+ \end{document}
