@@ -1,12 +1,5 @@
-\chapter{Introduction}
-Jusqu'à présent, nous avons exploré le procédé de production d'ammoniac de manière très globale, mais nous ne nous
-sommes pas encore vraiment penchés sur la synthèse d'ammoniac en elle-même. Cette étape n'est pas des moindres, et
-elle nécessite une analyse en profondeur. Cette section présente un rapide historique du procédé utilisé, met en
-avant les contraintes thermodynamiques, et survole brièvement ce qui concerne la cinétique de réaction. Deux études
-paramétriques réalisées sont également présentées et comparées.
-
-\chapter{Conception détaillée de la dernière étape du procédé}
-\section{Historique et prévisions}
+\section{Conception détaillée de la dernière étape du procédé}
+\subsection{Historique et prévisions}
 
 \paragraph{Historique}
 Lorsque la réaction de production d'ammoniac prend place, la quantité d'ammoniac produite est relativement faible.
@@ -27,9 +20,9 @@ la température diminue, le rendement augmente. Nous remarquons également que l
 pression. Afin de vérifier ces prévisions, nous avons effectué une étude paramétrique sur l'influence de la température et de la
 pression de sortie du réacteur de synthèse d'ammoniac, au moyen de notre outil de gestion.
 
-\section{Analyse paramétrique avec \textsc{Matlab}}
+\subsection{Analyse paramétrique avec \textsc{Matlab}}
 
-\subsection{Réinjection}
+\subsubsection{Réinjection}
 
 Le procédé \textsc{Haber-Bosh} consiste à réinjecter une certaine quantité des réactifs n'ayant pas réagi à l'entrée du réacteur. Ces réactifs sont d'abord séparés de l'ammoniac, pour être ensuite purgés et finalement réinjectés dans le système. Le raisonnement qui suit donne la solution analytique d'une telle réinjection. Nous conseillons vivement de vous reporter à la figure \ref{Schema_synthese} pour une meilleure compréhension des mises en équations.
 
@@ -92,7 +85,7 @@ Nous obtenons finalement un système de \numprint{4} équations à \numprint{4} 
 
 Une autre solution aurait été d'effectuer un boucle sur \textsc{Matlab} utilisant la récursion en réinjectant à chaque fois une partie des produits au début de la boucle. Nous avons écrit un code mettant cette technique en pratique, même si il est d'une complexité plus élevée que celui découlant des équations ci-dessus. Ce code est disponible en Annexes. Nous obtenons des résultats très similaires à ceux obtenus avec la solution analytique.
 
-\subsection{Température et pression}
+\subsubsection{Température et pression}
 
 Maintenant que nous avons obtenus les équations en prenant compte la réinjection, nous sommes en mesure d'effectuer l'analyse paramétrique demandée. Cette sous-section se penche sur l'effet de la température du réacteur $T$ et la pression $p$ dans ce même réacteur. Nous ne présenterons pas ici l'effet du pourcentage de purge, étant donné que nous l'avons testé avec \textsc{Aspen+}. Voici deux graphes reprenant les résultats de notre outil de gestion \textsc{Matlab}.
 
@@ -119,15 +112,11 @@ nous avons analysé nos résultats dans cette gamme, et nous avons conclu qu'une
 suffisante pour avoir un bon rendement. Augmenter d'avantage la pression n'est selon nous pas vraiment rentable économiquement parlant.
 
 
-\subsection{Optimisation}
+\subsubsection{Optimisation}
 Nous sommes maintenant en mesure de choisir une température et une pression favorisant la réaction. De par
 toute la discussion ci-dessus nous conseillerions une température de \unit{500}{\celsius}, et une pression aux environs de \unit{200}{\bbar}. Mettons encore une fois l'accent sur l'importance de la réinjection des réactifs: nonobstant ce choix de pression et de température optimal, nous ne calculons un rendement sans réinjection que de 25\%. Comparé au rendement de 98\% avec réinjection, c'est effectivement très peu.
 
 
-\section{Analyse paramétrique avec \textsc{Aspen+}}
-\section{Comparaison des deux analyses}
+\subsection{Analyse paramétrique avec \textsc{Aspen+}}
+\subsection{Comparaison des deux analyses}
 
-\chapter{Conclusion} Finalement, nous pouvons tirer de tout ceci qu'une conversion totale dans le réacteur n'est
-pas économiquement réalisable, même si nous nous en approchons significativement grâce au procédé \textsc{Haber-Bosh} qui limite les pertes et augmente le rendement.
-
-\end{document}
