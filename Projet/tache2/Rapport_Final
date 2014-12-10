@@ -1,0 +1,24 @@
+\input{head.tex}
+\title{\vspace{\fill}\begin{LARGE} \begin{bf}  
+Rapport de la deuxième tâche \\
+LFSAB1503 \\ 
+\end{bf}\end{LARGE}
+\vspace{\fill}}
+
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\newpage
+\input{intro.tex}
+\newpage
+\input{tache2.tex}
+\newpage
+\input{conclu.tex}
+
+
+\nocite{*}
+\bibliographystyle{plain} % Le style est mis entre accolades.
+\bibliography{sources} % mon fichier de base de données s'appelle bibli.bib
+\end{document}
