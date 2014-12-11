@@ -118,5 +118,13 @@ toute la discussion ci-dessus nous conseillerions une température de \unit{500}
 
 
 \subsection{Analyse paramétrique avec \textsc{Aspen+}}
+Dans le cadre de la tâche 2, il nous a été demandé de réaliser une analyse paramétrique sur base du flow-sheet simplifié. Comme expliqué ci-dessus nous avons réaliser une simulation avec \textsc{Matlab} que nous avons ensuite comparer avec une autre simulation faite avec \textsc{Aspen+}. Il s'agit d'un logiciel qui est utilisé dans l'industrie afin de designer des procédés chimique et d'en faire des simulations. Dans notre cas nous nous sommes juste intéresser au dernier bloc de notre flow-sheet, à savoir la synthèse d'ammoniac. Pour cela nous avons désigner un flow-sheet sur \textsc{Aspen} contenant un réacteur, un préchauffeur, un refroidisseur, une unité flash (pour la séparation des produits), un compresseur isentropique ainsi qu'un séparateur et un mixeur (Figure \ref{Aspen}).
+\begin{figure}[ht!]
+ \centering
+ \includegraphics[scale=0.6]{Aspen.jpg}
+ \caption{Flow-sheet réalisé avec \textsc{Apen+}}
+ \label{Aspen}
+\end{figure}
+Pour réaliser cette simulation nous nous sommes basés sur notre bilan de matière afin de déterminer les quantités de matières rentrant dans le réacteur. Comme expliqué plus haut nous avons mis un séparateur afin de recycler nos produits dans le but d'augmenter un maximum le rendement. Vous trouverez dans la section ci-dessous la comparaison entre la simulation \textsc{Matlab} et \textsc{Aspen}.
 \subsection{Comparaison des deux analyses}
 
