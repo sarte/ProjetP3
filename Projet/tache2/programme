@@ -1,0 +1,62 @@
+function [] = outil(T1,M,T,p,mu)
+% T1 la température dans le primary reformer [K]
+% M le nombre de tonnes d'ammoniac voulues 
+% T température [K] le reacteur de synthèse
+% p = pression reacteur de synthèse [bar]
+% mu le pourcentage de purge
+%
+% Il faut encore commenter et ajouter tous les disp
+
+format long
+xi=1/2*(M*(10^6))/(17.031); %degre d'avancement %4.403734366742998e+07
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%  Synthese, renvoie solN   %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% valeurs de reference utilisees dans les calculs
+N2 = [19.50583 19.88705 -8.598535 1.369784 0.527601	212.3900];
+H2 = [33.066178 -11.363417 11.432816 -2.772874 -0.158558 172.707974]; 
+NH3 = [19.99563 49.77119 -15.37599 1.921168	0.189174 203.8591];
+Re = [0 0 0 0 0 0]; %3e element nul
+deltaHref = [0 0 0 -45.90];
+
+% calcul des differentes valeurs en fonction des arguments
+deltaS1 = deltaS(N2,H2,Re,NH3,[1 3 0 2],T);
+deltaH1 = deltaH(N2,H2,Re,NH3,[1 3 0 2],T, deltaHref);
+K1 = K(deltaS1,deltaH1,T);
+
+%resolution de l'eq
+syms N positive %x est le degre d'avancement
+[solN] = double(solve(K1 * p^2 == (1 - mu)^2 * (2 * xi * (4*N - 2 * xi + 1/78*N - mu*(2*xi + 1/78)))^2 / ( 27 * (N - xi)^4), xi<=N,N, 'Real', true));
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Findxymn, renvoie la sol  %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+CH4 = [-0.703029 108.4773 -42.52157 5.862788 0.678565 158.7163];
+H2O = [30.09200 6.832514 6.793435 -2.534480	0.082139 223.3967];
+CO = [25.56759 6.096130 4.054656 -2.671301 0.131021 227.3665] ;
+CO2 = [24.99735 55.18696 -33.69137 7.948387 -0.136638 228.2431];
+O2 = [30.03235 8.772972 -3.988133 0.788313 -0.741599 236.1663];
+deltaHref1 = [-74.810 -241.820 0 -110.530];
+deltaHref2 = [-110.530 -241.820 0 -393.510];
+deltaHref3 = [-74.810 0 -393.510 -241.820];
+
+deltaSS1 = deltaS(CH4,H2O,H2,CO,[1 1 3 1],T1);
+deltaHH1 = deltaH(CH4,H2O,H2,CO,[1 1 3 1],T1, deltaHref1);
+K11 = K(deltaSS1,deltaHH1,T1);
+deltaSS2 = deltaS(CO,H2O,H2,CO2,[1 1 1 1],T1);
+deltaHH2 = deltaH(CO,H2O,H2,CO2,[1 1 1 1],T1, deltaHref2);
+K2 = K(deltaSS2,deltaHH2,T1);
+
+
+syms x y n m positive
+[solx, soly, soln, solm] = solve(3 * x + m - 3 * solN == 0, 4 * x - (0.42/0.78 + 3)*solN == 0,-K11/900 + (((3*m + n)^3) * (m - n))/(((x + 2*m + y)^2) * (y - n - m) * (x - m)) == 0, -K2 + ((3*m + n) * n)/((m - n) * (y - n - m)) == 0,x,y,n,m,'Real',true);
+
+solx/1000000*16
+soly/1000000*18
+
+end
