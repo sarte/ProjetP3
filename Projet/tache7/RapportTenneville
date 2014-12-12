@@ -1,1 +1,29 @@
 \section{Visite de l'unité de biométhanisation de Tenneville}
+
+L’usine de biométhanisation est une usine destinée au traitement des déchets de la province du Luxembourg. Elle transforme les déchets organiques en biogaz et en compost. L’usine traite donc les détritus de 55 communes, ce qui vaut environ 30000 tonnes de déchets organiques par an. L’usine produit toute l’énergie dont elle a besoin pour son fonctionnement.
+
+
+
+
+\paragraph{} 
+Les détritus sont d’abord stockés dans un hangar. Ils sont ensuite broyés. Après avoir été broyés, ceux-ci passent dans un crible rotatif qui envoie les déchets dont la taille est supérieure à 40 mm dans un nouveau broyeur et les déchets inférieurs à 40 mm sont envoyés dans le digesteur en passant d’abord par un séparateur magnétique utilisé pour éliminer tous résidus métalliques. Le digesteur a une capacité de 3000 $m^3$
+Une fois  dans celui-ci les déchets sont transformés en méthane par un processus de dégradation anaérobie. Cela veut dire que ce sont des bactéries qui n’ont pas besoin de dioxygène pour vivre qui transforment les déchets en gaz. Ceux-ci restent en moyenne une vingtaine de jours dans le digesteur à une température de 41\degree . La réaction se produit sans qu’aucun n’additif ne soit ajouté. Le processus de biométhanisation dans le digesteur se fait en plusieurs étapes :
+\\
+\begin{itemize}
+\item L’acido-genèse : produit de l’alcool
+\item L’acéto-genèse : produit de l’acétone	
+\item La méthano-genèse : on obtient finalement du $CO_2$ et du $CH_4$. La répartition est de plus ou moins 55 \% de méthane et de 43 \% de dioxyde de carbone.
+\\
+\end{itemize}
+\includegraphics[scale=0.5]{biometh}
+
+
+\paragraph{} 
+Le biogaz est directement valorisé dans l’usine. En effet, ce gaz est envoyé dans des moteurs pour produire l’électricité et la chaleur dont l’usine a besoin pour fonctionner. Il est beaucoup rentable de le valoriser pour produire l’électricité que de le stocker pour le revendre ensuite. En effet, le biogaz obtenu n’est pas pur, il contient environ 55 \% de méthane et 43\% de dioxyde de carbone. Donc cela couterait trop cher de la faire purifier alors qu’il peut être directement valorisé tout en rendant l’usine indépendante. Lorsque tous le biogaz produit ne peut pas être conduit aux moteurs, celui-ci est envoyé dans des torchères afin d'être brulé. En effet, il est interdit de rejeter du méthane directement dans l’atmosphère. Ce sont deux moteurs de 830 kW qui produisent de l’énergie électrique et thermique. Ce sont 5270 MWh d’énergie électrique et 9000 MWh d’énergie thermique qui sont produit. Le site consomme environ 1520 MWh d’énergie électrique pour fonctionner, le reste est revendu sur le réseau. Quant à elle, l’énergie thermique est utilisé pour le séchage de boues de station d’épuration et pour le chauffage des bureaux et des ateliers.
+
+
+\paragraph{}
+Ensuite la matière restante, appelée digestat, doit être valorisée. Le digestat doit être séché afin d'être transformé en compost. Pour cela on injecte de la chaux dans celui-ci, il est ensuite entreposé dans un hangar sur des dalles aérauliques (dalles composées de petits trous dans lesquelles on injecte de l'air). De ventilateurs sont également placés dans ce hangar pour permettre un bon séchage. Cette étape est obligatoire sans quoi il n’y aurait pas un bon rendement. On passe d’un rendement de 40\% à un rendement de 80\%. Le compost obtenu est encore affiné afin qu’il ne reste plus aucun déchets non-organique. Il y a environ 18000 tonnes de compost produit par an.
+
+\paragraph{}
+En conclusion, la biométhanisation n'est pas la meilleure solution pour obtenir du méthane. Le biogaz obtenu par biométhanisation contient 55\% de méthane et 43\% de dioxyde de carbone. Il faudrait donc le raffiner par la suite pour obtenir du $CH_4$ pur. Cela couterait donc très cher de produire du méthane par biométhanisation. D'ailleurs, le but premier de cette usine n'est pas de produire du méthane, mais de traiter les déchets de la meilleure façon possible.
