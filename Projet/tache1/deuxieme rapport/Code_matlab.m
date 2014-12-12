@@ -173,12 +173,15 @@ GUIDE D'UTILISATION DE L'OUTIL MATLAB
 Rappelons tout d'abord que cet outil a été conçu dans le but d'avoir un aperçu des flux de matière 
 lors de chaque étape du procédé de conception d'ammoniac.
 
-Le fonction principale est "Findxymn", les autres sont des sous-fonctions appelées dans Findxymn.
+Le fonction principale est "outil", les autres sont des sous-fonctions appelées dans Findxymn.
 Ce guide ne traite que la fonction principale. Pour plus d'informations sur les sous-fonctions, se
 rapporter aux codes commentés.
 
-Findxymn prend en arguments la température de sortie du reformage primaire, en Kelvin, ainsi que le 
-flux final d'ammoniac voulu, en tonnes par jour. Cette fonction, lorsqu'elle est appelée, affiche
-la valeur de chaque flux de matière à l'entrée et à la sortie de chaque "bloc".
-Toutes les données de sortie sont exprimées en tonnes par jour.
-
+"Outil", lorsqu'elle est appelée, affiche la valeur de chaque flux de matière à l'entrée et à la sortie
+de chaque "bloc". Toutes les données de sortie sont exprimées en tonnes par jour.
+Les arguments à passer dans la fonction sont les suivants:
+- M [t/jour], le flux massique d'ammoniac requis
+- T1[K], la température dans le reformeur primaire.
+- T[K], la température dans le réacteur de synthèse.
+- p[bar], la pression dans le réacteur de synthèse.
+- mu, le pourcentage de purge. mu=0 implique que rien n'est réinjecté.
