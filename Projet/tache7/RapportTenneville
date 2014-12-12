@@ -7,7 +7,7 @@ L’usine de biométhanisation est une usine destinée au traitement des déchet
 
 \paragraph{} 
 Les détritus sont d’abord stockés dans un hangar. Ils sont ensuite broyés. Après avoir été broyés, ceux-ci passent dans un crible rotatif qui envoie les déchets dont la taille est supérieure à 40 mm dans un nouveau broyeur et les déchets inférieurs à 40 mm sont envoyés dans le digesteur en passant d’abord par un séparateur magnétique utilisé pour éliminer tous résidus métalliques. Le digesteur a une capacité de 3000 $m^3$.
-Une fois  dans celui-ci les déchets sont transformés en méthane par un processus de dégradation anaérobie. Cela veut dire que ce sont des bactéries qui n’ont pas besoin de dioxygène pour vivre qui transforment les déchets en gaz. Ceux-ci restent en moyenne une vingtaine de jours dans le digesteur à une température de \unit{41}{\degree \celsius} . La réaction se produit sans qu’aucun n’additif ne soit ajouté. Le processus de biométhanisation dans le digesteur se fait en plusieurs étapes :
+Une fois  dans celui-ci les déchets sont transformés en méthane par un processus de dégradation anaérobie. Cela veut dire que ce sont des bactéries qui n’ont pas besoin de dioxygène pour vivre qui transforment les déchets en gaz. Ceux-ci restent en moyenne une vingtaine de jours dans le digesteur à une température de \unit{41}{\celsius} . La réaction se produit sans qu’aucun n’additif ne soit ajouté. Le processus de biométhanisation dans le digesteur se fait en plusieurs étapes :
 \\
 \begin{itemize}
 \item L’acido-genèse : produit de l’alcool
