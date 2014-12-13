@@ -27,43 +27,114 @@
 
 \begin{frame}
 \frametitle{La dernière étape du procédé}
-\framesubtitle{avec un exemple de sous-titre}
 
 Le procédé \textsc{Haber-Bosch}
 
-$$\ce{N_2} + \ce{3H_2} \xrightleftharpoons[\mathit{endo}]{\mathit{exo}} \ce{2NH_3}$$
+$$\ce{N_2} + \ce{3H_2} \xrightleftharpoons \ce{2NH_3}$$
+
+%[\mathit{endo}]{\mathit{exo}}
 
 Supposition avec le principe de \textsc{Le Chatelier}: quand la température diminue, le rendement augmente. 
 
 \end{frame}
 
 
-
-
 \begin{frame}
-\frametitle{Analyse paramétrique avec \textsc{Matlab}}
-\framesubtitle{avec un exemple de sous-titre}
+\frametitle{La dernière étape du procédé}
 
-\begin{empheq}[left=\empheqlbrace]{align}
-& F_{mol,\ce{Ar}_{in}}  + \mu \frac{ X - \mu (X-\xi)}{78(1-\mu)} = \frac{ X - \mu (X-\xi)}{78(1-\mu)} \\
-& F_{mol,\ce{N2}_{in}} + \mu (X-\xi) = X \\
-& F_{mol,\ce{H2}_{in}}  + \mu (3X - 3\xi) = 3X \\
-& K(T) = \left( \dfrac{4 \xi^2 \cdot (4X - 2\xi + \frac{ X - \mu (X-\xi)}{78(1-\mu)})^2}{(3X-3\xi)^3 \cdot (X-\xi) \cdot p^2}\right) 
-\end{empheq}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{Schema_synthese.png}
+\caption{Aperçu des flux dans la dernière étape du procédé}
+\label{Schema_synthese}
+\end{figure}
+
+\begin{table}[ht!]
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+& \multicolumn{1}{c!{\makebox[0pt]{+}}}{\ce{N2}}
+& \multicolumn{1}{c!{\makebox[0pt]{$\rightarrow$}}}{\ce{3H2}}
+& \ce{2NH3} \\
+\hline
+$n_i$ & $X$ & $3X$ & $0$ \\
+\hline
+$n_f$ & $X-\xi$ & $3X - 3\xi $ & $2\xi$ \\\hline
+\end{tabular}
+\end{center}
+\caption{Tableau d'avancement de la synthèse de l'ammoniac}
+\label{Tableau}
+\end{table}
 
 \end{frame}
 
 
 
 \begin{frame}
-\frametitle{Analyse paramétrique avec \textsc{Matlab}}
-\framesubtitle{avec un exemple de sous-titre}
+\frametitle{La dernière étape du procédé}
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[scale=0.2]{fct_pression.jpg}
+\includegraphics[scale=0.17]{fct_pression.png}
+\caption{Quantité d'ammoniac produite en fonction de la température et de la pression.}
+\label{fct_pression}
 \end{figure}
 
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{La dernière étape du procédé}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{Aspen.jpg}
+\caption{Flow-sheet réalisé avec \textsc{Apen+}}
+\label{Aspen}
+\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{La dernière étape du procédé}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.35]{GrapheCompT.png}
+\caption{Rendement en fonction de la température}
+\label{scheme1}
+\end{figure}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{La dernière étape du procédé}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.35]{GrapheCompP.png}
+\caption{Rendement en fonction de la pression}
+\label{scheme2}
+\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{La dernière étape du procédé}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.35]{GrapheCompPu.png}
+\caption{Rendement en fonction du taux de purge}
+\label{schemee}
+\end{figure}
 
 \end{frame}
 
