@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[10pt]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[francais]{babel}
 \usepackage{amsmath}
@@ -26,7 +26,6 @@
 
 \begin{frame}
 \frametitle{Bilan de matière}
-\framesubtitle{avec un exemple de sous-titre}
 
 \begin{itemize}
 	\item $F_{\ce{CH4}}$ le débit molaire de \ce{CH4}.
@@ -40,10 +39,8 @@
 
 
 
-
 \begin{frame}
 \frametitle{Bilan de matière}
-\framesubtitle{avec un exemple de sous-titre}
 
 \begin{itemize}
 	\item Réaction 1 du reformage primaire:\\
@@ -65,7 +62,6 @@
 
 \begin{frame}
 \frametitle{Bilan de matière}
-\framesubtitle{avec un exemple de sous-titre}
 
 En écrivant des tableaux d'avancement pour toutes ces réactions et en injectant dans les équations obtenues les débits initiaux, nous sommes en mesure d'obtenir des expressions pour les constantes d'équilibre $K_1(T)$ et $K_2(T)$.
 
@@ -74,6 +70,95 @@ Avec \textsc{Matlab} nous pouvons également calculer la valeur théorique de ce
 \end{frame}
 
 
+
+\begin{frame}
+\frametitle{Bilan de matière}
+
+
+\begin{figure}[h]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+&
+\multicolumn{1}{c!{\makebox[0pt]{+}}}{
+\ce{CH4}}
+&
+\multicolumn{1}{c!{\makebox[0pt]{$\rightleftharpoons$}}}{\ce{H2O}}
+&
+\multicolumn{1}{c!{\makebox[0pt]{+}}}{\ce{3H2}}
+& \ce{CO}
+\\
+\hline
+$n_i$ & $F_{\ce{CH4}}$ & $F_{\ce{H2O}}$ & $0$ & $0$ \\
+\hline
+$n_f$ & $F_{\ce{CH4}}-\xi_1$ & $F_{\ce{H2O}}-\xi_1-\xi_2$ & $3\xi_1+\xi_2$ & $\xi_1-\xi_2$ \\\hline
+\end{tabular}
+\end{center}
+\caption{Tableau d'avancement de la réaction 1 du reformage primaire.}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+&
+\multicolumn{1}{c!{\makebox[0pt]{+}}}{
+\ce{CO}}
+&
+\multicolumn{1}{c!{\makebox[0pt]{$\rightleftharpoons$}}}{\ce{H2O}}
+&
+\multicolumn{1}{c!{\makebox[0pt]{+}}}{\ce{H2}}
+& \ce{CO2}
+\\
+\hline
+$n_i$ & $\xi_1$ & $F_{\ce{H2O}}-\xi_1$ & $3\xi_1$ & $0$\\
+\hline
+$n_f$ & $\xi_1-\xi_2$ & $F_{\ce{H2O}}-\xi_1-\xi_2$ & $3\xi_1+\xi_2$ & $\xi_2$ \\\hline
+\end{tabular}
+\end{center}
+\caption{Tableau d'avancement de la réaction 2 du reformage primaire.}
+\end{figure}
+
+
+\begin{figure}[h]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+&
+\multicolumn{1}{c!{\makebox[0pt]{+}}}{
+\ce{2CH4}}
+&
+\multicolumn{1}{c!{\makebox[0pt]{$\rightarrow$}}}{\ce{O2}}
+&
+\multicolumn{1}{c!{\makebox[0pt]{+}}}{\ce{2CO}}
+& \ce{4H2}
+\\
+\hline
+$n_i$ & $F_{\ce{CH4}}-\xi_1$ & $0.21 \cdot F_{\text{air}}$ & $\xi_1-\xi_2$ & $3\xi_1+\xi_2$\\
+\hline
+$n_f$ & $0$ & $0$ & $F_{\ce{CH4}}-\xi_2$ & $\xi_1+\xi_2+2F_{\ce{CH4}}$ \\\hline
+\end{tabular}
+\end{center}
+\caption{Tableau d'avancement de la réaction du reformage secondaire}
+\end{figure}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Bilan de matière}
+
+\[
+\left \{
+\begin{array}
+$& K_1 (T) = \left( \dfrac{(3\xi_1 + \xi_2)^3 \cdot (\xi_1 - \xi_2) \cdot p_{tot}^3}{(F_{\ce{CH4}} + 2\xi_1 + F_{\ce{H2O}})^2
+\cdot (F_{\ce{H2O}} - \xi_1 - \xi_2) \cdot (F_{\ce{CH4}}-\xi_1) \cdot p\degree^2}\right)
+& K_2 (T) = \left( \dfrac{(3\xi_1 + \xi_2)\cdot n}{(\xi_1-\xi_2)\cdot(F_{\ce{H2O}}-\xi_1-\xi_2)} \right)$
+\end{array}
+\right.
+\]
+
+\end{frame}
 
 \begin{frame}
 \frametitle{Bilan d'énergie}
@@ -96,23 +181,23 @@ $$\Delta H\degree_{Reacteur}(T)=\xi_1\cdot\Delta H\degree_{Reaction1,m}(T)+\xi_2
 
 \begin{frame}
 \frametitle{Bilan d'énergie}
-\framesubtitle{Four}
+\framesubtitle{Four + Quantité de \ce{CH_4}}
+
+Four
 
 $$\Delta H\degree_{Four,m} = 2\cdot \Delta H\degree_{H_{2}O_{(g)}} + \Delta H\degree_{CO_{2(g)}}
 - \left(\Delta H\degree_{CH_{4(g)}} + 2\cdot \Delta H\degree_{O_{2(g)}}\right)$$
 
+\\
+\\
 
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Bilan d'énergie}
-\framesubtitle{Quantité de \ce{CH_4}}
+Quantité de \ce{CH_4}
 
 $$\text{Quantité de \ce{CH_4}} = \dfrac{\Delta H_{Reacteur}}{\Delta H_{Four,m}}$$
 
 
 \end{frame}
+
 
 
 
