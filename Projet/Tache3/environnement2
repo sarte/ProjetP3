@@ -1,0 +1,139 @@
+\chapter{Tâche 3: Etude de l'impact environnemental}
+\section{Introduction}
+Cette partie traite de l'étude de l'impact environnemental de notre procédé, nous cherchons donc à écrire une étude technique visant à apprécier les conséquences environnementales de notre projet pour tenter d'en limiter, atténuer ou compenser les impacts négatifs. Concrètement, on nous demande d'identifier les causes de la consommation d'énergie, de l'émission de \ce{CO_2} et les sources principales des produits secondaires, potentiellement dangereux, dans notre processus. Ces points d'attention doivent être détaillés en spécifiant les unités du processus qui sont liées à chacun d'eux, en mentionnant également les conséquences pour la société et en donnant des arguments concrets.
+Cette tâche sera structurée de la manière suivante: nous distinguerons les deux éléments le plus importants de cette analyse, à savoir les rejets en terme de matière, d'une part, et les pertes et consommation au niveau énergétique, d'autre part. En terme de matière, nous analyserons les composants rejetés en se demandant s'ils sont dangeureux, en quelle quantité, s'il est utile de les récupérer, à quelles fins, et caetera. Quant à la consommation énergétique, nous allons l'évaluer, en analysant la température à différents moments du processus de fabrication.
+Commençons par introduire une abréviation anglophone très employée dans le secteur des analyses environnementales: Best Available Techniques ou BAT. Nous pouvons donner une définition précise de chaque mot:
+\begin{enumerate}
+\item \textbf{Best}: efficace, donnant un haut niveau de protection environnemental.
+\item \textbf{Available}: disponible, concrètement réalisable, à une l'échelle qui permet une implémentation dans notre secteur sous des conditions économiques plus ou moins rentables.
+\item \textbf{Techniques}: les technologies employées ainsi que l'installation, tout ce qui touche à son design, la manière dont elle a été construite et dont elle est maintenue.
+\end{enumerate}
+Les BAT désignent donc l'étape la plus avancée dans le développement d'une activité et ses méthodes d'opération dans le secteur considéré. Elles indiquent la durabilité et l'efficacité d'un procédé, qui permettent de réduire les émissions nocives, ou de manière plus générale, l'impact sur l'environnement.
+
+
+\section{Consommation énergétique}
+
+\subsection{Energie de notre procédé}
+\paragraph{} Nous allons calculer l'énergie que ne devons apporter à notre réaction via le four. Dans la tâche 1 nous avons défini la réaction qui est la combustion du méthane:
+\begin{equation}\label{combust.methane}\ce{CH_{4(g)} + 2O_{2(g)} <=> 2H_2O_{(g)} + CO_{2(g)}}\end{equation}
+ et son $\Delta H$:
+$$\Delta H\degree_{Four,m} = 2\cdot \Delta H\degree_{H_{2}O_{(g)}} + \Delta H\degree_{CO_{2(g)}}
+- \left(\Delta H\degree_{CH_{4(g)}} + 2\cdot \Delta H\degree_{O_{2(g)}}\right)$$
+
+\subsection{Analyse de l'énergie consommée de manière générale}
+A l'heure actuelle, les besoins en énergie des installations pour la production d'ammoniac sont surtout dû au démarrage du processus de fabrication. En effet, seule la mise en route nécessite de la vapeur d'origine externe ou produite par une chaudière d'appoint. Grâce à une récupération de l'énergie et aux transferts de chaleur optimisés, la plupart des procédés liés à la production de l'ammoniac peuvent fonctionner de manière autonomone. Les besoins en énergie de ce genre d'installation presque autonome nécessite environ 29GJ/t de \ce{NH_3} produit --- rappelons que $\unit{1}{\giga\joule} = \unit{10^9}{J}$. Dans les années nonante, après des décennies de recherche pour abaisser le consommation énergétique de la production d'ammoniac, une valeur de \unit{7}{\giga cal \per \ton} de \ce{NH_3} a été atteinte (un chiffre quasi équivalant aux \unit{29}{\giga\joule\per\ton} ci-dessus, car nous pouvons rappeler que \unit{1}{cal} = \unit{4,1868}{\joule}) mais depuis, l'industrie ne s'est plus intéressée à continuer à essayer de diminuer ce chiffre. Ce fait est à plaindre car, outre une économie financière importante, la réduction de ne serait-ce que \unit{0,1}{\giga cal \per \ton} de \ce{NH_3} permettrait de limiter l'impact environnemental du procédé car les émissions de \ce{CO_2} seraient revues à la baisse.\\
+
+\paragraph{}
+Comme décrit ci-dessus le processus nécessite de 29 à 31GJ/t en terme de fuel.Le processus à également d'autres besoins en énergie: (par tonne de \ce{NH_3}) 497 kWh d'électricité, $1.5 m^3$ d'eau pour la chaudière et $188 m^3$ d'eau pour le refroidissement.
+
+\paragraph{} De manière générale, la production d'ammoniac synthétique consomme de 3 à 5 \% de la production mondiale de gaz naturel et utilise entre 1 et 2 \% environ de la production mondiale d'énergie
+
+
+
+\section{Rejets de \ce{CO_2} et de produits secondaires}
+Notre outil de gestion nous permet également de réaliser le calcul d'approvisionnement nécessaire en matière première en fonction de la température et de la quantité d'ammnoniac à produire. Avec la constante d'équilibre $K$ nous pouvons quantifier la quantité de \ce{CO_2}. Nous cherchons à optimiser $K$ afin que les quantités et de \ce{CO_2} soient minimales, en d'autres termes nous cherchons la valeur de la température $T$ qui donnera la "meilleure" valeur pour $K$.
+
+
+\subsection{Analyse de notre procédé}
+En inspectant notre flow-sheet et notre bilan d'énergie, nous pouvons faire une prévision quant à l'origine des polluants que nous pouvons attendre de notre production d'ammoniac. Nous remarquons que les produits à surveiller sont:
+\begin{itemize}
+\item Le \ce{CO_2} de la réaction dans le four.
+\item Le \ce{CO} de la réaction (1) du reformage primaire.
+\item Le \ce{CO_2} de la réaction (2) du reformage primaire.
+\item Le \ce{CO_2} et les traces de solvants ainsi que des gaz de synthèse provenant des processus d'absorption du dioxyde de carbone.
+\item Le \ce{N_2} lors de la synthèse de l'ammoniac
+\item Le \ce{H_2} lors de la synthèse de l'ammoniac
+\item Le \ce{NH_3} à la sortie.
+\end{itemize}
+
+\paragraph{Justification: pourquoi s'intéresser à l'ammoniac?}
+Près de $80 \%$ de la quantité d'ammoniac est utilisée comme source d'azote pour des produits comme les engrais. Les $20 \%$ restant servent pour diverses applications industrielles comme la fabrication de matières plastiques, de fibres, d'explosifs, d'amines, d'amides ou d'autres composés organiques à base d'azote, qui à terme seront employés comme intermédiaires pour la production de colorants ou de produits pharmaceutiques. L'ammoniac est également utile pour des mesures de protection environnementale, par exemple dans l'élimination de gaz \ce{NO_x} provenant de gaz à combustion. L'ammoniac liquide est un important solvant et c'est également un réfrigérant. En 2003, la capacité mondiale de production annuelle était de l'ordre de $109$ de tonnes!
+
+\paragraph{Produits: quels sont les produits de notre procédé (en plus de l'ammoniac)?}
+Premièrement, nous retrouvons du \ce{CO_2} en tant que produit, qui peut être réemployé pour un tas d'applications, pour la production de méthanol, à l'industrie des boissons, en passant par liquide de refroidissement pour les réacteurs nucléaires. Ceci étant dit, il est inévitable qu'un important excès de \ce{CO_2} soit dispersé, du \ce{CO_2} provenant de la réaction dans le reformeur primaire (steam/air reformer). Le dioxyde de carbone est produit en fonction de la conversion stoechiométrique et peut être récupéré pour des applications mentionnées ci-dessus.
+
+\subsection{Emissions de dioxyde de carbone provenant de la production d'ammoniac}
+Commençons par mentionner le fait que les coûts du gaz naturel représentent entre 70 et 90 \% du coût des intrants pour le production. Ce gaz naturel produit deux importantes sources d'émission de \ce{CO_2}: le combustible et le procédé. Dans notre cas, nous considérons que nous utilisons du méthane pur et non du gaz naturel.
+
+\paragraph{Le combustible} Les émissions de \ce{CO_2} générées par le combustible proviennent principalement de la combustion du méthane qui apporte la chaleur pour le reformage primaire. D'autres sources sont l'alimentation des chaudières à vapeur, des dispositifs de chauffage, des turbines à gaz et d'autres équipement de l'usine. Pendant la combustion, tout le carbone du combustible est converti en \ce{CO_2} et rejeté dans l'atmosphère.
+\paragraph{Rejet de \ce{CO_2} dans le four}
+Réaction de combustion du méthane:
+\begin{equation}\label{combust.methane}\ce{CH_{4(g)} + 2O_{2(g)} <=> 2H_2O_{(g)} + CO_{2(g)}}\end{equation}
+En connaissant la quantité \ce{CH_4} dont nous avons besoin pour chauffer le reformage primaire, nous pouvons calculer la quantité de \ce{CO_2} rejetée dans l'atmosphère.
+\paragraph{Le procédé} Les émissions de \ce{CO_2} générées par le procédé proviennent de la conversion du carbone contenu dans le \ce{CH_4} en \ce{CO_2} en en \ce{H_2}. Ce carbone est utilisé comme matière de base pendant la production du gaz de synthèse. L'hydrogène est combiné à l'azote provenant de l'air au cours du procédé de synthèse de l'ammoniac --- le dernier bloc de notre flow-sheet. Le système d'absorption du \ce{CO_2} retire ce composé chimique du flux gazeux issu du procédé afin d'éviter la contamination du catalyseur de synthèse d'ammoniac. Ce \ce{CO_2} relativement pur est rejeté dans l'atmosphère, à défaut de lui trouver une autre utilisation.
+\paragraph{Rejet de \ce{CO_2} lors du procédé}
+Dans la tâche 1, nous avons calculé les produits sortants de notre procédé. Nous connaissons donc la quantité de \ce{CO_2} émise dans l'atmosphère en fonction de la température pour 1500t de \ce{NH_3}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.6]{produits.jpg}
+\label{produits_sortants}
+\end{figure}
+\subsection{Emission de dioxyde de carbone à l'échelle mondiale}
+Les émissions de \ce{CO_2} ont été estimées d'après les évaluation de production d'ammoniac et d'urée. Les émissions provenant de la production d'ammoniac sont dérivées de la combustion du gaz naturel utilisé comme source d'énergie et du procédé de reformage primaire employé pour obtenir le flux d'hydrogène du gaz naturel servant de matière de base. Ces flux d'émissions de \ce{CO_2} sont respectivement appelés combustible et procédé ou matière de base (voir plus haut).
+Le production mondiale totale d'ammoniac est estimée à \unit{128}{\mega\tonne}. La quantité totale de \ce{CO_2} produit par les usines est estimée à \unit{275}{\mega\tonne}, dont près de \unit{170}{\mega\tonne} (soit environ 62 \%) sont liées au procédé ou à la matière de base. Heureusement, près de \unit{78}{\mega\tonne} de ce \ce{CO_2} est récupéré pour la production d'urée, ce qui porte à \unit{197}{\mega\tonne} les émissions de \ce{CO_2} des l'ensemble des usines d'ammoniac du monde.
+
+\subsection{Rejets secondaires}
+Nous poursuivons en nous attardant sur les rejets secondaires et la gestion des déchets, en mentionnant les éléments suivants:
+\begin{itemize}
+
+\item Rejet de purge lors de la synthèse du \ce{NH_3}
+
+\item  En cas de problème, le \ce{H_2}, le \ce{CH_4}, le \ce{CO}, le \ce{CO_2}, le \ce{NH_3} et le \ce{N_2}  doivent être évacués sans qu'ils ne soient envoyés directement dans l'atmosphère. Ils sont donc envoyés vers des torchères afin de ne rejeter que les gaz de fumées.
+
+
+\item Les eaux usées seront évacuées avec ou sans traitement préalable au rejet, selon leur degré de pollution, et les résidus boueux recueillis à l'épuration des circuits de refroidissement doivent faire l'objet d'une mise en décharge appropriée à leur nature. 
+
+
+\item Catalyseurs épuisés et produits d'épuration: selon l'usage prévu et le mode de fonctionnement des installations, la durée de vie des catalyseurs employés dans les installations de production d'ammoniac varie entre 2 et 8 ans. Les catalyseurs dont l'activité est devenue insuffisante sont remplacés. La plupart des catalyseurs renferment des quantités notables d'oxydes et de sulfures des métaux lourds comme le cobalt \ce{Co}, le nickel \ce{Ni}, le manganèse \ce{Mo}, le cuivre \ce{Cu}, le zink \ce{Zn} et le fer \ce{Fe}, non solubles dans l'eau. Les déchets retournent en partie chez le fabricant en vue d'un retraitement ou sont récupérés par des usines métallurgiques en vue du recyclage des métaux. A défaut, il faut prévoir une mise en décharge réglementaire en fonction de la composition des produits.
+\end{itemize}
+
+\subsection{Impact environnemental de ces résidus}
+
+\begin{itemize}
+\item[\ce{CO_2}]: Le dioxyde de carbone a un impact négatif sur l'environemment, c'est un gaz à effet de serre. On considère que le \ce{CO_2} est responsable de 25\% des problèmes liés au gaz à effet de serre.
+\item[\ce{NO_x}]: Les oxydes d'azote sont des polluants atmospériques et des gaz à effet de serre. Ils peuvent également causer des pluies acides.
+\item[\ce{CO}]: Le monoxyde de carbone est un polluant atmosphérique.
+\item[\ce{H_2}]: Le \ce{H_2} n'est pas dangereux pour l'environnement mais est  extrêmement inflammable.
+\item[\ce{N_2}]: Le \ce{N_2} n'est pas nocif pour l'environnement mais peut avoir des effets dangereux sur l'homme en cas de trop forte concentration.
+\item[\ce{NH_3}]: L'ammoniac potentiellement rejeté peut-être responsable de nombreux dégats au niveau environnemental: \begin{itemize}
+\item L'acidification de l'eau et des sols. Cela favorise évidemment le risque de pluie acide.
+\item il s'agit du principal responsable de l'eutrophisation des milieux aquatiques --- l'eutrophisation est le processus par lequel des nutriments s'accumulent dans un milieu.
+\end{itemize}
+Par contre l'ammoniac n'a aucun effet négatif sur le réchauffement climatique, ni sur la couche d'ozone. C'est pour cela qu'il est souvent utilisé comme fluide réfrigérant, les autres fluides ayant des effets négatifs sur couche d'ozone.
+--- un fluide frigorigène (ou réfrigérant) est un fluide typiquement présent dans une pompe à chaleur ou dans un cycle de refroidissement, qui subit souvent des transformations de phase.\\
+\end{itemize}
+
+\textbf{Écologie: quels sont les problèmes relatifs à la santé et la sécurité associés à notre production d'ammoniac, ainsi qu'à la conservation de l'ammoniac produit?}
+Nous pouvons mentionner les trois points suivants:
+\begin{enumerate}
+\item Le risque d'inflammation et/ou d'explosion
+\item L'empoisonnement
+\item La suffocation
+\end{enumerate}
+Les incendies ou les explosions dues à l'allumage involontaire des fuites ne sont pas si rares que cela, plus particulièrement quand ceux-ci ont lieu dans les systèmes de gaz d'alimentation et de synthèse.
+Le \ce{CO} représente le plus important composé toxique, provenant de potentielles fuites.
+La suffocation due au manque d'oxygène, quelque part dans notre usine, peut avoir lieu à des endroits où l'air respirable a été dilué avec des gaz inertes. Le \ce{CO} et le \ce{N_2} sont des gaz dangereux pour l'homme.\\
+
+\section{Points sensible du procédé}
+On peut identifier trois points sensibles dans notre procédé:
+\begin{itemize}
+\item Le four
+\item L'absorption du \ce{CO_2}
+\item Synthèse du \ce{NH_3}
+\end{itemize}
+En effet, la plupart des rejets de notre procédé sont issus des ces trois étapes. Du \ce{CO_2} est rejeté dans l'atmosphère lors de la combustion de méthane dans le four et lors de l'absorbtion de celui-ci pour éviter qu'il ne parvienne dans les catalyseurs. Et enfin, il y a les rejets de la purge lors de la synthèse du \ce{NH_3}.
+
+
+\section{Recommandations pour réduire l’impact de l’activité de
+production sur l’environnement}
+
+\paragraph{}
+Une des recommandations que nous pouvons faire est de changer l'origine du méthane utilisé pour le procédé. Nous pourions envisager d'utiliser le méthane issu de la biométhanisation. Cette piste permmettrait d'approvisionner l'installation en méthane tout en contribuant à la gestion des déchets.
+
+\paragraph{}
+Ensuite, nous nous sommes intéressé à la façon dont nous obtenons le dihydrogène nécessaire à la production d'ammoniac. En effet, à l'heure actuelle, nous avons besoin du méthane pour produire du \ce{H_2}. C'est ce que nous faisons dans notre reformage primaire. Etant donné qu'une grande partie des gaz toxiques rejetés est issues de ce procédé, une autre façon d'obtenir de l'hydrogène permettrait de limiter cela. Une des alternative est l'électrolyse de l'eau mais telle que nous la connaissons ce n'est pas économiquement viable. Une autre alternative est l'électrolyse de l'eau à haute température, cela permettrait d'augmenter le rendement de l'élecrolyse de 50 \%
+
+\paragraph{}
+Nous pouvons aussi envisager de produire de l'urée avec le \ce{CO_2} au lieu de le rejeter directement dans l'atmosphère. En effet, certaines usines transforment le \ce{CO_2} pour produire de l'urée, ce qui permet de réduire la quantité de \ce{CO_2} émise dans l'atmosphère et donc la contribution aux gaz à effet de serre.
+\section{Sources}
+‰ Je sais que ce n'est pas comme ça qu'il faut citer ses sources mais comme ce partie ne fait pas partie du rapport final, je propose de ne pas perdre de temps pour la mise en page.
