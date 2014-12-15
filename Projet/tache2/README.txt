@@ -14,7 +14,7 @@ To run the Ammonia Synthesis Simulaiton Tool:
 	- M[t/day] Ammonia daily flow in tons.
 	- T[K] Synthesis Reactor temperature.
 	- p[bar], Synthesis Reactor pressure.
-	- mu, the purge fraction.
+	- mu, the purge split fraction.
 3. Wait until the results are displayed in the screen.
 4. To start a new simulation, start step (2).
 
