@@ -5,7 +5,7 @@ function [] = outil(T1,M,T,p,mu)
 % T1[K] Primary Reformer temperature.
 % T[K] Synthesis Reactor temperature.
 % p[bar], Synthesis Reactor pressure.
-% mu, the purge fraction.
+% mu, the purge split fraction.
 %
 % xi represents the stage of completion of the synthesis reaction
 % x corresponds to the number of moles of methane needed per day.
