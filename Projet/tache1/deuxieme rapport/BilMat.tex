@@ -11,11 +11,11 @@ moduler la production d'ammoniac. Nous avons procédé de manière systématique
 variables intermédiaires:
 
 \begin{itemize}
-	\item Soit $F_{\ce{CH4}}$ le débit molaire de \ce{CH4}.
-	\item Soit $F_{\ce{H2O}}$ le débit molaire d'\ce{H2O}.
+	\item Soit $F_{mol, \ce{CH4}}$ le débit molaire de \ce{CH4}.
+	\item Soit $F_{mol, \ce{H2O}}$ le débit molaire d'\ce{H2O}.
 	\item Soit $\xi_1$ le degré d'avancement de la réaction à l'équilibre (1).
 	\item Soit $\xi_2$ le degré d'avancement de la réaction à l'équilibre (2).
-	\item Soit $F_{\text{air}}$ le débit molaire d'air.
+	\item Soit $F_{mol, \text{air}}$ le débit molaire d'air.
 \end{itemize}
 
 \subsection{Analyse et commentaires}
@@ -38,9 +38,9 @@ l'écriture, nous abrégons le nombre de moles initial et final repectivement pa
 & \ce{CO}
 \\
 \hline
-$n_i$ & $F_{\ce{CH4}}$ & $F_{\ce{H2O}}$ & $0$ & $0$ \\
+$n_i$ & $F_{mol, \ce{CH4}}$ & $F_{mol, \ce{H2O}}$ & $0$ & $0$ \\
 \hline
-$n_f$ & $F_{\ce{CH4}}-\xi_1$ & $F_{\ce{H2O}}-\xi_1-\xi_2$ & $3\xi_1+\xi_2$ & $\xi_1-\xi_2$ \\\hline
+$n_f$ & $F_{mol, \ce{CH4}}-\xi_1$ & $F_{mol, \ce{H2O}}-\xi_1-\xi_2$ & $3\xi_1+\xi_2$ & $\xi_1-\xi_2$ \\\hline
 \end{tabular}
 \end{center}
 \caption{Tableau d'avancement de la réaction 1 du reformage primaire.}
@@ -59,9 +59,9 @@ $n_f$ & $F_{\ce{CH4}}-\xi_1$ & $F_{\ce{H2O}}-\xi_1-\xi_2$ & $3\xi_1+\xi_2$ & $\x
 & \ce{CO2}
 \\
 \hline
-$n_i$ & $\xi_1$ & $F_{\ce{H2O}}-\xi_1$ & $3\xi_1$ & $0$\\
+$n_i$ & $\xi_1$ & $F_{mol, \ce{H2O}}-\xi_1$ & $3\xi_1$ & $0$\\
 \hline
-$n_f$ & $\xi_1-\xi_2$ & $F_{\ce{H2O}}-\xi_1-\xi_2$ & $3\xi_1+\xi_2$ & $\xi_2$ \\\hline
+$n_f$ & $\xi_1-\xi_2$ & $F_{mol, \ce{H2O}}-\xi_1-\xi_2$ & $3\xi_1+\xi_2$ & $\xi_2$ \\\hline
 \end{tabular}
 \end{center}
 \caption{Tableau d'avancement de la réaction 2 du reformage primaire.}
@@ -70,7 +70,7 @@ $n_f$ & $\xi_1-\xi_2$ & $F_{\ce{H2O}}-\xi_1-\xi_2$ & $3\xi_1+\xi_2$ & $\xi_2$ \\
 Les réactions prenant place dans la suite du procédé sont toutes considérées comme complètes dans cette Tâche \numprint{1}. Dans le reformeur secondaire, le méthane et l'oxygène
 sont alimentés de façon stœchiométrique, ce qui signifie qu'il ne reste plus aucun de ces deux réactifs après réaction.
 Tout a été converti. Cette condition nous permet d'aboutir à une première équation :
-$$F_{\ce{CH4}} - \xi_1 - 2 \cdot 0.21 \cdot F_{\text{air}} = 0$$
+$$F_{mol, \ce{CH4}} - \xi_1 - 2 \cdot 0.21 \cdot F_{mol, \text{air}} = 0$$
 
 \begin{figure}[h]
 \begin{center}
@@ -86,9 +86,9 @@ $$F_{\ce{CH4}} - \xi_1 - 2 \cdot 0.21 \cdot F_{\text{air}} = 0$$
 & \ce{4H2}
 \\
 \hline
-$n_i$ & $F_{\ce{CH4}}-\xi_1$ & $0.21 \cdot F_{\text{air}}$ & $\xi_1-\xi_2$ & $3\xi_1+\xi_2$\\
+$n_i$ & $F_{mol, \ce{CH4}}-\xi_1$ & $0.21 \cdot F_{mol, \text{air}}$ & $\xi_1-\xi_2$ & $3\xi_1+\xi_2$\\
 \hline
-$n_f$ & $0$ & $0$ & $F_{\ce{CH4}}-\xi_2$ & $\xi_1+\xi_2+2F_{\ce{CH4}}$ \\\hline
+$n_f$ & $0$ & $0$ & $F_{mol, \ce{CH4}}-\xi_2$ & $\xi_1+\xi_2+2F_{mol, \ce{CH4}}$ \\\hline
 \end{tabular}
 \end{center}
 \caption{Tableau d'avancement de la réaction du reformage secondaire}
@@ -111,9 +111,9 @@ l'eau restante, et absorber le \ce{CO2}. Nous obtenons l'expression du débit mo
 & \ce{CO2}
 \\
 \hline
-$n_i$ & $F_{\ce{CH4}}-\xi_2$ & $F_{\ce{H2O}}-\xi_1-\xi_2$ & $\xi_1+\xi_2+2F_{\ce{CH4}}$ & $\xi_2$\\
+$n_i$ & $F_{mol, \ce{CH4}}-\xi_2$ & $F_{mol, \ce{H2O}}-\xi_1-\xi_2$ & $\xi_1+\xi_2+2F_{mol, \ce{CH4}}$ & $\xi_2$\\
 \hline
-$n_f$ & $0$ & $F_{\ce{H2O}}-\xi_1-F_{\ce{CH4}}$ & $\xi_1+3F_{\ce{CH4}}$ & $F_{\ce{CH4}}$ \\\hline
+$n_f$ & $0$ & $F_{mol, \ce{H2O}}-\xi_1-F_{mol, \ce{CH4}}$ & $\xi_1+3F_{mol, \ce{CH4}}$ & $F_{mol, \ce{CH4}}$ \\\hline
 \end{tabular}
 \end{center}
 \caption{Tableau d'avancement de la réaction dans les réacteurs Water-Gas-Shift.}
@@ -123,7 +123,7 @@ Enfin, la dernière réaction permet la synthèse de \ce{NH3}. Nous imposons qu'
 ne reste ni de \ce{N2}, ni de \ce{H2}, étant donné que la réaction globale peut être considérée
 comme complète, grâce au "recyclage".
 Nous obtenons ici une seconde équation:
-$$ 2 \cdot 0.78 \cdot F_{\text{air}} = \frac{2}{3}\cdot (\xi_1 + 3F_{\ce{CH4}}) $$
+$$ 2 \cdot 0.78 \cdot F_{mol, \text{air}} = \frac{2}{3}\cdot (\xi_1 + 3F_{mol, \ce{CH4}}) $$
 
 \begin{figure}[h]
 \begin{center}
@@ -138,48 +138,50 @@ $$ 2 \cdot 0.78 \cdot F_{\text{air}} = \frac{2}{3}\cdot (\xi_1 + 3F_{\ce{CH4}}) 
 \ce{2NH3}
 \\
 \hline
-$n_i$ & $0.78 \cdot F_{\text{air}}$ & $\xi_1+3F_{\ce{CH4}}$ & $0$ \\
+$n_i$ & $0.78 \cdot F_{mol, \text{air}}$ & $\xi_1+3F_{mol, \ce{CH4}}$ & $0$ \\
 \hline
-$n_f$ & $0$ & $0$ & $2 \cdot 0.78 \cdot F_{\text{air}}$ \\\hline
+$n_f$ & $0$ & $0$ & $2 \cdot 0.78 \cdot F_{mol, \text{air}}$ \\\hline
 \end{tabular}
 \end{center}
 \caption{Tableau d'avancement de la synthèse de l'ammoniac}
 \end{figure}
 
-Au terme de ce procédé, nous aurons donc un débit molaire de prouction valant $1.56 \cdot F_{\text{air}}$ de \ce{NH3}. Cette
-quantité est liée au débit molaire de \ce{CH4} introduites dans le réacteur (i.e. $F_{\ce{CH4}}$) par les deux équations obtenues plus haut:
+Au terme de ce procédé, nous aurons donc un débit molaire de prouction valant $1.56 \cdot F_{mol, \text{air}}$ de \ce{NH3}. Cette
+quantité est liée au débit molaire de \ce{CH4} introduites dans le réacteur (i.e. $F_{mol, \ce{CH4}}$) par les deux équations obtenues plus haut:
 \[
 \left \{
 \begin{array}
-& F_{\ce{CH4}} - \xi_1 - 2\cdot0.21 \cdot F_{\text{air}} = 0
-& 2\cdot0.78 \cdot F_{\text{air}} = \frac{2}{3}\cdot (\xi_1 + 3F_{\ce{CH4}}) 
+& F_{mol, \ce{CH4}} - \xi_1 - 2\cdot0.21 \cdot F_{mol, \text{air}} = 0
+& 2\cdot0.78 \cdot F_{mol, \text{air}} = \frac{2}{3}\cdot (\xi_1 + 3F_{mol, \ce{CH4}}) 
 \end{array}
 \right.
 \]
-En simplifiant, on obtient: $4 \cdot F_{\ce{CH4}} = 2.76 \cdot F_{\text{air}}$. Nous avons maintenant la quantité de \ce{CH4} introduite
+En simplifiant, on obtient: $4 \cdot F_{mol, \ce{CH4}} = 2.76 \cdot F_{mol, \text{air}}$. Nous avons maintenant la quantité de \ce{CH4} introduite
 dans le réacteur par jour en fonction de la quantité d'ammoniac produite. Notons que la température n'a pas d'effet
 sur cette quantité. Mais nous n'avons pas encore d'information à propos de la quantité d'eau nécessaire.
 
 
-Afin d'obtenir une relation avec le nombre de moles d'\ce{H2O} introduites dans le réacteur (i.e. $F_{\ce{H2O}}$), nous
+Afin d'obtenir une relation avec le nombre de moles d'\ce{H2O} introduites dans le réacteur (i.e. $F_{mol, \ce{H2O}}$), nous
 devons utiliser les constantes d'équilibre des deux premières réactions. Pour une certaine
 température $T$ [\unit{}{\kelvin}], nous avons l'expression suivante pour $K_1 (T)$ et $K_2 (T)$, respectivement les
 constantes d'équilibre de la première et de la deuxième équation, avec $p_{tot}$ la pression totale dans le système et $(p\degree)^2$ la
 pression standard de \unit{1}{bar}:
+
 \[
 \left \{
 \begin{array}
-& K_1 (T) = \left( \dfrac{(3\xi_1 + \xi_2)^3 \cdot (\xi_1 - \xi_2) \cdot p_{tot}^3}{(F_{\ce{CH4}} + 2\xi_1 + F_{\ce{H2O}})^2
-\cdot (F_{\ce{H2O}} - \xi_1 - \xi_2) \cdot (F_{\ce{CH4}}-\xi_1) \cdot p\degree^2}\right)
-& K_2 (T) = \left( \dfrac{(3\xi_1 + \xi_2)\cdot n}{(\xi_1-\xi_2)\cdot(F_{\ce{H2O}}-\xi_1-\xi_2)} \right)
+& K_1 (T) = \left( \dfrac{ (3\xi_1 + \xi_2)^3 \cdot (\xi_1 - \xi_2) \cdot p_{tot}^3 }{ (F_{mol, \ce{CH4}} + 2\xi_1 + F_{mol, \ce{H2O}}) ^2 \cdot (F_{mol, \ce{H2O}} - \xi_1 - \xi_2) \cdot (F_{mol, \ce{CH4}}-\xi_1) \cdot p\degree^2}\right)
+\\
+& K_2 (T) = \left( \dfrac{(3\xi_1 + \xi_2)\cdot n}{(\xi_1-\xi_2)\cdot(F_{mol, \ce{H2O}}-\xi_1-\xi_2)} \right)
 \end{array}
 \right.
 \]
+
 Nous pouvons calculer la valeur théorique de ces constantes d'équilibre en fonction de la température
-avec \textsc{MATLAB} (voir code en Annexes), en posant la pression du reformeur primaire
+avec \textsc{Matlab} (voir code en Annexes), en posant la pression du reformeur primaire
 à \unit{30}{\bbar}\footnote{Valeur conseillée sur iCampus, consulté le mercredi 3 octobre 2014}.
 Il nous reste donc \numprint{4} équations à \numprint{4} inconnues et \numprint{2} paramètres: la
-température $T$ et $F_{\text{air}}$ le nombre de moles d'air introduites dans le réacteur. À partir de ces équations, nous avons
+température $T$ et $F_{mol, \text{air}}$ le nombre de moles d'air introduites dans le réacteur. À partir de ces équations, nous avons
 créé un outil de gestion permettant de réaliser le calcul d'approvisionnement nécessaire en matière première, en
 fonction de la température et de la capacité d'ammoniac à produire. Le code est disponible en Annexes.%prog final matlab complet
 
