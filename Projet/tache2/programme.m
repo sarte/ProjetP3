@@ -1,10 +1,11 @@
 function [] = outil(T1,M,T,p,mu)
-% SyntheseTTT calculates the amount of methane [t/day], water [t/day] and air [t/day] needed to produce M
-% [t/day] of ammonia, in function of differents parameters:
-% T1[K], the temperature in the Primary Reformer.
-% T[K], the temperature in the Synthesis Reactor.
-% p[bar], the pressure in the Synthesis Reactor
-% mu, the purge percentage, for the Haber-Bosh process.
+% outil calculates the amount of methane [t/day], water [t/day] 
+% and air [t/day] needed to produce M [t/day] of ammonia, 
+% in function of differents parameters:
+% T1[K] Primary Reformer temperature.
+% T[K] Synthesis Reactor temperature.
+% p[bar], Synthesis Reactor pressure.
+% mu, the purge fraction.
 %
 % xi represents the stage of completion of the synthesis reaction
 % x corresponds to the number of moles of methane needed per day.
@@ -17,7 +18,7 @@ function [] = outil(T1,M,T,p,mu)
 % Uses a bottom-up strategy: it first calculates everything for the
 % Synthesis Reactor, and then goes back to the Primary Reformer.
 
-format long
+global OUT
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%     Synthesis Reactor     %%%
@@ -66,71 +67,41 @@ syms x y n m MM positive
 [solx, soly, soln, solm, MM] = solve(3 * x + m - 3 * solN == 0, 4 * x - (0.42/0.78 + 3)*solN == 0,-K11/900 + (((3*m + n)^3) * (m - n))/(((x + 2*m + y)^2) * (y - n - m) * (x - m)) == 0, -K2 + ((3*m + n) * n)/((m - n) * (y - n - m)) == 0,MM == M,x,y,n,m,MM,'Real',true);
 B=(abs((solm*deltaHH1+soln*deltaHH2)/DHfour)/1000000*16);
 D=(abs((solm*deltaHH1+soln*deltaHH2)/DHfour)/1000000*32);
+E=(abs((solm*deltaHH1+soln*deltaHH2)/DHfour)/1000000*44);
+F=(abs((solm*deltaHH1+soln*deltaHH2)/DHfour)/1000000*18);
 
-disp ('REFORMAGE PRIMAIRE')
-disp ('Flux entrant')
-disp (['CH4',solx/1000000*16])
-disp (['H2O',soly/1000000*18])
-disp ('Flux sortant')
-disp (['CH4',(solx-solm)/1000000*16])
-disp (['H2O',(soly-solm-soln)/1000000*18])
-disp (['CO',(solm-soln)/1000000*28])
-disp (['CO2',soln/1000000*44])
-disp (['H2', (3*solm+soln)/1000000*2])
-disp ('FOUR')
-disp (['CH4', B])
-disp (['O2', D])
-disp ('REFORMAGE SECONDAIRE')
-disp ('Flux entrant')
-disp (['CH4',(solx-solm)/1000000*16])
-disp (['H2O',(soly-solm-soln)/1000000*18])
-disp (['CO',(solm-soln)/1000000*28])
-disp (['CO2',soln/1000000*44])
-disp (['H2', (3*solm+soln)/1000000*2])
-disp(['O2', 0.21*(solm+3*solx)/3/0.78/1000000*32])
-disp(['N2', (solm+3*solx)/3/1000000*28])
-disp(['Ar', 0.01*(solm+3*solx)/3/0.78/1000000*40])
-disp ('Flux sortant')
-disp (['H2O',(soly-solm-soln)/1000000*18])
-disp (['CO',(solx-soln)/1000000*28])
-disp (['CO2',soln/1000000*44])
-disp (['H2',(solm+soln+2*solx)/1000000*2])
-disp(['N2', (solm+3*solx)/3/1000000*28])
-disp(['Ar', 0.01*(solm+3*solx)/3/0.78/1000000*40])
-disp ('REACTEURS WATER GAS SHIFT')
-disp ('Flux entrant')
-disp (['CO',(solx-soln)/1000000*28])
-disp (['CO2',soln/1000000*44])
-disp(['N2', (solm+3*solx)/3/1000000*28])
-disp (['H2',(solm+soln+2*solx)/1000000*2])
-disp(['Ar', 0.01*(solm+3*solx)/3/0.78/1000000*40])
-disp (['H2O',(soly-solm-soln)/1000000*18])
-disp ('Flux sortant')
-disp (['H2O',(soly-solm-solx)/1000000*18])
-disp (['CO2',solx/1000000*44])
-disp (['H2',(solm+3*solx)/1000000*2])
-disp(['N2', (solm+3*solx)/3/1000000*28])
-disp(['Ar', 0.01*(solm+3*solx)/3/0.78/1000000*40])
-disp ('ABSORPTION DE CO2 & COMPRESSION')
-disp ('Flux entrant')
-disp (['CO2',solx/1000000*44])
-disp(['N2', (solm+3*solx)/3/1000000*28])
-disp (['H2',(solm+3*solx)/1000000*2])
-disp(['Ar', 0.01*(solm+3*solx)/3/0.78/1000000*40])
-disp (['H2O',(soly-solm-solx)/1000000*18])
-disp ('Flux sortant')
-disp (['H2',(solm+3*solx)/1000000*2])
-disp(['N2', (solm+3*solx)/3/1000000*28])
-disp(['Ar', 0.01*(solm+3*solx)/3/0.78/1000000*40])
-disp (['H2O',(soly-solm-solx)/1000000*18])
-disp (['CO2',solx/1000000*44])
-disp ('SYNTHESE DE NH3 & SEPARATION')
-disp ('Flux entrant')
-disp(['N2', (solm+3*solx)/3/1000000*28])
-disp (['H2',(solm+3*solx)/1000000*2])
-disp(['Ar', 0.01*(solm+3*solx)/3/0.78/1000000*40])
-disp ('Flux sortant')
-disp(['Ar', 0.01*(solm+3*solx)/3/0.78/1000000*40])
-disp(['NH3', MM])
+
+% These flows are displayed by RUN
+% I: to primary reformer
+% CH4 H2O
+OUT.I = double([solx/1000000*16,soly/1000000*18]);
+% II: from primary to secondary reformer
+% CH4 H2 CO2 CO H2O
+OUT.II = double([(solx-solm)/1000000*16,(3*solm+soln)/1000000*2,soln/1000000*44,(solm-soln)/1000000*28,(soly-solm-soln)/1000000*18]);
+% III: Air flow to secondary flow
+% N2 O2 Ar
+OUT.III = double([(solm+3*solx)/3/1000000*28,0.21*(solm+3*solx)/3/0.78/1000000*32,0.01*(solm+3*solx)/3/0.78/1000000*40]);
+% IV: from secondary reformer to Water-Gas-Shift reactor
+% N2 H2 H2O Ar CO2 CO
+OUT.IV = double([(solm+3*solx)/3/1000000*28,(solm+soln+2*solx)/1000000*2,(soly-solm-soln)/1000000*18,0.01*(solm+3*solx)/3/0.78/1000000*40,soln/1000000*44,(solx-soln)/1000000*28]);
+% V: from Water-Gas-Shift reactor to CO2 absortion & compression
+% N2 H2 H2O Ar CO2
+OUT.V = double([(solm+3*solx)/3/1000000*28,(solm+3*solx)/1000000*2,(soly-solm-solx)/1000000*18,0.01*(solm+3*solx)/3/0.78/1000000*40,solx/1000000*44]);
+% VI: out from CO2 absortion & compression
+% H2O CO2
+OUT.VI = double([(soly-solm-solx)/1000000*18,solx/1000000*44]);
+% VII: from CO2 absortion & compression to NH3 synthesis reactor
+% N2 H2 Ar
+OUT.VII = double([(solm+3*solx)/3/1000000*28,(solm+3*solx)/1000000*2,0.01*(solm+3*solx)/3/0.78/1000000*40]);
+% VIII: out from NH3 synthesis reactor
+% N2 H2 Ar %%%%%%%%%%%% N2 et H2 a faire
+OUT.VIII = double([0,0,0.01*(solm+3*solx)/3/0.78/1000000*40]);
+% XI: Final NH3 (out from synthesis reactor)
+% NH3
+OUT.IX = double(MM);
+% H: All the flows in the primary reformer heater
+%Heater CH4 O2 H2O CO2  %%%%%%%%%%%%%%%%%%%% E et F a verifier
+OUT.H = double([B,D,E,F]);
+
 
 end
